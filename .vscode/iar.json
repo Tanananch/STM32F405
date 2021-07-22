@@ -1,0 +1,7 @@
+{
+    "version": 1,
+    "path": "E:\\IAR Systems\\Embedded Workbench 8.3\\",
+    "project": "${workspaceFolder}\\user\\IAR_F4.ewp",
+    "config": "Debug",
+    "parallel" : true
+}

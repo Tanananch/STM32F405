@@ -1,0 +1,27211 @@
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\app\\user_task.c"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\app\\user_task.h"
+
+
+
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+
+
+ 
+    
+
+
+
+
+
+
+
+
+
+ 
+  
+
+
+ 
+
+#line 90 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+#line 118 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+
+
+
+
+            
+#line 135 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+#line 158 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+                                             
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+typedef enum IRQn
+{
+ 
+  NonMaskableInt_IRQn         = -14,     
+  MemoryManagement_IRQn       = -12,     
+  BusFault_IRQn               = -11,     
+  UsageFault_IRQn             = -10,     
+  SVCall_IRQn                 = -5,      
+  DebugMonitor_IRQn           = -4,      
+  PendSV_IRQn                 = -2,      
+  SysTick_IRQn                = -1,      
+ 
+  WWDG_IRQn                   = 0,       
+  PVD_IRQn                    = 1,       
+  TAMP_STAMP_IRQn             = 2,       
+  RTC_WKUP_IRQn               = 3,       
+  FLASH_IRQn                  = 4,       
+  RCC_IRQn                    = 5,       
+  EXTI0_IRQn                  = 6,       
+  EXTI1_IRQn                  = 7,       
+  EXTI2_IRQn                  = 8,       
+  EXTI3_IRQn                  = 9,       
+  EXTI4_IRQn                  = 10,      
+  DMA1_Stream0_IRQn           = 11,      
+  DMA1_Stream1_IRQn           = 12,      
+  DMA1_Stream2_IRQn           = 13,      
+  DMA1_Stream3_IRQn           = 14,      
+  DMA1_Stream4_IRQn           = 15,      
+  DMA1_Stream5_IRQn           = 16,      
+  DMA1_Stream6_IRQn           = 17,      
+  ADC_IRQn                    = 18,      
+
+
+  CAN1_TX_IRQn                = 19,      
+  CAN1_RX0_IRQn               = 20,      
+  CAN1_RX1_IRQn               = 21,      
+  CAN1_SCE_IRQn               = 22,      
+  EXTI9_5_IRQn                = 23,      
+  TIM1_BRK_TIM9_IRQn          = 24,      
+  TIM1_UP_TIM10_IRQn          = 25,      
+  TIM1_TRG_COM_TIM11_IRQn     = 26,      
+  TIM1_CC_IRQn                = 27,      
+  TIM2_IRQn                   = 28,      
+  TIM3_IRQn                   = 29,      
+  TIM4_IRQn                   = 30,      
+  I2C1_EV_IRQn                = 31,      
+  I2C1_ER_IRQn                = 32,      
+  I2C2_EV_IRQn                = 33,      
+  I2C2_ER_IRQn                = 34,      
+  SPI1_IRQn                   = 35,      
+  SPI2_IRQn                   = 36,      
+  USART1_IRQn                 = 37,      
+  USART2_IRQn                 = 38,      
+  USART3_IRQn                 = 39,      
+  EXTI15_10_IRQn              = 40,      
+  RTC_Alarm_IRQn              = 41,      
+  OTG_FS_WKUP_IRQn            = 42,      
+  TIM8_BRK_TIM12_IRQn         = 43,      
+  TIM8_UP_TIM13_IRQn          = 44,      
+  TIM8_TRG_COM_TIM14_IRQn     = 45,      
+  TIM8_CC_IRQn                = 46,      
+  DMA1_Stream7_IRQn           = 47,      
+  FSMC_IRQn                   = 48,      
+  SDIO_IRQn                   = 49,      
+  TIM5_IRQn                   = 50,      
+  SPI3_IRQn                   = 51,      
+  UART4_IRQn                  = 52,      
+  UART5_IRQn                  = 53,      
+  TIM6_DAC_IRQn               = 54,      
+  TIM7_IRQn                   = 55,      
+  DMA2_Stream0_IRQn           = 56,      
+  DMA2_Stream1_IRQn           = 57,      
+  DMA2_Stream2_IRQn           = 58,      
+  DMA2_Stream3_IRQn           = 59,      
+  DMA2_Stream4_IRQn           = 60,      
+  ETH_IRQn                    = 61,      
+  ETH_WKUP_IRQn               = 62,      
+  CAN2_TX_IRQn                = 63,      
+  CAN2_RX0_IRQn               = 64,      
+  CAN2_RX1_IRQn               = 65,      
+  CAN2_SCE_IRQn               = 66,      
+  OTG_FS_IRQn                 = 67,      
+  DMA2_Stream5_IRQn           = 68,      
+  DMA2_Stream6_IRQn           = 69,      
+  DMA2_Stream7_IRQn           = 70,      
+  USART6_IRQn                 = 71,      
+  I2C3_EV_IRQn                = 72,      
+  I2C3_ER_IRQn                = 73,      
+  OTG_HS_EP1_OUT_IRQn         = 74,      
+  OTG_HS_EP1_IN_IRQn          = 75,      
+  OTG_HS_WKUP_IRQn            = 76,      
+  OTG_HS_IRQn                 = 77,      
+  DCMI_IRQn                   = 78,      
+  CRYP_IRQn                   = 79,      
+  HASH_RNG_IRQn               = 80,      
+  FPU_IRQn                    = 81       
+
+
+#line 350 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+    
+#line 425 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+   
+#line 471 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 541 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+} IRQn_Type;
+
+
+
+ 
+
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\Libraries\\CMSIS\\Include\\core_cm4.h"
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ #pragma system_include   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+
+#line 93 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\Libraries\\CMSIS\\Include\\core_cm4.h"
+
+#line 110 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\Libraries\\CMSIS\\Include\\core_cm4.h"
+
+
+
+ 
+#line 149 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\Libraries\\CMSIS\\Include\\core_cm4.h"
+
+#line 186 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\Libraries\\CMSIS\\Include\\core_cm4.h"
+
+#line 1 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\stdint.h"
+ 
+ 
+
+
+
+
+  #pragma system_include
+
+
+#line 1 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\ycheck.h"
+ 
+ 
+
+ 
+
+
+  #pragma system_include
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+#line 11 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\stdint.h"
+#line 1 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\yvals.h"
+ 
+ 
+
+
+
+
+
+  #pragma system_include
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+
+
+ 
+#pragma rtmodel = "__dlib_version", "6"
+
+ 
+
+
+
+
+
+ 
+#line 1 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\DLib_Defaults.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+  #pragma system_include
+
+
+ 
+#line 1 "E:\\\\IAR Systems\\\\Embedded Workbench 8.3\\\\arm\\\\inc\\\\c\\\\DLib_Config_Full.h"
+ 
+ 
+
+
+
+
+
+  #pragma system_include
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+#line 40 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\DLib_Defaults.h"
+   
+#line 47 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\DLib_Defaults.h"
+
+ 
+#line 1 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\DLib_Product.h"
+ 
+
+
+
+
+
+   #pragma system_include
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+#line 106 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\DLib_Product.h"
+
+
+
+
+
+
+
+
+
+#line 51 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\DLib_Defaults.h"
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+#line 153 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\DLib_Defaults.h"
+
+
+
+
+
+
+
+
+
+ 
+
+#line 172 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\DLib_Defaults.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+#line 223 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\DLib_Defaults.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+#line 311 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\DLib_Defaults.h"
+
+
+
+
+
+
+
+
+ 
+#line 331 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\DLib_Defaults.h"
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+#line 400 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\DLib_Defaults.h"
+
+
+
+
+
+ 
+
+#line 414 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\DLib_Defaults.h"
+
+
+   
+#line 424 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\DLib_Defaults.h"
+
+#line 432 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\DLib_Defaults.h"
+
+  
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+ 
+#line 461 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\DLib_Defaults.h"
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+   
+#line 518 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\DLib_Defaults.h"
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+#line 542 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\DLib_Defaults.h"
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+#line 582 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\DLib_Defaults.h"
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+#line 43 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\yvals.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+#line 81 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\yvals.h"
+
+ 
+
+
+
+
+
+
+ 
+#line 99 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\yvals.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+   
+#line 124 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\yvals.h"
+
+
+
+
+
+ 
+#line 142 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\yvals.h"
+
+
+
+
+ 
+#line 191 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\yvals.h"
+
+#line 199 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\yvals.h"
+
+#line 206 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\yvals.h"
+
+ 
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+  typedef unsigned int _Wchart;
+  typedef unsigned int _Wintt;
+#line 238 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\yvals.h"
+
+ 
+
+
+ 
+typedef unsigned int     _Sizet;
+
+ 
+typedef signed char   __int8_t;
+typedef unsigned char  __uint8_t;
+typedef signed short int   __int16_t;
+typedef unsigned short int  __uint16_t;
+typedef signed int   __int32_t;
+typedef unsigned int  __uint32_t;
+
+   typedef signed long long int   __int64_t;
+   typedef unsigned long long int  __uint64_t;
+
+
+
+
+typedef signed int   __intptr_t;
+typedef unsigned int  __uintptr_t;
+
+ 
+typedef struct _Mbstatet
+{  
+
+    unsigned int _Wchar;   
+    unsigned int _State;   
+#line 275 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\yvals.h"
+
+#line 299 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\yvals.h"
+} _Mbstatet;
+
+
+
+
+
+
+ 
+
+
+ 
+#line 321 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\yvals.h"
+  typedef struct __va_list __Va_list;
+
+
+
+
+
+
+
+
+
+
+    typedef struct __FILE _Filet;
+
+
+
+ 
+typedef struct
+{
+
+    long long _Off;     
+
+
+
+  _Mbstatet _Wstate;
+} _Fpost;
+
+
+
+
+
+ 
+
+
+ 
+
+  
+   
+  _Pragma("object_attribute = __weak") __intrinsic __nounwind void __iar_Locksyslock_Malloc(void);
+  _Pragma("object_attribute = __weak") __intrinsic __nounwind void __iar_Locksyslock_Stream(void);
+  _Pragma("object_attribute = __weak") __intrinsic __nounwind void __iar_Locksyslock_Debug(void);
+  _Pragma("object_attribute = __weak") __intrinsic __nounwind void __iar_Locksyslock_StaticGuard(void);
+  _Pragma("object_attribute = __weak") __intrinsic __nounwind void __iar_Unlocksyslock_Malloc(void);
+  _Pragma("object_attribute = __weak") __intrinsic __nounwind void __iar_Unlocksyslock_Stream(void);
+  _Pragma("object_attribute = __weak") __intrinsic __nounwind void __iar_Unlocksyslock_Debug(void);
+  _Pragma("object_attribute = __weak") __intrinsic __nounwind void __iar_Unlocksyslock_StaticGuard(void);
+
+
+
+      _Pragma("object_attribute = __weak") __intrinsic __nounwind void __iar_Lockfilelock(_Filet *);
+      _Pragma("object_attribute = __weak") __intrinsic __nounwind void __iar_Unlockfilelock(_Filet *);
+
+
+
+  typedef void *__iar_Rmtx;
+
+  _Pragma("object_attribute = __weak") __intrinsic __nounwind void __iar_Initdynamiclock(__iar_Rmtx *);
+  _Pragma("object_attribute = __weak") __intrinsic __nounwind void __iar_Dstdynamiclock(__iar_Rmtx *);
+  _Pragma("object_attribute = __weak") __intrinsic __nounwind void __iar_Lockdynamiclock(__iar_Rmtx *);
+  _Pragma("object_attribute = __weak") __intrinsic __nounwind void __iar_Unlockdynamiclock(__iar_Rmtx *);
+
+  
+#line 406 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\yvals.h"
+
+#line 446 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\yvals.h"
+
+
+
+
+
+
+ 
+#line 12 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\stdint.h"
+
+
+
+
+
+ 
+
+  typedef signed char          int8_t;
+  typedef unsigned char        uint8_t;
+
+
+
+  typedef signed short int         int16_t;
+  typedef unsigned short int       uint16_t;
+
+
+
+  typedef signed int         int32_t;
+  typedef unsigned int       uint32_t;
+
+
+
+  typedef signed long long int         int64_t;
+  typedef unsigned long long int       uint64_t;
+
+
+
+ 
+typedef signed char      int_least8_t;
+typedef unsigned char    uint_least8_t;
+
+typedef signed short int     int_least16_t;
+typedef unsigned short int   uint_least16_t;
+
+typedef signed int     int_least32_t;
+typedef unsigned int   uint_least32_t;
+
+ 
+
+  typedef signed long long int   int_least64_t;
+
+
+  typedef unsigned long long int uint_least64_t;
+
+
+
+
+ 
+typedef signed int       int_fast8_t;
+typedef unsigned int     uint_fast8_t;
+
+typedef signed int      int_fast16_t;
+typedef unsigned int    uint_fast16_t;
+
+typedef signed int      int_fast32_t;
+typedef unsigned int    uint_fast32_t;
+
+
+  typedef signed long long int    int_fast64_t;
+
+
+  typedef unsigned long long int  uint_fast64_t;
+
+
+ 
+typedef signed long long int          intmax_t;
+typedef unsigned long long int        uintmax_t;
+
+
+ 
+typedef signed int          intptr_t;
+typedef unsigned int        uintptr_t;
+
+ 
+
+
+
+typedef int __data_intptr_t; typedef unsigned int __data_uintptr_t;
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+#line 188 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\Libraries\\CMSIS\\Include\\core_cm4.h"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\core_cmInstr.h"
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+#line 854 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\core_cmInstr.h"
+ 
+#line 1 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\cmsis_iar.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#pragma system_include
+
+
+
+
+
+
+
+
+ 
+#line 64 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\cmsis_iar.h"
+
+
+#line 73 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\cmsis_iar.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  #pragma language=save
+  #pragma language=extended
+  _Pragma("inline=forced") __intrinsic uint16_t __iar_uint16_read(void const *ptr) {
+    return *(__packed uint16_t*)(ptr);
+  }
+  #pragma language=restore
+
+
+
+
+
+  #pragma language=save
+  #pragma language=extended
+  _Pragma("inline=forced") __intrinsic void __iar_uint16_write(void const *ptr, uint16_t val) {
+    *(__packed uint16_t*)(ptr) = val;;
+  }
+  #pragma language=restore
+
+
+
+
+  #pragma language=save
+  #pragma language=extended
+  _Pragma("inline=forced") __intrinsic uint32_t __iar_uint32_read(void const *ptr) {
+    return *(__packed uint32_t*)(ptr);
+  }
+  #pragma language=restore
+
+
+
+
+  #pragma language=save
+  #pragma language=extended
+  _Pragma("inline=forced") __intrinsic void __iar_uint32_write(void const *ptr, uint32_t val) {
+    *(__packed uint32_t*)(ptr) = val;;
+  }
+  #pragma language=restore
+
+
+
+
+  #pragma language=save
+  #pragma language=extended
+  __packed struct  __iar_u32 { uint32_t v; };
+  #pragma language=restore
+
+
+
+
+
+
+
+
+
+
+
+
+#line 180 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\cmsis_iar.h"
+
+#line 1 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\iccarm_builtin.h"
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+  #pragma system_include
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+#pragma language=save
+#pragma language=extended
+
+__intrinsic __nounwind void    __iar_builtin_no_operation(void);
+
+__intrinsic __nounwind void    __iar_builtin_disable_interrupt(void);
+__intrinsic __nounwind void    __iar_builtin_enable_interrupt(void);
+
+typedef unsigned int __istate_t;
+
+__intrinsic __nounwind __istate_t __iar_builtin_get_interrupt_state(void);
+__intrinsic __nounwind void __iar_builtin_set_interrupt_state(__istate_t);
+
+ 
+__intrinsic __nounwind unsigned int __iar_builtin_get_PSR( void );
+__intrinsic __nounwind unsigned int __iar_builtin_get_IPSR( void );
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_get_MSP( void );
+__intrinsic __nounwind void         __iar_builtin_set_MSP( unsigned int );
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_get_PSP( void );
+__intrinsic __nounwind void         __iar_builtin_set_PSP( unsigned int );
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_get_PRIMASK( void );
+__intrinsic __nounwind void         __iar_builtin_set_PRIMASK( unsigned int );
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_get_CONTROL( void );
+__intrinsic __nounwind void         __iar_builtin_set_CONTROL( unsigned int );
+
+ 
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_get_FAULTMASK( void );
+__intrinsic __nounwind void         __iar_builtin_set_FAULTMASK(unsigned int);
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_get_BASEPRI( void );
+__intrinsic __nounwind void         __iar_builtin_set_BASEPRI( unsigned int );
+
+ 
+__intrinsic __nounwind void __iar_builtin_disable_irq(void);
+__intrinsic __nounwind void __iar_builtin_enable_irq(void);
+
+__intrinsic __nounwind void __iar_builtin_disable_fiq(void);
+__intrinsic __nounwind void __iar_builtin_enable_fiq(void);
+
+
+ 
+
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_SWP( unsigned int, volatile unsigned int * );
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned char __iar_builtin_SWPB( unsigned char, volatile unsigned char * );
+
+typedef unsigned int __ul;
+typedef unsigned int __iar_builtin_uint;
+
+
+
+
+
+
+ 
+
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind void __iar_builtin_CDP (unsigned __constrange(0,15) coproc, unsigned __constrange(0,15) opc1, unsigned __constrange(0,15) CRd, unsigned __constrange(0,15) CRn, unsigned __constrange(0,15) CRm, unsigned __constrange(0,8) opc2) ;
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind void __iar_builtin_CDP2(unsigned __constrange(0,15) coproc, unsigned __constrange(0,15) opc1, unsigned __constrange(0,15) CRd, unsigned __constrange(0,15) CRn, unsigned __constrange(0,15) CRm, unsigned __constrange(0,8) opc2) ;
+
+ 
+__intrinsic __nounwind void          __iar_builtin_MCR( unsigned __constrange(0,15) coproc, unsigned __constrange(0,8) opcode_1, __iar_builtin_uint src,
+                                unsigned __constrange(0,15) CRn, unsigned __constrange(0,15) CRm, unsigned __constrange(0,8) opcode_2 )  ;
+__intrinsic __nounwind unsigned int __iar_builtin_MRC( unsigned __constrange(0,15) coproc, unsigned __constrange(0,8) opcode_1,
+                                unsigned __constrange(0,15) CRn, unsigned __constrange(0,15) CRm, unsigned __constrange(0,8) opcode_2 )  ;
+__intrinsic __nounwind void          __iar_builtin_MCR2( unsigned __constrange(0,15) coproc, unsigned __constrange(0,8) opcode_1, __iar_builtin_uint src,
+                                 unsigned __constrange(0,15) CRn, unsigned __constrange(0,15) CRm, unsigned __constrange(0,8) opcode_2 ) ;
+__intrinsic __nounwind unsigned int __iar_builtin_MRC2( unsigned __constrange(0,15) coproc, unsigned __constrange(0,8) opcode_1,
+                                 unsigned __constrange(0,15) CRn, unsigned __constrange(0,15) CRm, unsigned __constrange(0,8) opcode_2 ) ;
+
+__intrinsic __nounwind void __iar_builtin_MCRR (unsigned __constrange(0,15) coproc, unsigned __constrange(0,8) opc1, unsigned long long src, unsigned __constrange(0,15) CRm) ;
+__intrinsic __nounwind void __iar_builtin_MCRR2(unsigned __constrange(0,15) coproc, unsigned __constrange(0,8) opc1, unsigned long long src, unsigned __constrange(0,15) CRm) ;
+
+__intrinsic __nounwind unsigned long long __iar_builtin_MRRC (unsigned __constrange(0,15) coproc, unsigned __constrange(0,8) opc1, unsigned __constrange(0,15) CRm) ;
+__intrinsic __nounwind unsigned long long __iar_builtin_MRRC2(unsigned __constrange(0,15) coproc, unsigned __constrange(0,8) opc1, unsigned __constrange(0,15) CRm) ;
+
+ 
+__intrinsic __nounwind void __iar_builtin_LDC  ( unsigned __constrange(0,15) coproc, unsigned __constrange(0,15) CRn, volatile __iar_builtin_uint const *src) ;
+__intrinsic __nounwind void __iar_builtin_LDCL ( unsigned __constrange(0,15) coproc, unsigned __constrange(0,15) CRn, volatile __iar_builtin_uint const *src) ;
+__intrinsic __nounwind void __iar_builtin_LDC2 ( unsigned __constrange(0,15) coproc, unsigned __constrange(0,15) CRn, volatile __iar_builtin_uint const *src) ;
+__intrinsic __nounwind void __iar_builtin_LDC2L( unsigned __constrange(0,15) coproc, unsigned __constrange(0,15) CRn, volatile __iar_builtin_uint const *src) ;
+
+ 
+__intrinsic __nounwind void __iar_builtin_STC  ( unsigned __constrange(0,15) coproc, unsigned __constrange(0,15) CRn, volatile __iar_builtin_uint *dst) ;
+__intrinsic __nounwind void __iar_builtin_STCL ( unsigned __constrange(0,15) coproc, unsigned __constrange(0,15) CRn, volatile __iar_builtin_uint *dst) ;
+__intrinsic __nounwind void __iar_builtin_STC2 ( unsigned __constrange(0,15) coproc, unsigned __constrange(0,15) CRn, volatile __iar_builtin_uint *dst) ;
+__intrinsic __nounwind void __iar_builtin_STC2L( unsigned __constrange(0,15) coproc, unsigned __constrange(0,15) CRn, volatile __iar_builtin_uint *dst) ;
+
+ 
+__intrinsic __nounwind void __iar_builtin_LDC_noidx( unsigned __constrange(0,15) coproc, unsigned __constrange(0,15) CRn, volatile __iar_builtin_uint const *src,
+                              unsigned __constrange(0,255) option);
+
+__intrinsic __nounwind void __iar_builtin_LDCL_noidx( unsigned __constrange(0,15) coproc, unsigned __constrange(0,15) CRn, volatile __iar_builtin_uint const *src,
+                               unsigned __constrange(0,255) option);
+
+__intrinsic __nounwind void __iar_builtin_LDC2_noidx( unsigned __constrange(0,15) coproc, unsigned __constrange(0,15) CRn, volatile __iar_builtin_uint const *src,
+                               unsigned __constrange(0,255) option);
+
+__intrinsic __nounwind void __iar_builtin_LDC2L_noidx( unsigned __constrange(0,15) coproc, unsigned __constrange(0,15) CRn, volatile __iar_builtin_uint const *src,
+                                unsigned __constrange(0,255) option);
+
+ 
+__intrinsic __nounwind void __iar_builtin_STC_noidx( unsigned __constrange(0,15) coproc, unsigned __constrange(0,15) CRn, volatile __iar_builtin_uint *dst,
+                              unsigned __constrange(0,255) option);
+
+__intrinsic __nounwind void __iar_builtin_STCL_noidx( unsigned __constrange(0,15) coproc, unsigned __constrange(0,15) CRn, volatile __iar_builtin_uint *dst,
+                               unsigned __constrange(0,255) option);
+
+__intrinsic __nounwind void __iar_builtin_STC2_noidx( unsigned __constrange(0,15) coproc, unsigned __constrange(0,15) CRn, volatile __iar_builtin_uint *dst,
+                               unsigned __constrange(0,255) option);
+
+__intrinsic __nounwind void __iar_builtin_STC2L_noidx( unsigned __constrange(0,15) coproc, unsigned __constrange(0,15) CRn, volatile __iar_builtin_uint *dst,
+                                unsigned __constrange(0,255) option);
+
+
+
+ 
+__intrinsic __nounwind unsigned int       __iar_builtin_rsr(__spec_string const char * special_register)   ;
+__intrinsic __nounwind unsigned long long __iar_builtin_rsr64(__spec_string const char * special_register) ;
+__intrinsic __nounwind void*              __iar_builtin_rsrp(__spec_string const char * special_register)  ;
+
+ 
+__intrinsic __nounwind void __iar_builtin_wsr(__spec_string const char * special_register, unsigned int value)         ;
+__intrinsic __nounwind void __iar_builtin_wsr64(__spec_string const char * special_register, unsigned long long value) ;
+__intrinsic __nounwind void __iar_builtin_wsrp(__spec_string const char * special_register, const void *value)         ;
+
+ 
+__intrinsic __nounwind unsigned int __iar_builtin_get_APSR( void );
+__intrinsic __nounwind void         __iar_builtin_set_APSR( unsigned int );
+
+ 
+__intrinsic __nounwind unsigned int __iar_builtin_get_CPSR( void );
+__intrinsic __nounwind void         __iar_builtin_set_CPSR( unsigned int );
+
+ 
+__intrinsic __nounwind unsigned int __iar_builtin_get_FPSCR( void );
+__intrinsic __nounwind void __iar_builtin_set_FPSCR( unsigned int );
+
+ 
+ 
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_CLZ(unsigned int) ;
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_ROR(unsigned int, unsigned int) ;
+__intrinsic __nounwind unsigned int __iar_builtin_RRX(unsigned int);
+
+ 
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind signed int __iar_builtin_QADD( signed int, signed int );
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind signed int __iar_builtin_QDADD( signed int, signed int );
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind signed int __iar_builtin_QSUB( signed int, signed int );
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind signed int __iar_builtin_QDSUB( signed int, signed int );
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind signed int __iar_builtin_QDOUBLE( signed int );
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind int        __iar_builtin_QFlag( void );
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind int   __iar_builtin_acle_QFlag(void);
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind void  __iar_builtin_set_QFlag(int);
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind void  __iar_builtin_ignore_QFlag(void);
+
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind int         __iar_builtin_QCFlag( void );
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind void __iar_builtin_reset_QC_flag( void );
+
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind signed int __iar_builtin_SMUL( signed short, signed short );
+
+ 
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_REV( unsigned int );
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind signed int __iar_builtin_REVSH( short );
+
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_REV16( unsigned int );
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_RBIT( unsigned int );
+
+__intrinsic __nounwind unsigned char  __iar_builtin_LDREXB( volatile unsigned char const * );
+__intrinsic __nounwind unsigned short __iar_builtin_LDREXH( volatile unsigned short const * );
+__intrinsic __nounwind unsigned int  __iar_builtin_LDREX ( volatile unsigned int const * );
+__intrinsic __nounwind unsigned long long __iar_builtin_LDREXD( volatile unsigned long long const * );
+
+__intrinsic __nounwind unsigned int  __iar_builtin_STREXB( unsigned char, volatile unsigned char * );
+__intrinsic __nounwind unsigned int  __iar_builtin_STREXH( unsigned short, volatile unsigned short * );
+__intrinsic __nounwind unsigned int  __iar_builtin_STREX ( unsigned int, volatile unsigned int * );
+__intrinsic __nounwind unsigned int  __iar_builtin_STREXD( unsigned long long, volatile unsigned long long * );
+
+__intrinsic __nounwind void __iar_builtin_CLREX( void );
+
+__intrinsic __nounwind void __iar_builtin_SEV( void );
+__intrinsic __nounwind void __iar_builtin_WFE( void );
+__intrinsic __nounwind void __iar_builtin_WFI( void );
+__intrinsic __nounwind void __iar_builtin_YIELD( void );
+
+__intrinsic __nounwind void __iar_builtin_PLI( volatile void const * );
+__intrinsic __nounwind void __iar_builtin_PLD( volatile void const * );
+
+__intrinsic __nounwind void __iar_builtin_PLIx( volatile void const *, unsigned int __constrange(0,2), unsigned int __constrange(0,1));
+__intrinsic __nounwind void __iar_builtin_PLDx( volatile void const *, unsigned int __constrange(0, 1), unsigned int __constrange(0, 2), unsigned int __constrange(0, 1));
+__intrinsic __nounwind void __iar_builtin_PLDW( volatile void const * );
+
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind signed int   __iar_builtin_SSAT     (signed int val, unsigned int __constrange( 1, 32 ) sat );
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_USAT     (signed int val, unsigned int __constrange( 0, 31 ) sat );
+
+ 
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_SEL( unsigned int op1, unsigned int op2 );
+
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_SADD8    (unsigned int pair1, unsigned int pair2);
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_SADD16   (unsigned int pair1, unsigned int pair2);
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_SSUB8    (unsigned int pair1, unsigned int pair2);
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_SSUB16   (unsigned int pair1, unsigned int pair2);
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_SADDSUBX (unsigned int pair1, unsigned int pair2);
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_SSUBADDX (unsigned int pair1, unsigned int pair2);
+
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_SHADD8   (unsigned int pair1, unsigned int pair2);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_SHADD16  (unsigned int pair1, unsigned int pair2);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_SHSUB8   (unsigned int pair1, unsigned int pair2);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_SHSUB16  (unsigned int pair1, unsigned int pair2);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_SHADDSUBX(unsigned int pair1, unsigned int pair2);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_SHSUBADDX(unsigned int pair1, unsigned int pair2);
+
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_QADD8    (unsigned int pair1, unsigned int pair2);
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_QADD16   (unsigned int pair1, unsigned int pair2);
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_QSUB8    (unsigned int pair1, unsigned int pair2);
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_QSUB16   (unsigned int pair1, unsigned int pair2);
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_QADDSUBX (unsigned int pair1, unsigned int pair2);
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_QSUBADDX (unsigned int pair1, unsigned int pair2);
+
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_UADD8    (unsigned int pair1, unsigned int pair2);
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_UADD16   (unsigned int pair1, unsigned int pair2);
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_USUB8    (unsigned int pair1, unsigned int pair2);
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_USUB16   (unsigned int pair1, unsigned int pair2);
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_UADDSUBX (unsigned int pair1, unsigned int pair2);
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_USUBADDX (unsigned int pair1, unsigned int pair2);
+
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_UHADD8   (unsigned int pair1, unsigned int pair2);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_UHADD16  (unsigned int pair1, unsigned int pair2);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_UHSUB8   (unsigned int pair1, unsigned int pair2);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_UHSUB16  (unsigned int pair1, unsigned int pair2);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_UHADDSUBX(unsigned int pair1, unsigned int pair2);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_UHSUBADDX(unsigned int pair1, unsigned int pair2);
+
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_UQADD8   (unsigned int pair1, unsigned int pair2);
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_UQADD16  (unsigned int pair1, unsigned int pair2);
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_UQSUB8   (unsigned int pair1, unsigned int pair2);
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_UQSUB16  (unsigned int pair1, unsigned int pair2);
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_UQADDSUBX(unsigned int pair1, unsigned int pair2);
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_UQSUBADDX(unsigned int pair1, unsigned int pair2);
+
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_USAD8(unsigned int x, unsigned int y );
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_USADA8(unsigned int x, unsigned int y,
+                                   unsigned int acc );
+
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_SSAT16   (unsigned int pair,
+                                      unsigned int __constrange( 1, 16 ) sat );
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_USAT16   (unsigned int pair,
+                                      unsigned int __constrange( 0, 15 ) sat );
+
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind int __iar_builtin_SMUAD (unsigned int x, unsigned int y);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind int __iar_builtin_SMUSD (unsigned int x, unsigned int y);
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind int __iar_builtin_SMUADX(unsigned int x, unsigned int y);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind int __iar_builtin_SMUSDX(unsigned int x, unsigned int y);
+
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind int __iar_builtin_SMLAD (unsigned int x, unsigned int y, int sum);
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind int __iar_builtin_SMLSD (unsigned int x, unsigned int y, int sum);
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind int __iar_builtin_SMLADX(unsigned int x, unsigned int y, int sum);
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind int __iar_builtin_SMLSDX(unsigned int x, unsigned int y, int sum);
+
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind long long __iar_builtin_SMLALD (unsigned int pair1,
+                                 unsigned int pair2,
+                                 long long acc);
+
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind long long __iar_builtin_SMLALDX(unsigned int pair1,
+                                 unsigned int pair2,
+                                 long long acc);
+
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind long long __iar_builtin_SMLSLD (unsigned int pair1,
+                                 unsigned int pair2,
+                                 long long acc);
+
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind long long __iar_builtin_SMLSLDX(unsigned int pair1,
+                                 unsigned int pair2,
+                                 long long acc);
+
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_PKHBT(unsigned int x,
+                                  unsigned int y,
+                                  unsigned __constrange(0,31) count);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_PKHTB(unsigned int x,
+                                  unsigned int y,
+                                  unsigned __constrange(0,32) count);
+
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind int __iar_builtin_SMLABB(unsigned int x, unsigned int y, int acc);
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind int __iar_builtin_SMLABT(unsigned int x, unsigned int y, int acc);
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind int __iar_builtin_SMLATB(unsigned int x, unsigned int y, int acc);
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind int __iar_builtin_SMLATT(unsigned int x, unsigned int y, int acc);
+
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind int __iar_builtin_SMLAWB(int x, unsigned int y, int acc);
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind int __iar_builtin_SMLAWT(int x, unsigned int y, int acc);
+
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind int __iar_builtin_SMMLA (int x, int y, int acc);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind int __iar_builtin_SMMLAR(int x, int y, int acc);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind int __iar_builtin_SMMLS (int x, int y, int acc);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind int __iar_builtin_SMMLSR(int x, int y, int acc);
+
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind int __iar_builtin_SMMUL (int x, int y);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind int __iar_builtin_SMMULR(int x, int y);
+
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind int __iar_builtin_SMULBB(unsigned int x, unsigned int y);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind int __iar_builtin_SMULBT(unsigned int x, unsigned int y);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind int __iar_builtin_SMULTB(unsigned int x, unsigned int y);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind int __iar_builtin_SMULTT(unsigned int x, unsigned int y);
+
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind int __iar_builtin_SMULWB(int x, unsigned int y);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind int __iar_builtin_SMULWT(int x, unsigned int y);
+
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind int __iar_builtin_SXTAB (int x, unsigned int y);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind int __iar_builtin_SXTAH (int x, unsigned int y);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_UXTAB (unsigned int x, unsigned int y);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_UXTAH (unsigned int x, unsigned int y);
+
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned long long __iar_builtin_UMAAL(unsigned int x,
+                                       unsigned int y,
+                                       unsigned int a,
+                                       unsigned int b);
+
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind long long __iar_builtin_SMLALBB(unsigned int x,
+                                 unsigned int y,
+                                 long long acc);
+
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind long long __iar_builtin_SMLALBT(unsigned int x,
+                                 unsigned int y,
+                                 long long acc);
+
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind long long __iar_builtin_SMLALTB(unsigned int x,
+                                 unsigned int y,
+                                 long long acc);
+
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind long long __iar_builtin_SMLALTT(unsigned int x,
+                                 unsigned int y,
+                                 long long acc);
+
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_UXTB16(unsigned int x);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_UXTAB16(unsigned int acc, unsigned int x);
+
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_SXTB16(unsigned int x);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_SXTAB16(unsigned int acc, unsigned int x);
+
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_SASX(unsigned int, unsigned int) ;
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_SSAX(unsigned int, unsigned int) ;
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_SHASX(unsigned int, unsigned int) ;
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_SHSAX(unsigned int, unsigned int) ;
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_QASX(unsigned int, unsigned int) ;
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_QSAX(unsigned int, unsigned int) ;
+
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_UASX(unsigned int, unsigned int) ;
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_USAX(unsigned int, unsigned int) ;
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_UHASX(unsigned int, unsigned int) ;
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_UHSAX(unsigned int, unsigned int) ;
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_UQASX(unsigned int, unsigned int) ;
+_Pragma("function_effects = hidden_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_UQSAX(unsigned int, unsigned int) ;
+
+ 
+__intrinsic __nounwind void __iar_builtin_DMB(void);
+__intrinsic __nounwind void __iar_builtin_DSB(void);
+__intrinsic __nounwind void __iar_builtin_ISB(void);
+__intrinsic __nounwind void __iar_builtin_DMBx(unsigned int __constrange(1, 15)) ;
+__intrinsic __nounwind void __iar_builtin_DSBx(unsigned int __constrange(1, 15)) ;
+__intrinsic __nounwind void __iar_builtin_ISBx(unsigned int __constrange(1, 15)) ;
+
+ 
+__intrinsic __nounwind unsigned int __iar_builtin_TT(unsigned int);
+__intrinsic __nounwind unsigned int __iar_builtin_TTT(unsigned int);
+__intrinsic __nounwind unsigned int __iar_builtin_TTA(unsigned int);
+__intrinsic __nounwind unsigned int __iar_builtin_TTAT(unsigned int);
+
+__intrinsic __nounwind unsigned int __get_LR(void);
+__intrinsic __nounwind void __set_LR(unsigned int);
+
+__intrinsic __nounwind unsigned int __get_SP(void);
+__intrinsic __nounwind void __set_SP(unsigned int);
+
+ 
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind float __iar_builtin_VSQRT_F32(float x);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind double __iar_builtin_VSQRT_F64(double x);
+
+ 
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind float __iar_builtin_VFMA_F32(float x, float y, float z);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind float __iar_builtin_VFMS_F32(float x, float y, float z);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind float __iar_builtin_VFNMA_F32(float x, float y, float z);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind float __iar_builtin_VFNMS_F32(float x, float y, float z);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind double __iar_builtin_VFMA_F64(double x, double y, double z);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind double __iar_builtin_VFMS_F64(double x, double y, double z);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind double __iar_builtin_VFNMA_F64(double x, double y, double z);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind double __iar_builtin_VFNMS_F64(double x, double y, double z);
+
+ 
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_CRC32B(unsigned int crc, unsigned char data);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_CRC32H(unsigned int crc, unsigned short data);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_CRC32W(unsigned int crc, unsigned int data);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_CRC32CB(unsigned int crc, unsigned char data);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_CRC32CH(unsigned int crc, unsigned short data);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind unsigned int __iar_builtin_CRC32CW(unsigned int crc, unsigned int data);
+
+ 
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind float __iar_builtin_VMAXNM_F32(float a, float b);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind float __iar_builtin_VMINNM_F32(float a, float b);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind double __iar_builtin_VMAXNM_F64(double a, double b);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind double __iar_builtin_VMINNM_F64(double a, double b);
+
+ 
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind float __iar_builtin_VRINTA_F32(float a);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind float __iar_builtin_VRINTM_F32(float a);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind float __iar_builtin_VRINTN_F32(float a);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind float __iar_builtin_VRINTP_F32(float a);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind float __iar_builtin_VRINTX_F32(float a);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind float __iar_builtin_VRINTR_F32(float a);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind float __iar_builtin_VRINTZ_F32(float a);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind double __iar_builtin_VRINTA_F64(double a);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind double __iar_builtin_VRINTM_F64(double a);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind double __iar_builtin_VRINTN_F64(double a);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind double __iar_builtin_VRINTP_F64(double a);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind double __iar_builtin_VRINTX_F64(double a);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind double __iar_builtin_VRINTR_F64(double a);
+_Pragma("function_effects = no_state, always_returns") __intrinsic __nounwind double __iar_builtin_VRINTZ_F64(double a);
+
+#pragma language=restore
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#line 182 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\cmsis_iar.h"
+
+#line 189 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\cmsis_iar.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+#line 209 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\cmsis_iar.h"
+
+#line 220 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\cmsis_iar.h"
+
+#line 239 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\cmsis_iar.h"
+
+
+
+
+
+
+  _Pragma("inline=forced") __intrinsic uint8_t __CLZ(uint32_t val) {
+	return __iar_builtin_CLZ(val);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+_Pragma("inline=forced") __intrinsic int32_t __REVSH(int32_t val) {
+  return __iar_builtin_REVSH((int16_t)val);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#line 350 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\cmsis_iar.h"
+
+
+
+#line 393 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\cmsis_iar.h"
+
+
+
+  _Pragma("inline=forced") __intrinsic uint8_t __LDRBT(volatile uint8_t *addr) {
+    uint32_t res;
+    __asm("LDRBT %0, [%1]" : "=r" (res) : "r" (addr) : "memory");
+    return ((uint8_t)res);
+  }
+
+  _Pragma("inline=forced") __intrinsic uint16_t __LDRHT(volatile uint16_t *addr) {
+    uint32_t res;
+    __asm("LDRHT %0, [%1]" : "=r" (res) : "r" (addr) : "memory");
+    return ((uint16_t)res);
+  }
+
+  _Pragma("inline=forced") __intrinsic uint32_t __LDRT(volatile uint32_t *addr) {
+    uint32_t res;
+    __asm("LDRT %0, [%1]" : "=r" (res) : "r" (addr) : "memory");
+    return res;
+  }
+
+  _Pragma("inline=forced") __intrinsic void __STRBT(uint8_t value, volatile uint8_t *addr) {
+    __asm("STRBT %1, [%0]" : : "r" (addr), "r" ((uint32_t)value) : "memory");
+  }
+
+  _Pragma("inline=forced") __intrinsic void __STRHT(uint16_t value, volatile uint16_t *addr) {
+    __asm("STRHT %1, [%0]" : : "r" (addr), "r" ((uint32_t)value) : "memory");
+  }
+
+  _Pragma("inline=forced") __intrinsic void __STRT(uint32_t value, volatile uint32_t *addr) {
+    __asm("STRT %1, [%0]" : : "r" (addr), "r" (value) : "memory");
+  }
+
+
+
+#line 498 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\cmsis_iar.h"
+
+
+
+
+#pragma diag_default=Pe940
+#pragma diag_default=Pe177
+
+#line 856 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\core_cmInstr.h"
+
+
+#line 877 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\core_cmInstr.h"
+
+   
+
+#line 189 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\Libraries\\CMSIS\\Include\\core_cm4.h"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\core_cmFunc.h"
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+#line 611 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\core_cmFunc.h"
+ 
+
+
+
+#line 634 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\core_cmFunc.h"
+
+ 
+
+#line 190 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\Libraries\\CMSIS\\Include\\core_cm4.h"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\core_cmSimd.h"
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ #pragma system_include   
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+ 
+
+
+
+ 
+
+#line 670 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\core_cmSimd.h"
+ 
+
+
+
+#line 689 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\core_cmSimd.h"
+
+ 
+
+
+
+
+
+
+#line 191 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\Libraries\\CMSIS\\Include\\core_cm4.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+#line 234 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\Libraries\\CMSIS\\Include\\core_cm4.h"
+
+ 
+
+
+
+
+
+
+ 
+#line 250 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\Libraries\\CMSIS\\Include\\core_cm4.h"
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+ 
+
+
+
+
+
+ 
+
+
+ 
+typedef union
+{
+  struct
+  {
+
+
+
+    uint32_t _reserved0:16;               
+    uint32_t GE:4;                        
+    uint32_t _reserved1:7;                
+
+    uint32_t Q:1;                         
+    uint32_t V:1;                         
+    uint32_t C:1;                         
+    uint32_t Z:1;                         
+    uint32_t N:1;                         
+  } b;                                    
+  uint32_t w;                             
+} APSR_Type;
+
+
+
+ 
+typedef union
+{
+  struct
+  {
+    uint32_t ISR:9;                       
+    uint32_t _reserved0:23;               
+  } b;                                    
+  uint32_t w;                             
+} IPSR_Type;
+
+
+
+ 
+typedef union
+{
+  struct
+  {
+    uint32_t ISR:9;                       
+
+
+
+    uint32_t _reserved0:7;                
+    uint32_t GE:4;                        
+    uint32_t _reserved1:4;                
+
+    uint32_t T:1;                         
+    uint32_t IT:2;                        
+    uint32_t Q:1;                         
+    uint32_t V:1;                         
+    uint32_t C:1;                         
+    uint32_t Z:1;                         
+    uint32_t N:1;                         
+  } b;                                    
+  uint32_t w;                             
+} xPSR_Type;
+
+
+
+ 
+typedef union
+{
+  struct
+  {
+    uint32_t nPRIV:1;                     
+    uint32_t SPSEL:1;                     
+    uint32_t FPCA:1;                      
+    uint32_t _reserved0:29;               
+  } b;                                    
+  uint32_t w;                             
+} CONTROL_Type;
+
+ 
+
+
+
+
+
+
+ 
+
+
+ 
+typedef struct
+{
+  volatile uint32_t ISER[8];                  
+       uint32_t RESERVED0[24];
+  volatile uint32_t ICER[8];                  
+       uint32_t RSERVED1[24];
+  volatile uint32_t ISPR[8];                  
+       uint32_t RESERVED2[24];
+  volatile uint32_t ICPR[8];                  
+       uint32_t RESERVED3[24];
+  volatile uint32_t IABR[8];                  
+       uint32_t RESERVED4[56];
+  volatile uint8_t  IP[240];                  
+       uint32_t RESERVED5[644];
+  volatile  uint32_t STIR;                     
+}  NVIC_Type;
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+ 
+typedef struct
+{
+  volatile const  uint32_t CPUID;                    
+  volatile uint32_t ICSR;                     
+  volatile uint32_t VTOR;                     
+  volatile uint32_t AIRCR;                    
+  volatile uint32_t SCR;                      
+  volatile uint32_t CCR;                      
+  volatile uint8_t  SHP[12];                  
+  volatile uint32_t SHCSR;                    
+  volatile uint32_t CFSR;                     
+  volatile uint32_t HFSR;                     
+  volatile uint32_t DFSR;                     
+  volatile uint32_t MMFAR;                    
+  volatile uint32_t BFAR;                     
+  volatile uint32_t AFSR;                     
+  volatile const  uint32_t PFR[2];                   
+  volatile const  uint32_t DFR;                      
+  volatile const  uint32_t ADR;                      
+  volatile const  uint32_t MMFR[4];                  
+  volatile const  uint32_t ISAR[5];                  
+       uint32_t RESERVED0[5];
+  volatile uint32_t CPACR;                    
+} SCB_Type;
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+ 
+typedef struct
+{
+       uint32_t RESERVED0[1];
+  volatile const  uint32_t ICTR;                     
+  volatile uint32_t ACTLR;                    
+} SCnSCB_Type;
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+ 
+typedef struct
+{
+  volatile uint32_t CTRL;                     
+  volatile uint32_t LOAD;                     
+  volatile uint32_t VAL;                      
+  volatile const  uint32_t CALIB;                    
+} SysTick_Type;
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+ 
+typedef struct
+{
+  volatile  union
+  {
+    volatile  uint8_t    u8;                   
+    volatile  uint16_t   u16;                  
+    volatile  uint32_t   u32;                  
+  }  PORT [32];                           
+       uint32_t RESERVED0[864];
+  volatile uint32_t TER;                      
+       uint32_t RESERVED1[15];
+  volatile uint32_t TPR;                      
+       uint32_t RESERVED2[15];
+  volatile uint32_t TCR;                      
+       uint32_t RESERVED3[29];
+  volatile  uint32_t IWR;                      
+  volatile const  uint32_t IRR;                      
+  volatile uint32_t IMCR;                     
+       uint32_t RESERVED4[43];
+  volatile  uint32_t LAR;                      
+  volatile const  uint32_t LSR;                      
+       uint32_t RESERVED5[6];
+  volatile const  uint32_t PID4;                     
+  volatile const  uint32_t PID5;                     
+  volatile const  uint32_t PID6;                     
+  volatile const  uint32_t PID7;                     
+  volatile const  uint32_t PID0;                     
+  volatile const  uint32_t PID1;                     
+  volatile const  uint32_t PID2;                     
+  volatile const  uint32_t PID3;                     
+  volatile const  uint32_t CID0;                     
+  volatile const  uint32_t CID1;                     
+  volatile const  uint32_t CID2;                     
+  volatile const  uint32_t CID3;                     
+} ITM_Type;
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+ 
+
+
+ 
+typedef struct
+{
+  volatile uint32_t CTRL;                     
+  volatile uint32_t CYCCNT;                   
+  volatile uint32_t CPICNT;                   
+  volatile uint32_t EXCCNT;                   
+  volatile uint32_t SLEEPCNT;                 
+  volatile uint32_t LSUCNT;                   
+  volatile uint32_t FOLDCNT;                  
+  volatile const  uint32_t PCSR;                     
+  volatile uint32_t COMP0;                    
+  volatile uint32_t MASK0;                    
+  volatile uint32_t FUNCTION0;                
+       uint32_t RESERVED0[1];
+  volatile uint32_t COMP1;                    
+  volatile uint32_t MASK1;                    
+  volatile uint32_t FUNCTION1;                
+       uint32_t RESERVED1[1];
+  volatile uint32_t COMP2;                    
+  volatile uint32_t MASK2;                    
+  volatile uint32_t FUNCTION2;                
+       uint32_t RESERVED2[1];
+  volatile uint32_t COMP3;                    
+  volatile uint32_t MASK3;                    
+  volatile uint32_t FUNCTION3;                
+} DWT_Type;
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+ 
+
+
+ 
+typedef struct
+{
+  volatile uint32_t SSPSR;                    
+  volatile uint32_t CSPSR;                    
+       uint32_t RESERVED0[2];
+  volatile uint32_t ACPR;                     
+       uint32_t RESERVED1[55];
+  volatile uint32_t SPPR;                     
+       uint32_t RESERVED2[131];
+  volatile const  uint32_t FFSR;                     
+  volatile uint32_t FFCR;                     
+  volatile const  uint32_t FSCR;                     
+       uint32_t RESERVED3[759];
+  volatile const  uint32_t TRIGGER;                  
+  volatile const  uint32_t FIFO0;                    
+  volatile const  uint32_t ITATBCTR2;                
+       uint32_t RESERVED4[1];
+  volatile const  uint32_t ITATBCTR0;                
+  volatile const  uint32_t FIFO1;                    
+  volatile uint32_t ITCTRL;                   
+       uint32_t RESERVED5[39];
+  volatile uint32_t CLAIMSET;                 
+  volatile uint32_t CLAIMCLR;                 
+       uint32_t RESERVED7[8];
+  volatile const  uint32_t DEVID;                    
+  volatile const  uint32_t DEVTYPE;                  
+} TPI_Type;
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+ 
+
+
+ 
+typedef struct
+{
+  volatile const  uint32_t TYPE;                     
+  volatile uint32_t CTRL;                     
+  volatile uint32_t RNR;                      
+  volatile uint32_t RBAR;                     
+  volatile uint32_t RASR;                     
+  volatile uint32_t RBAR_A1;                  
+  volatile uint32_t RASR_A1;                  
+  volatile uint32_t RBAR_A2;                  
+  volatile uint32_t RASR_A2;                  
+  volatile uint32_t RBAR_A3;                  
+  volatile uint32_t RASR_A3;                  
+} MPU_Type;
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+
+ 
+typedef struct
+{
+       uint32_t RESERVED0[1];
+  volatile uint32_t FPCCR;                    
+  volatile uint32_t FPCAR;                    
+  volatile uint32_t FPDSCR;                   
+  volatile const  uint32_t MVFR0;                    
+  volatile const  uint32_t MVFR1;                    
+} FPU_Type;
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+ 
+typedef struct
+{
+  volatile uint32_t DHCSR;                    
+  volatile  uint32_t DCRSR;                    
+  volatile uint32_t DCRDR;                    
+  volatile uint32_t DEMCR;                    
+} CoreDebug_Type;
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+ 
+#line 1408 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\Libraries\\CMSIS\\Include\\core_cm4.h"
+
+#line 1417 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\Libraries\\CMSIS\\Include\\core_cm4.h"
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+static inline void NVIC_SetPriorityGrouping(uint32_t PriorityGroup)
+{
+  uint32_t reg_value;
+  uint32_t PriorityGroupTmp = (PriorityGroup & (uint32_t)0x07);                
+
+  reg_value  =  ((SCB_Type *) ((0xE000E000UL) + 0x0D00UL) )->AIRCR;                                                    
+  reg_value &= ~((0xFFFFUL << 16) | (7UL << 8));              
+  reg_value  =  (reg_value                                 |
+                ((uint32_t)0x5FA << 16) |
+                (PriorityGroupTmp << 8));                                      
+  ((SCB_Type *) ((0xE000E000UL) + 0x0D00UL) )->AIRCR =  reg_value;
+}
+
+
+
+
+
+
+
+ 
+static inline uint32_t NVIC_GetPriorityGrouping(void)
+{
+  return ((((SCB_Type *) ((0xE000E000UL) + 0x0D00UL) )->AIRCR & (7UL << 8)) >> 8);    
+}
+
+
+
+
+
+
+
+ 
+static inline void NVIC_EnableIRQ(IRQn_Type IRQn)
+{
+ 
+  ((NVIC_Type *) ((0xE000E000UL) + 0x0100UL) )->ISER[(uint32_t)((int32_t)IRQn) >> 5] = (uint32_t)(1 << ((uint32_t)((int32_t)IRQn) & (uint32_t)0x1F));  
+}
+
+
+
+
+
+
+
+ 
+static inline void NVIC_DisableIRQ(IRQn_Type IRQn)
+{
+  ((NVIC_Type *) ((0xE000E000UL) + 0x0100UL) )->ICER[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F));  
+}
+
+
+
+
+
+
+
+
+
+
+
+ 
+static inline uint32_t NVIC_GetPendingIRQ(IRQn_Type IRQn)
+{
+  return((uint32_t) ((((NVIC_Type *) ((0xE000E000UL) + 0x0100UL) )->ISPR[(uint32_t)(IRQn) >> 5] & (1 << ((uint32_t)(IRQn) & 0x1F)))?1:0));  
+}
+
+
+
+
+
+
+
+ 
+static inline void NVIC_SetPendingIRQ(IRQn_Type IRQn)
+{
+  ((NVIC_Type *) ((0xE000E000UL) + 0x0100UL) )->ISPR[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F));  
+}
+
+
+
+
+
+
+
+ 
+static inline void NVIC_ClearPendingIRQ(IRQn_Type IRQn)
+{
+  ((NVIC_Type *) ((0xE000E000UL) + 0x0100UL) )->ICPR[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F));  
+}
+
+
+
+
+
+
+
+
+
+
+ 
+static inline uint32_t NVIC_GetActive(IRQn_Type IRQn)
+{
+  return((uint32_t)((((NVIC_Type *) ((0xE000E000UL) + 0x0100UL) )->IABR[(uint32_t)(IRQn) >> 5] & (1 << ((uint32_t)(IRQn) & 0x1F)))?1:0));  
+}
+
+
+
+
+
+
+
+
+
+
+ 
+static inline void NVIC_SetPriority(IRQn_Type IRQn, uint32_t priority)
+{
+  if(IRQn < 0) {
+    ((SCB_Type *) ((0xE000E000UL) + 0x0D00UL) )->SHP[((uint32_t)(IRQn) & 0xF)-4] = ((priority << (8 - 4)) & 0xff); }  
+  else {
+    ((NVIC_Type *) ((0xE000E000UL) + 0x0100UL) )->IP[(uint32_t)(IRQn)] = ((priority << (8 - 4)) & 0xff);    }         
+}
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+static inline uint32_t NVIC_GetPriority(IRQn_Type IRQn)
+{
+
+  if(IRQn < 0) {
+    return((uint32_t)(((SCB_Type *) ((0xE000E000UL) + 0x0D00UL) )->SHP[((uint32_t)(IRQn) & 0xF)-4] >> (8 - 4)));  }  
+  else {
+    return((uint32_t)(((NVIC_Type *) ((0xE000E000UL) + 0x0100UL) )->IP[(uint32_t)(IRQn)]           >> (8 - 4)));  }  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+static inline uint32_t NVIC_EncodePriority (uint32_t PriorityGroup, uint32_t PreemptPriority, uint32_t SubPriority)
+{
+  uint32_t PriorityGroupTmp = (PriorityGroup & 0x07);           
+  uint32_t PreemptPriorityBits;
+  uint32_t SubPriorityBits;
+
+  PreemptPriorityBits = ((7 - PriorityGroupTmp) > 4) ? 4 : 7 - PriorityGroupTmp;
+  SubPriorityBits     = ((PriorityGroupTmp + 4) < 7) ? 0 : PriorityGroupTmp - 7 + 4;
+
+  return (
+           ((PreemptPriority & ((1 << (PreemptPriorityBits)) - 1)) << SubPriorityBits) |
+           ((SubPriority     & ((1 << (SubPriorityBits    )) - 1)))
+         );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+static inline void NVIC_DecodePriority (uint32_t Priority, uint32_t PriorityGroup, uint32_t* pPreemptPriority, uint32_t* pSubPriority)
+{
+  uint32_t PriorityGroupTmp = (PriorityGroup & 0x07);           
+  uint32_t PreemptPriorityBits;
+  uint32_t SubPriorityBits;
+
+  PreemptPriorityBits = ((7 - PriorityGroupTmp) > 4) ? 4 : 7 - PriorityGroupTmp;
+  SubPriorityBits     = ((PriorityGroupTmp + 4) < 7) ? 0 : PriorityGroupTmp - 7 + 4;
+
+  *pPreemptPriority = (Priority >> SubPriorityBits) & ((1 << (PreemptPriorityBits)) - 1);
+  *pSubPriority     = (Priority                   ) & ((1 << (SubPriorityBits    )) - 1);
+}
+
+
+
+
+
+ 
+static inline void NVIC_SystemReset(void)
+{
+  __iar_builtin_DSB();                                                     
+ 
+  ((SCB_Type *) ((0xE000E000UL) + 0x0D00UL) )->AIRCR  = ((0x5FA << 16)      |
+                 (((SCB_Type *) ((0xE000E000UL) + 0x0D00UL) )->AIRCR & (7UL << 8)) |
+                 (1UL << 2));                    
+  __iar_builtin_DSB();                                                      
+  while(1);                                                     
+}
+
+ 
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+static inline uint32_t SysTick_Config(uint32_t ticks)
+{
+  if ((ticks - 1) > (0xFFFFFFUL << 0))  return (1);       
+
+  ((SysTick_Type *) ((0xE000E000UL) + 0x0010UL) )->LOAD  = ticks - 1;                                   
+  NVIC_SetPriority (SysTick_IRQn, (1<<4) - 1);   
+  ((SysTick_Type *) ((0xE000E000UL) + 0x0010UL) )->VAL   = 0;                                           
+  ((SysTick_Type *) ((0xE000E000UL) + 0x0010UL) )->CTRL  = (1UL << 2) |
+                   (1UL << 1)   |
+                   (1UL << 0);                     
+  return (0);                                                   
+}
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+ 
+
+extern volatile int32_t ITM_RxBuffer;                     
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+static inline uint32_t ITM_SendChar (uint32_t ch)
+{
+  if ((((ITM_Type *) (0xE0000000UL) )->TCR & (1UL << 0))                  &&       
+      (((ITM_Type *) (0xE0000000UL) )->TER & (1UL << 0)        )                    )      
+  {
+    while (((ITM_Type *) (0xE0000000UL) )->PORT[0].u32 == 0);
+    ((ITM_Type *) (0xE0000000UL) )->PORT[0].u8 = (uint8_t) ch;
+  }
+  return (ch);
+}
+
+
+
+
+
+
+
+
+ 
+static inline int32_t ITM_ReceiveChar (void) {
+  int32_t ch = -1;                            
+
+  if (ITM_RxBuffer != 0x5AA55AA5) {
+    ch = ITM_RxBuffer;
+    ITM_RxBuffer = 0x5AA55AA5;        
+  }
+
+  return (ch);
+}
+
+
+
+
+
+
+
+
+ 
+static inline int32_t ITM_CheckChar (void) {
+
+  if (ITM_RxBuffer == 0x5AA55AA5) {
+    return (0);                                  
+  } else {
+    return (1);                                  
+  }
+}
+
+ 
+
+
+
+
+
+
+
+
+
+
+#line 548 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\Libraries\\CMSIS\\Include\\system_stm32f4xx.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+
+
+   
+  
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+ 
+
+extern uint32_t SystemCoreClock;           
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+  
+extern void SystemInit(void);
+extern void SystemCoreClockUpdate(void);
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+  
+
+
+   
+ 
+#line 549 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+
+   
+ 
+typedef int32_t  s32;
+typedef int16_t s16;
+typedef int8_t  s8;
+
+typedef const int32_t sc32;   
+typedef const int16_t sc16;   
+typedef const int8_t sc8;    
+
+typedef volatile int32_t  vs32;
+typedef volatile int16_t  vs16;
+typedef volatile int8_t   vs8;
+
+typedef volatile const int32_t vsc32;   
+typedef volatile const int16_t vsc16;   
+typedef volatile const int8_t vsc8;    
+
+typedef uint32_t  u32;
+typedef uint16_t u16;
+typedef uint8_t  u8;
+
+typedef const uint32_t uc32;   
+typedef const uint16_t uc16;   
+typedef const uint8_t uc8;    
+
+typedef volatile uint32_t  vu32;
+typedef volatile uint16_t vu16;
+typedef volatile uint8_t  vu8;
+
+typedef volatile const uint32_t vuc32;   
+typedef volatile const uint16_t vuc16;   
+typedef volatile const uint8_t vuc8;    
+
+typedef enum {RESET = 0, SET = !RESET} FlagStatus, ITStatus;
+
+typedef enum {DISABLE = 0, ENABLE = !DISABLE} FunctionalState;
+
+
+typedef enum {ERROR = 0, SUCCESS = !ERROR} ErrorStatus;
+
+
+
+ 
+
+
+
+    
+
+
+
+ 
+
+typedef struct
+{
+  volatile uint32_t SR;      
+  volatile uint32_t CR1;           
+  volatile uint32_t CR2;     
+  volatile uint32_t SMPR1;   
+  volatile uint32_t SMPR2;   
+  volatile uint32_t JOFR1;   
+  volatile uint32_t JOFR2;   
+  volatile uint32_t JOFR3;   
+  volatile uint32_t JOFR4;   
+  volatile uint32_t HTR;     
+  volatile uint32_t LTR;     
+  volatile uint32_t SQR1;    
+  volatile uint32_t SQR2;    
+  volatile uint32_t SQR3;    
+  volatile uint32_t JSQR;    
+  volatile uint32_t JDR1;    
+  volatile uint32_t JDR2;    
+  volatile uint32_t JDR3;    
+  volatile uint32_t JDR4;    
+  volatile uint32_t DR;      
+} ADC_TypeDef;
+
+typedef struct
+{
+  volatile uint32_t CSR;     
+  volatile uint32_t CCR;     
+  volatile uint32_t CDR;    
+ 
+} ADC_Common_TypeDef;
+
+
+
+
+ 
+
+typedef struct
+{
+  volatile uint32_t TIR;   
+  volatile uint32_t TDTR;  
+  volatile uint32_t TDLR;  
+  volatile uint32_t TDHR;  
+} CAN_TxMailBox_TypeDef;
+
+
+
+ 
+  
+typedef struct
+{
+  volatile uint32_t RIR;   
+  volatile uint32_t RDTR;  
+  volatile uint32_t RDLR;  
+  volatile uint32_t RDHR;  
+} CAN_FIFOMailBox_TypeDef;
+
+
+
+ 
+  
+typedef struct
+{
+  volatile uint32_t FR1;  
+  volatile uint32_t FR2;  
+} CAN_FilterRegister_TypeDef;
+
+
+
+ 
+  
+typedef struct
+{
+  volatile uint32_t              MCR;                  
+  volatile uint32_t              MSR;                  
+  volatile uint32_t              TSR;                  
+  volatile uint32_t              RF0R;                 
+  volatile uint32_t              RF1R;                 
+  volatile uint32_t              IER;                  
+  volatile uint32_t              ESR;                  
+  volatile uint32_t              BTR;                  
+  uint32_t                   RESERVED0[88];        
+  CAN_TxMailBox_TypeDef      sTxMailBox[3];        
+  CAN_FIFOMailBox_TypeDef    sFIFOMailBox[2];      
+  uint32_t                   RESERVED1[12];        
+  volatile uint32_t              FMR;                  
+  volatile uint32_t              FM1R;                 
+  uint32_t                   RESERVED2;            
+  volatile uint32_t              FS1R;                 
+  uint32_t                   RESERVED3;            
+  volatile uint32_t              FFA1R;                
+  uint32_t                   RESERVED4;            
+  volatile uint32_t              FA1R;                 
+  uint32_t                   RESERVED5[8];          
+  CAN_FilterRegister_TypeDef sFilterRegister[28];  
+} CAN_TypeDef;
+
+#line 717 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+ 
+
+typedef struct
+{
+  volatile uint32_t DR;          
+  volatile uint8_t  IDR;         
+  uint8_t       RESERVED0;   
+  uint16_t      RESERVED1;   
+  volatile uint32_t CR;          
+} CRC_TypeDef;
+
+
+
+ 
+
+typedef struct
+{
+  volatile uint32_t CR;        
+  volatile uint32_t SWTRIGR;   
+  volatile uint32_t DHR12R1;   
+  volatile uint32_t DHR12L1;   
+  volatile uint32_t DHR8R1;    
+  volatile uint32_t DHR12R2;   
+  volatile uint32_t DHR12L2;   
+  volatile uint32_t DHR8R2;    
+  volatile uint32_t DHR12RD;   
+  volatile uint32_t DHR12LD;   
+  volatile uint32_t DHR8RD;    
+  volatile uint32_t DOR1;      
+  volatile uint32_t DOR2;      
+  volatile uint32_t SR;        
+} DAC_TypeDef;
+
+
+
+ 
+
+typedef struct
+{
+  volatile uint32_t IDCODE;   
+  volatile uint32_t CR;       
+  volatile uint32_t APB1FZ;   
+  volatile uint32_t APB2FZ;   
+}DBGMCU_TypeDef;
+
+
+
+ 
+
+typedef struct
+{
+  volatile uint32_t CR;        
+  volatile uint32_t SR;        
+  volatile uint32_t RISR;      
+  volatile uint32_t IER;       
+  volatile uint32_t MISR;      
+  volatile uint32_t ICR;       
+  volatile uint32_t ESCR;      
+  volatile uint32_t ESUR;      
+  volatile uint32_t CWSTRTR;   
+  volatile uint32_t CWSIZER;   
+  volatile uint32_t DR;        
+} DCMI_TypeDef;
+
+
+
+ 
+
+typedef struct
+{
+  volatile uint32_t CR;      
+  volatile uint32_t NDTR;    
+  volatile uint32_t PAR;     
+  volatile uint32_t M0AR;    
+  volatile uint32_t M1AR;    
+  volatile uint32_t FCR;     
+} DMA_Stream_TypeDef;
+
+typedef struct
+{
+  volatile uint32_t LISR;    
+  volatile uint32_t HISR;    
+  volatile uint32_t LIFCR;   
+  volatile uint32_t HIFCR;   
+} DMA_TypeDef;
+ 
+
+
+ 
+
+typedef struct
+{
+  volatile uint32_t CR;             
+  volatile uint32_t ISR;            
+  volatile uint32_t IFCR;           
+  volatile uint32_t FGMAR;          
+  volatile uint32_t FGOR;           
+  volatile uint32_t BGMAR;          
+  volatile uint32_t BGOR;           
+  volatile uint32_t FGPFCCR;        
+  volatile uint32_t FGCOLR;         
+  volatile uint32_t BGPFCCR;        
+  volatile uint32_t BGCOLR;         
+  volatile uint32_t FGCMAR;         
+  volatile uint32_t BGCMAR;         
+  volatile uint32_t OPFCCR;         
+  volatile uint32_t OCOLR;          
+  volatile uint32_t OMAR;           
+  volatile uint32_t OOR;            
+  volatile uint32_t NLR;            
+  volatile uint32_t LWR;            
+  volatile uint32_t AMTCR;          
+  uint32_t      RESERVED[236];  
+  volatile uint32_t FGCLUT[256];    
+  volatile uint32_t BGCLUT[256];    
+} DMA2D_TypeDef;
+
+
+
+ 
+
+typedef struct
+{
+  volatile uint32_t MACCR;
+  volatile uint32_t MACFFR;
+  volatile uint32_t MACHTHR;
+  volatile uint32_t MACHTLR;
+  volatile uint32_t MACMIIAR;
+  volatile uint32_t MACMIIDR;
+  volatile uint32_t MACFCR;
+  volatile uint32_t MACVLANTR;              
+  uint32_t      RESERVED0[2];
+  volatile uint32_t MACRWUFFR;              
+  volatile uint32_t MACPMTCSR;
+  uint32_t      RESERVED1[2];
+  volatile uint32_t MACSR;                  
+  volatile uint32_t MACIMR;
+  volatile uint32_t MACA0HR;
+  volatile uint32_t MACA0LR;
+  volatile uint32_t MACA1HR;
+  volatile uint32_t MACA1LR;
+  volatile uint32_t MACA2HR;
+  volatile uint32_t MACA2LR;
+  volatile uint32_t MACA3HR;
+  volatile uint32_t MACA3LR;                
+  uint32_t      RESERVED2[40];
+  volatile uint32_t MMCCR;                  
+  volatile uint32_t MMCRIR;
+  volatile uint32_t MMCTIR;
+  volatile uint32_t MMCRIMR;
+  volatile uint32_t MMCTIMR;                
+  uint32_t      RESERVED3[14];
+  volatile uint32_t MMCTGFSCCR;             
+  volatile uint32_t MMCTGFMSCCR;
+  uint32_t      RESERVED4[5];
+  volatile uint32_t MMCTGFCR;
+  uint32_t      RESERVED5[10];
+  volatile uint32_t MMCRFCECR;
+  volatile uint32_t MMCRFAECR;
+  uint32_t      RESERVED6[10];
+  volatile uint32_t MMCRGUFCR;
+  uint32_t      RESERVED7[334];
+  volatile uint32_t PTPTSCR;
+  volatile uint32_t PTPSSIR;
+  volatile uint32_t PTPTSHR;
+  volatile uint32_t PTPTSLR;
+  volatile uint32_t PTPTSHUR;
+  volatile uint32_t PTPTSLUR;
+  volatile uint32_t PTPTSAR;
+  volatile uint32_t PTPTTHR;
+  volatile uint32_t PTPTTLR;
+  volatile uint32_t RESERVED8;
+  volatile uint32_t PTPTSSR;
+  uint32_t      RESERVED9[565];
+  volatile uint32_t DMABMR;
+  volatile uint32_t DMATPDR;
+  volatile uint32_t DMARPDR;
+  volatile uint32_t DMARDLAR;
+  volatile uint32_t DMATDLAR;
+  volatile uint32_t DMASR;
+  volatile uint32_t DMAOMR;
+  volatile uint32_t DMAIER;
+  volatile uint32_t DMAMFBOCR;
+  volatile uint32_t DMARSWTR;
+  uint32_t      RESERVED10[8];
+  volatile uint32_t DMACHTDR;
+  volatile uint32_t DMACHRDR;
+  volatile uint32_t DMACHTBAR;
+  volatile uint32_t DMACHRBAR;
+} ETH_TypeDef;
+
+
+
+ 
+
+typedef struct
+{
+  volatile uint32_t IMR;     
+  volatile uint32_t EMR;     
+  volatile uint32_t RTSR;    
+  volatile uint32_t FTSR;    
+  volatile uint32_t SWIER;   
+  volatile uint32_t PR;      
+} EXTI_TypeDef;
+
+
+
+ 
+
+typedef struct
+{
+  volatile uint32_t ACR;       
+  volatile uint32_t KEYR;      
+  volatile uint32_t OPTKEYR;   
+  volatile uint32_t SR;        
+  volatile uint32_t CR;        
+  volatile uint32_t OPTCR;     
+  volatile uint32_t OPTCR1;    
+} FLASH_TypeDef;
+
+
+
+
+ 
+
+typedef struct
+{
+  volatile uint32_t BTCR[8];        
+} FSMC_Bank1_TypeDef; 
+
+
+
+ 
+  
+typedef struct
+{
+  volatile uint32_t BWTR[7];     
+} FSMC_Bank1E_TypeDef;
+
+
+
+ 
+  
+typedef struct
+{
+  volatile uint32_t PCR2;        
+  volatile uint32_t SR2;         
+  volatile uint32_t PMEM2;       
+  volatile uint32_t PATT2;       
+  uint32_t      RESERVED0;   
+  volatile uint32_t ECCR2;       
+} FSMC_Bank2_TypeDef;
+
+
+
+ 
+  
+typedef struct
+{
+  volatile uint32_t PCR3;        
+  volatile uint32_t SR3;         
+  volatile uint32_t PMEM3;       
+  volatile uint32_t PATT3;       
+  uint32_t      RESERVED0;   
+  volatile uint32_t ECCR3;       
+} FSMC_Bank3_TypeDef;
+
+
+
+ 
+  
+typedef struct
+{
+  volatile uint32_t PCR4;        
+  volatile uint32_t SR4;         
+  volatile uint32_t PMEM4;       
+  volatile uint32_t PATT4;       
+  volatile uint32_t PIO4;        
+} FSMC_Bank4_TypeDef; 
+
+
+#line 1074 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+ 
+
+typedef struct
+{
+  volatile uint32_t MODER;     
+  volatile uint32_t OTYPER;    
+  volatile uint32_t OSPEEDR;   
+  volatile uint32_t PUPDR;     
+  volatile uint32_t IDR;       
+  volatile uint32_t ODR;       
+  volatile uint16_t BSRRL;     
+  volatile uint16_t BSRRH;     
+  volatile uint32_t LCKR;      
+  volatile uint32_t AFR[2];    
+} GPIO_TypeDef;
+
+
+
+ 
+  
+typedef struct
+{
+  volatile uint32_t MEMRMP;        
+  volatile uint32_t PMC;           
+  volatile uint32_t EXTICR[4];     
+  uint32_t      RESERVED[2];    
+  volatile uint32_t CMPCR;         
+} SYSCFG_TypeDef;
+
+
+
+ 
+
+typedef struct
+{
+  volatile uint16_t CR1;         
+  uint16_t      RESERVED0;   
+  volatile uint16_t CR2;         
+  uint16_t      RESERVED1;   
+  volatile uint16_t OAR1;        
+  uint16_t      RESERVED2;   
+  volatile uint16_t OAR2;        
+  uint16_t      RESERVED3;   
+  volatile uint16_t DR;          
+  uint16_t      RESERVED4;   
+  volatile uint16_t SR1;         
+  uint16_t      RESERVED5;   
+  volatile uint16_t SR2;         
+  uint16_t      RESERVED6;   
+  volatile uint16_t CCR;         
+  uint16_t      RESERVED7;   
+  volatile uint16_t TRISE;       
+  uint16_t      RESERVED8;   
+  volatile uint16_t FLTR;        
+  uint16_t      RESERVED9;   
+} I2C_TypeDef;
+
+#line 1154 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+ 
+
+typedef struct
+{
+  volatile uint32_t KR;    
+  volatile uint32_t PR;    
+  volatile uint32_t RLR;   
+  volatile uint32_t SR;    
+} IWDG_TypeDef;
+
+
+
+ 
+  
+typedef struct
+{
+  uint32_t      RESERVED0[2];   
+  volatile uint32_t SSCR;           
+  volatile uint32_t BPCR;           
+  volatile uint32_t AWCR;           
+  volatile uint32_t TWCR;           
+  volatile uint32_t GCR;            
+  uint32_t      RESERVED1[2];   
+  volatile uint32_t SRCR;           
+  uint32_t      RESERVED2[1];   
+  volatile uint32_t BCCR;           
+  uint32_t      RESERVED3[1];   
+  volatile uint32_t IER;            
+  volatile uint32_t ISR;            
+  volatile uint32_t ICR;            
+  volatile uint32_t LIPCR;          
+  volatile uint32_t CPSR;           
+  volatile uint32_t CDSR;          
+} LTDC_TypeDef;  
+
+
+
+ 
+  
+typedef struct
+{  
+  volatile uint32_t CR;             
+  volatile uint32_t WHPCR;          
+  volatile uint32_t WVPCR;          
+  volatile uint32_t CKCR;           
+  volatile uint32_t PFCR;           
+  volatile uint32_t CACR;           
+  volatile uint32_t DCCR;           
+  volatile uint32_t BFCR;           
+  uint32_t      RESERVED0[2];   
+  volatile uint32_t CFBAR;          
+  volatile uint32_t CFBLR;          
+  volatile uint32_t CFBLNR;         
+  uint32_t      RESERVED1[3];   
+  volatile uint32_t CLUTWR;          
+
+} LTDC_Layer_TypeDef;
+
+
+
+ 
+
+typedef struct
+{
+  volatile uint32_t CR;    
+  volatile uint32_t CSR;   
+} PWR_TypeDef;
+
+
+
+ 
+
+typedef struct
+{
+  volatile uint32_t CR;             
+  volatile uint32_t PLLCFGR;        
+  volatile uint32_t CFGR;           
+  volatile uint32_t CIR;            
+  volatile uint32_t AHB1RSTR;       
+  volatile uint32_t AHB2RSTR;       
+  volatile uint32_t AHB3RSTR;       
+  uint32_t      RESERVED0;      
+  volatile uint32_t APB1RSTR;       
+  volatile uint32_t APB2RSTR;       
+  uint32_t      RESERVED1[2];   
+  volatile uint32_t AHB1ENR;        
+  volatile uint32_t AHB2ENR;        
+  volatile uint32_t AHB3ENR;        
+  uint32_t      RESERVED2;      
+  volatile uint32_t APB1ENR;        
+  volatile uint32_t APB2ENR;        
+  uint32_t      RESERVED3[2];   
+  volatile uint32_t AHB1LPENR;      
+  volatile uint32_t AHB2LPENR;      
+  volatile uint32_t AHB3LPENR;      
+  uint32_t      RESERVED4;      
+  volatile uint32_t APB1LPENR;      
+  volatile uint32_t APB2LPENR;      
+  uint32_t      RESERVED5[2];   
+  volatile uint32_t BDCR;           
+  volatile uint32_t CSR;            
+  uint32_t      RESERVED6[2];   
+  volatile uint32_t SSCGR;          
+  volatile uint32_t PLLI2SCFGR;     
+  volatile uint32_t PLLSAICFGR;     
+  volatile uint32_t DCKCFGR;        
+  volatile uint32_t CKGATENR;         
+  volatile uint32_t DCKCFGR2;         
+
+} RCC_TypeDef;
+
+
+
+ 
+
+typedef struct
+{
+  volatile uint32_t TR;       
+  volatile uint32_t DR;       
+  volatile uint32_t CR;       
+  volatile uint32_t ISR;      
+  volatile uint32_t PRER;     
+  volatile uint32_t WUTR;     
+  volatile uint32_t CALIBR;   
+  volatile uint32_t ALRMAR;   
+  volatile uint32_t ALRMBR;   
+  volatile uint32_t WPR;      
+  volatile uint32_t SSR;      
+  volatile uint32_t SHIFTR;   
+  volatile uint32_t TSTR;     
+  volatile uint32_t TSDR;     
+  volatile uint32_t TSSSR;    
+  volatile uint32_t CALR;     
+  volatile uint32_t TAFCR;    
+  volatile uint32_t ALRMASSR; 
+  volatile uint32_t ALRMBSSR; 
+  uint32_t RESERVED7;     
+  volatile uint32_t BKP0R;    
+  volatile uint32_t BKP1R;    
+  volatile uint32_t BKP2R;    
+  volatile uint32_t BKP3R;    
+  volatile uint32_t BKP4R;    
+  volatile uint32_t BKP5R;    
+  volatile uint32_t BKP6R;    
+  volatile uint32_t BKP7R;    
+  volatile uint32_t BKP8R;    
+  volatile uint32_t BKP9R;    
+  volatile uint32_t BKP10R;   
+  volatile uint32_t BKP11R;   
+  volatile uint32_t BKP12R;   
+  volatile uint32_t BKP13R;   
+  volatile uint32_t BKP14R;   
+  volatile uint32_t BKP15R;   
+  volatile uint32_t BKP16R;   
+  volatile uint32_t BKP17R;   
+  volatile uint32_t BKP18R;   
+  volatile uint32_t BKP19R;   
+} RTC_TypeDef;
+
+
+
+
+ 
+  
+typedef struct
+{
+  volatile uint32_t GCR;       
+} SAI_TypeDef;
+
+typedef struct
+{
+  volatile uint32_t CR1;       
+  volatile uint32_t CR2;       
+  volatile uint32_t FRCR;      
+  volatile uint32_t SLOTR;     
+  volatile uint32_t IMR;       
+  volatile uint32_t SR;        
+  volatile uint32_t CLRFR;     
+  volatile uint32_t DR;        
+} SAI_Block_TypeDef;
+
+
+
+ 
+
+typedef struct
+{
+  volatile uint32_t POWER;           
+  volatile uint32_t CLKCR;           
+  volatile uint32_t ARG;             
+  volatile uint32_t CMD;             
+  volatile const uint32_t  RESPCMD;         
+  volatile const uint32_t  RESP1;           
+  volatile const uint32_t  RESP2;           
+  volatile const uint32_t  RESP3;           
+  volatile const uint32_t  RESP4;           
+  volatile uint32_t DTIMER;          
+  volatile uint32_t DLEN;            
+  volatile uint32_t DCTRL;           
+  volatile const uint32_t  DCOUNT;          
+  volatile const uint32_t  STA;             
+  volatile uint32_t ICR;             
+  volatile uint32_t MASK;            
+  uint32_t      RESERVED0[2];    
+  volatile const uint32_t  FIFOCNT;         
+  uint32_t      RESERVED1[13];   
+  volatile uint32_t FIFO;            
+} SDIO_TypeDef;
+
+
+
+ 
+
+typedef struct
+{
+  volatile uint16_t CR1;         
+  uint16_t      RESERVED0;   
+  volatile uint16_t CR2;         
+  uint16_t      RESERVED1;   
+  volatile uint16_t SR;          
+  uint16_t      RESERVED2;   
+  volatile uint16_t DR;          
+  uint16_t      RESERVED3;   
+  volatile uint16_t CRCPR;       
+  uint16_t      RESERVED4;   
+  volatile uint16_t RXCRCR;      
+  uint16_t      RESERVED5;   
+  volatile uint16_t TXCRCR;      
+  uint16_t      RESERVED6;   
+  volatile uint16_t I2SCFGR;     
+  uint16_t      RESERVED7;   
+  volatile uint16_t I2SPR;       
+  uint16_t      RESERVED8;   
+} SPI_TypeDef;
+
+#line 1430 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 1449 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+ 
+
+typedef struct
+{
+  volatile uint16_t CR1;          
+  uint16_t      RESERVED0;    
+  volatile uint16_t CR2;          
+  uint16_t      RESERVED1;    
+  volatile uint16_t SMCR;         
+  uint16_t      RESERVED2;    
+  volatile uint16_t DIER;         
+  uint16_t      RESERVED3;    
+  volatile uint16_t SR;           
+  uint16_t      RESERVED4;    
+  volatile uint16_t EGR;          
+  uint16_t      RESERVED5;    
+  volatile uint16_t CCMR1;        
+  uint16_t      RESERVED6;    
+  volatile uint16_t CCMR2;        
+  uint16_t      RESERVED7;    
+  volatile uint16_t CCER;         
+  uint16_t      RESERVED8;    
+  volatile uint32_t CNT;          
+  volatile uint16_t PSC;          
+  uint16_t      RESERVED9;    
+  volatile uint32_t ARR;          
+  volatile uint16_t RCR;          
+  uint16_t      RESERVED10;   
+  volatile uint32_t CCR1;         
+  volatile uint32_t CCR2;         
+  volatile uint32_t CCR3;         
+  volatile uint32_t CCR4;         
+  volatile uint16_t BDTR;         
+  uint16_t      RESERVED11;   
+  volatile uint16_t DCR;          
+  uint16_t      RESERVED12;   
+  volatile uint16_t DMAR;         
+  uint16_t      RESERVED13;   
+  volatile uint16_t OR;           
+  uint16_t      RESERVED14;   
+} TIM_TypeDef;
+
+
+
+ 
+ 
+typedef struct
+{
+  volatile uint16_t SR;          
+  uint16_t      RESERVED0;   
+  volatile uint16_t DR;          
+  uint16_t      RESERVED1;   
+  volatile uint16_t BRR;         
+  uint16_t      RESERVED2;   
+  volatile uint16_t CR1;         
+  uint16_t      RESERVED3;   
+  volatile uint16_t CR2;         
+  uint16_t      RESERVED4;   
+  volatile uint16_t CR3;         
+  uint16_t      RESERVED5;   
+  volatile uint16_t GTPR;        
+  uint16_t      RESERVED6;   
+} USART_TypeDef;
+
+
+
+ 
+
+typedef struct
+{
+  volatile uint32_t CR;    
+  volatile uint32_t CFR;   
+  volatile uint32_t SR;    
+} WWDG_TypeDef;
+
+
+
+ 
+
+typedef struct
+{
+  volatile uint32_t CR;          
+  volatile uint32_t SR;          
+  volatile uint32_t DR;          
+  volatile uint32_t DOUT;        
+  volatile uint32_t DMACR;       
+  volatile uint32_t IMSCR;       
+  volatile uint32_t RISR;        
+  volatile uint32_t MISR;        
+  volatile uint32_t K0LR;        
+  volatile uint32_t K0RR;        
+  volatile uint32_t K1LR;        
+  volatile uint32_t K1RR;        
+  volatile uint32_t K2LR;        
+  volatile uint32_t K2RR;        
+  volatile uint32_t K3LR;        
+  volatile uint32_t K3RR;        
+  volatile uint32_t IV0LR;       
+  volatile uint32_t IV0RR;       
+  volatile uint32_t IV1LR;       
+  volatile uint32_t IV1RR;       
+  volatile uint32_t CSGCMCCM0R;  
+  volatile uint32_t CSGCMCCM1R;  
+  volatile uint32_t CSGCMCCM2R;  
+  volatile uint32_t CSGCMCCM3R;  
+  volatile uint32_t CSGCMCCM4R;  
+  volatile uint32_t CSGCMCCM5R;  
+  volatile uint32_t CSGCMCCM6R;  
+  volatile uint32_t CSGCMCCM7R;  
+  volatile uint32_t CSGCM0R;     
+  volatile uint32_t CSGCM1R;     
+  volatile uint32_t CSGCM2R;     
+  volatile uint32_t CSGCM3R;     
+  volatile uint32_t CSGCM4R;     
+  volatile uint32_t CSGCM5R;     
+  volatile uint32_t CSGCM6R;     
+  volatile uint32_t CSGCM7R;     
+} CRYP_TypeDef;
+
+
+
+ 
+  
+typedef struct 
+{
+  volatile uint32_t CR;                
+  volatile uint32_t DIN;               
+  volatile uint32_t STR;               
+  volatile uint32_t HR[5];             
+  volatile uint32_t IMR;               
+  volatile uint32_t SR;                
+       uint32_t RESERVED[52];      
+  volatile uint32_t CSR[54];           
+} HASH_TypeDef;
+
+
+
+ 
+  
+typedef struct 
+{
+  volatile uint32_t HR[8];       
+} HASH_DIGEST_TypeDef;
+
+
+
+ 
+  
+typedef struct 
+{
+  volatile uint32_t CR;   
+  volatile uint32_t SR;   
+  volatile uint32_t DR;   
+} RNG_TypeDef;
+
+
+
+ 
+  
+
+
+ 
+#line 1621 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+#line 1640 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+ 
+#line 1691 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 1722 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 1762 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+
+
+
+
+ 
+#line 1778 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 1788 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+
+ 
+  
+
+
+ 
+#line 1908 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 1916 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 1925 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+
+
+ 
+
+
+
+ 
+  
+  
+
+ 
+    
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+#line 1956 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 1982 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+  
+ 
+#line 2008 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 2046 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 2088 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+#line 2137 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 2175 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 2213 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 2242 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+
+ 
+#line 2278 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 2300 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+#line 2321 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 2332 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 2350 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+#line 2388 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+#line 2409 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+
+   
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+ 
+
+
+ 
+#line 2549 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 2566 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 2583 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 2600 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 2634 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 2668 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 2702 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 2736 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 2770 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 2804 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 2838 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 2872 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 2906 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 2940 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 2974 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 3008 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 3042 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 3076 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 3110 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 3144 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 3178 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 3212 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 3246 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 3280 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 3314 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 3348 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 3382 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 3416 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 3450 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 3484 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 3518 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 3552 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 3612 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+#line 3649 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 3658 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+#line 3800 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+  
+#line 3875 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 3894 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+  
+#line 3905 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+  
+#line 3927 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+  
+#line 3949 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+  
+#line 3971 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+  
+#line 3993 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+#line 4012 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+#line 4021 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+#line 4030 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+#line 4055 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+
+
+ 
+
+#line 4070 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+ 
+                                                                     
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+#line 4170 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 4192 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 4214 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 4236 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 4258 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 4280 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+ 
+ 
+ 
+ 
+ 
+#line 4304 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 4312 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 4321 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 4340 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 4348 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 4374 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+                                             
+ 
+#line 4392 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+#line 4421 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+#line 4444 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+#line 4467 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+#line 4490 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+#line 4911 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 4920 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 4929 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 4940 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 4950 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 4960 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 4970 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 4981 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 4991 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 5001 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 5011 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 5022 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 5032 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 5042 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 5052 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 5063 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 5073 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 5083 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 5093 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 5104 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 5114 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 5124 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 5134 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 5145 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 5155 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 5165 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 5175 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 5186 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 5196 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 5206 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 5216 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+ 
+
+
+
+#line 6242 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+#line 6330 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+#line 6478 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+ 
+#line 6495 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 6513 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+ 
+#line 6530 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 6564 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+ 
+ 
+ 
+ 
+ 
+#line 6588 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 6597 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+ 
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+#line 6628 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 6637 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+
+
+
+
+ 
+
+
+
+#line 6658 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+ 
+
+
+
+ 
+
+
+ 
+#line 6683 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 6693 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+
+ 
+
+
+ 
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+#line 6733 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 6746 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+#line 6789 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 6800 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+
+
+
+
+
+ 
+
+
+ 
+
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+ 
+
+#line 6868 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+                                
+ 
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+ 
+#line 7005 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+ 
+#line 7044 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+#line 7184 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+#line 7200 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 7210 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 7221 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 7230 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 7241 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#line 7262 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+ 
+
+
+
+
+#line 7275 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+
+#line 7287 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+
+
+
+#line 7304 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+ 
+#line 7336 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+#line 7382 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 7401 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+  
+
+
+
+
+ 
+
+
+
+
+#line 7422 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 7458 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 7479 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+ 
+#line 7507 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+#line 7564 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 7587 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 7615 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+#line 7634 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 7670 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 7693 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+#line 7718 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+
+
+ 
+#line 7733 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 7744 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+#line 7772 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 7783 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+#line 7814 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 7823 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+
+#line 7853 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+ 
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+#line 7903 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 7933 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 7961 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 7978 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+ 
+
+
+ 
+
+
+
+ 
+#line 8031 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 8073 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+ 
+
+
+ 
+
+
+
+ 
+#line 8112 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 8132 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+ 
+#line 8150 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 8170 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 8178 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 8186 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+#line 8311 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+
+
+
+
+ 
+#line 8328 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 8337 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+
+
+ 
+#line 8349 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+                                     
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+#line 8370 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 8379 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+
+
+
+ 
+#line 8393 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+#line 8474 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+ 
+
+
+
+
+
+
+#line 8515 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+ 
+#line 8585 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 8600 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 8626 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+#line 8658 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 8666 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 8676 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+   
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+ 
+
+
+
+
+
+
+  
+#line 8763 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+  
+#line 8778 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+  
+#line 8793 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+  
+#line 8808 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+
+
+
+  
+#line 8828 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+  
+#line 8843 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+  
+#line 8858 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+  
+#line 8873 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+
+           
+
+
+  
+#line 8893 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+  
+#line 8907 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+  
+#line 8921 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+  
+#line 8935 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+
+
+
+  
+#line 8954 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+  
+#line 8968 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+  
+#line 8982 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+  
+#line 8996 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+   
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+#line 9041 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+#line 9084 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 9098 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 9108 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+#line 9227 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+#line 9262 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+
+
+#line 9273 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 9281 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 9288 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+ 
+#line 9299 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+#line 9317 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+ 
+
+
+
+ 
+#line 9341 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 9350 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+
+
+
+
+ 
+#line 9370 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 9381 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+#line 9398 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+ 
+#line 9410 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+#line 9458 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+ 
+
+
+ 
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+#line 9502 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 9518 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+ 
+
+
+ 
+#line 9536 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+  
+ 
+
+
+ 
+#line 9552 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+  
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+  
+#line 9579 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+ 
+
+
+ 
+#line 9608 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+ 
+#line 9623 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+ 
+#line 9638 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+ 
+ 
+ 
+
+ 
+#line 9653 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+ 
+ 
+
+ 
+#line 9706 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+#line 9713 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+ 
+
+
+ 
+
+
+
+ 
+
+
+ 
+
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+
+ 
+ 
+ 
+
+ 
+#line 9788 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+
+
+   
+#line 9839 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 9865 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+#line 9882 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+ 
+
+
+
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+
+
+ 
+
+ 
+
+  
+
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\stm32f4xx_conf.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+ 
+ 
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_adc.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+ 
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+
+
+ 
+    
+#line 9940 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+ 
+
+  
+
+ 
+
+ 
+#line 39 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_adc.h"
+
+
+
+ 
+
+
+
+  
+
+ 
+
+
+
+  
+typedef struct
+{
+  uint32_t ADC_Resolution;                
+                                    
+  FunctionalState ADC_ScanConvMode;       
+
+
+  
+  FunctionalState ADC_ContinuousConvMode; 
+
+ 
+  uint32_t ADC_ExternalTrigConvEdge;      
+
+
+ 
+  uint32_t ADC_ExternalTrigConv;          
+
+
+ 
+  uint32_t ADC_DataAlign;                 
+
+ 
+  uint8_t  ADC_NbrOfConversion;           
+
+
+ 
+}ADC_InitTypeDef;
+  
+
+
+  
+typedef struct 
+{
+  uint32_t ADC_Mode;                      
+
+                                               
+  uint32_t ADC_Prescaler;                 
+
+ 
+  uint32_t ADC_DMAAccessMode;             
+
+
+ 
+  uint32_t ADC_TwoSamplingDelay;          
+
+ 
+  
+}ADC_CommonInitTypeDef;
+
+
+ 
+
+
+
+  
+
+
+
+
+
+
+  
+#line 141 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_adc.h"
+
+
+  
+
+
+
+
+  
+#line 157 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_adc.h"
+
+
+  
+
+
+
+
+  
+#line 173 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_adc.h"
+                                     
+
+
+  
+
+
+
+
+  
+#line 214 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_adc.h"
+                                     
+
+
+  
+
+
+
+
+  
+#line 231 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_adc.h"
+                                      
+
+
+  
+
+
+
+
+  
+#line 248 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_adc.h"
+
+
+  
+
+
+
+
+  
+#line 288 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_adc.h"
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+#line 327 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_adc.h"
+
+
+
+
+
+
+
+
+
+
+
+
+#line 358 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_adc.h"
+
+
+  
+
+
+
+
+  
+#line 382 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_adc.h"
+
+
+  
+
+
+
+
+  
+#line 398 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_adc.h"
+                                            
+
+
+  
+
+
+
+
+  
+#line 439 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_adc.h"
+
+
+  
+
+
+
+
+  
+#line 455 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_adc.h"
+
+
+  
+
+
+
+
+  
+#line 477 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_adc.h"
+
+
+  
+
+
+
+
+  
+#line 491 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_adc.h"
+
+
+  
+
+
+
+
+  
+#line 505 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_adc.h"
+  
+#line 513 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_adc.h"
+
+
+  
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+
+ 
+   
+
+   
+void ADC_DeInit(void);
+
+ 
+void ADC_Init(ADC_TypeDef* ADCx, ADC_InitTypeDef* ADC_InitStruct);
+void ADC_StructInit(ADC_InitTypeDef* ADC_InitStruct);
+void ADC_CommonInit(ADC_CommonInitTypeDef* ADC_CommonInitStruct);
+void ADC_CommonStructInit(ADC_CommonInitTypeDef* ADC_CommonInitStruct);
+void ADC_Cmd(ADC_TypeDef* ADCx, FunctionalState NewState);
+
+ 
+void ADC_AnalogWatchdogCmd(ADC_TypeDef* ADCx, uint32_t ADC_AnalogWatchdog);
+void ADC_AnalogWatchdogThresholdsConfig(ADC_TypeDef* ADCx, uint16_t HighThreshold,uint16_t LowThreshold);
+void ADC_AnalogWatchdogSingleChannelConfig(ADC_TypeDef* ADCx, uint8_t ADC_Channel);
+
+ 
+void ADC_TempSensorVrefintCmd(FunctionalState NewState);
+void ADC_VBATCmd(FunctionalState NewState);
+
+ 
+void ADC_RegularChannelConfig(ADC_TypeDef* ADCx, uint8_t ADC_Channel, uint8_t Rank, uint8_t ADC_SampleTime);
+void ADC_SoftwareStartConv(ADC_TypeDef* ADCx);
+FlagStatus ADC_GetSoftwareStartConvStatus(ADC_TypeDef* ADCx);
+void ADC_EOCOnEachRegularChannelCmd(ADC_TypeDef* ADCx, FunctionalState NewState);
+void ADC_ContinuousModeCmd(ADC_TypeDef* ADCx, FunctionalState NewState);
+void ADC_DiscModeChannelCountConfig(ADC_TypeDef* ADCx, uint8_t Number);
+void ADC_DiscModeCmd(ADC_TypeDef* ADCx, FunctionalState NewState);
+uint16_t ADC_GetConversionValue(ADC_TypeDef* ADCx);
+uint32_t ADC_GetMultiModeConversionValue(void);
+
+ 
+void ADC_DMACmd(ADC_TypeDef* ADCx, FunctionalState NewState);
+void ADC_DMARequestAfterLastTransferCmd(ADC_TypeDef* ADCx, FunctionalState NewState);
+void ADC_MultiModeDMARequestAfterLastTransferCmd(FunctionalState NewState);
+
+ 
+void ADC_InjectedChannelConfig(ADC_TypeDef* ADCx, uint8_t ADC_Channel, uint8_t Rank, uint8_t ADC_SampleTime);
+void ADC_InjectedSequencerLengthConfig(ADC_TypeDef* ADCx, uint8_t Length);
+void ADC_SetInjectedOffset(ADC_TypeDef* ADCx, uint8_t ADC_InjectedChannel, uint16_t Offset);
+void ADC_ExternalTrigInjectedConvConfig(ADC_TypeDef* ADCx, uint32_t ADC_ExternalTrigInjecConv);
+void ADC_ExternalTrigInjectedConvEdgeConfig(ADC_TypeDef* ADCx, uint32_t ADC_ExternalTrigInjecConvEdge);
+void ADC_SoftwareStartInjectedConv(ADC_TypeDef* ADCx);
+FlagStatus ADC_GetSoftwareStartInjectedConvCmdStatus(ADC_TypeDef* ADCx);
+void ADC_AutoInjectedConvCmd(ADC_TypeDef* ADCx, FunctionalState NewState);
+void ADC_InjectedDiscModeCmd(ADC_TypeDef* ADCx, FunctionalState NewState);
+uint16_t ADC_GetInjectedConversionValue(ADC_TypeDef* ADCx, uint8_t ADC_InjectedChannel);
+
+ 
+void ADC_ITConfig(ADC_TypeDef* ADCx, uint16_t ADC_IT, FunctionalState NewState);
+FlagStatus ADC_GetFlagStatus(ADC_TypeDef* ADCx, uint8_t ADC_FLAG);
+void ADC_ClearFlag(ADC_TypeDef* ADCx, uint8_t ADC_FLAG);
+ITStatus ADC_GetITStatus(ADC_TypeDef* ADCx, uint16_t ADC_IT);
+void ADC_ClearITPendingBit(ADC_TypeDef* ADCx, uint16_t ADC_IT);
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+ 
+#line 35 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\stm32f4xx_conf.h"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_crc.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+ 
+
+
+
+ 
+
+
+
+ 
+
+ 
+   
+
+void CRC_ResetDR(void);
+uint32_t CRC_CalcCRC(uint32_t Data);
+uint32_t CRC_CalcBlockCRC(uint32_t pBuffer[], uint32_t BufferLength);
+uint32_t CRC_GetCRC(void);
+void CRC_SetIDRegister(uint8_t IDValue);
+uint8_t CRC_GetIDRegister(void);
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+#line 36 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\stm32f4xx_conf.h"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_dbgmcu.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+  
+
+ 
+ 
+
+
+
+  
+
+
+
+
+
+#line 76 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_dbgmcu.h"
+
+#line 83 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_dbgmcu.h"
+
+
+  
+
+ 
+  
+uint32_t DBGMCU_GetREVID(void);
+uint32_t DBGMCU_GetDEVID(void);
+void DBGMCU_Config(uint32_t DBGMCU_Periph, FunctionalState NewState);
+void DBGMCU_APB1PeriphConfig(uint32_t DBGMCU_Periph, FunctionalState NewState);
+void DBGMCU_APB2PeriphConfig(uint32_t DBGMCU_Periph, FunctionalState NewState);
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+ 
+#line 37 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\stm32f4xx_conf.h"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_dma.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+
+
+
+ 
+
+typedef struct
+{
+  uint32_t DMA_Channel;            
+ 
+ 
+  uint32_t DMA_PeripheralBaseAddr;  
+
+  uint32_t DMA_Memory0BaseAddr;    
+
+ 
+
+  uint32_t DMA_DIR;                
+
+ 
+
+  uint32_t DMA_BufferSize;         
+
+ 
+
+  uint32_t DMA_PeripheralInc;      
+ 
+
+  uint32_t DMA_MemoryInc;          
+ 
+
+  uint32_t DMA_PeripheralDataSize; 
+ 
+
+  uint32_t DMA_MemoryDataSize;     
+ 
+
+  uint32_t DMA_Mode;               
+
+
+ 
+
+  uint32_t DMA_Priority;           
+ 
+
+  uint32_t DMA_FIFOMode;          
+
+
+ 
+
+  uint32_t DMA_FIFOThreshold;      
+ 
+
+  uint32_t DMA_MemoryBurst;        
+
+
+ 
+
+  uint32_t DMA_PeripheralBurst;    
+
+
+   
+}DMA_InitTypeDef;
+
+ 
+
+
+
+ 
+
+#line 134 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_dma.h"
+
+
+
+
+
+
+  
+#line 149 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_dma.h"
+
+#line 158 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_dma.h"
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+ 
+#line 346 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_dma.h"
+
+#line 353 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_dma.h"
+
+
+  
+
+
+
+ 
+#line 400 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_dma.h"
+
+
+
+
+#line 424 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_dma.h"
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+#line 487 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_dma.h"
+
+
+
+
+
+#line 512 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_dma.h"
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+  
+
+ 
+  
+
+  
+void DMA_DeInit(DMA_Stream_TypeDef* DMAy_Streamx);
+
+ 
+void DMA_Init(DMA_Stream_TypeDef* DMAy_Streamx, DMA_InitTypeDef* DMA_InitStruct);
+void DMA_StructInit(DMA_InitTypeDef* DMA_InitStruct);
+void DMA_Cmd(DMA_Stream_TypeDef* DMAy_Streamx, FunctionalState NewState);
+
+ 
+void DMA_PeriphIncOffsetSizeConfig(DMA_Stream_TypeDef* DMAy_Streamx, uint32_t DMA_Pincos);
+void DMA_FlowControllerConfig(DMA_Stream_TypeDef* DMAy_Streamx, uint32_t DMA_FlowCtrl);
+
+ 
+void DMA_SetCurrDataCounter(DMA_Stream_TypeDef* DMAy_Streamx, uint16_t Counter);
+uint16_t DMA_GetCurrDataCounter(DMA_Stream_TypeDef* DMAy_Streamx);
+
+ 
+void DMA_DoubleBufferModeConfig(DMA_Stream_TypeDef* DMAy_Streamx, uint32_t Memory1BaseAddr,
+                                uint32_t DMA_CurrentMemory);
+void DMA_DoubleBufferModeCmd(DMA_Stream_TypeDef* DMAy_Streamx, FunctionalState NewState);
+void DMA_MemoryTargetConfig(DMA_Stream_TypeDef* DMAy_Streamx, uint32_t MemoryBaseAddr,
+                            uint32_t DMA_MemoryTarget);
+uint32_t DMA_GetCurrentMemoryTarget(DMA_Stream_TypeDef* DMAy_Streamx);
+
+ 
+FunctionalState DMA_GetCmdStatus(DMA_Stream_TypeDef* DMAy_Streamx);
+uint32_t DMA_GetFIFOStatus(DMA_Stream_TypeDef* DMAy_Streamx);
+FlagStatus DMA_GetFlagStatus(DMA_Stream_TypeDef* DMAy_Streamx, uint32_t DMA_FLAG);
+void DMA_ClearFlag(DMA_Stream_TypeDef* DMAy_Streamx, uint32_t DMA_FLAG);
+void DMA_ITConfig(DMA_Stream_TypeDef* DMAy_Streamx, uint32_t DMA_IT, FunctionalState NewState);
+ITStatus DMA_GetITStatus(DMA_Stream_TypeDef* DMAy_Streamx, uint32_t DMA_IT);
+void DMA_ClearITPendingBit(DMA_Stream_TypeDef* DMAy_Streamx, uint32_t DMA_IT);
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+ 
+#line 38 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\stm32f4xx_conf.h"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_exti.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+
+
+
+ 
+
+typedef enum
+{
+  EXTI_Mode_Interrupt = 0x00,
+  EXTI_Mode_Event = 0x04
+}EXTIMode_TypeDef;
+
+
+
+
+
+ 
+
+typedef enum
+{
+  EXTI_Trigger_Rising = 0x08,
+  EXTI_Trigger_Falling = 0x0C,  
+  EXTI_Trigger_Rising_Falling = 0x10
+}EXTITrigger_TypeDef;
+
+
+
+
+
+
+ 
+
+typedef struct
+{
+  uint32_t EXTI_Line;               
+ 
+   
+  EXTIMode_TypeDef EXTI_Mode;       
+ 
+
+  EXTITrigger_TypeDef EXTI_Trigger; 
+ 
+
+  FunctionalState EXTI_LineCmd;     
+  
+}EXTI_InitTypeDef;
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+#line 128 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_exti.h"
+                                          
+
+
+#line 143 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_exti.h"
+                    
+
+
+ 
+
+
+
+ 
+
+ 
+ 
+
+ 
+void EXTI_DeInit(void);
+
+ 
+void EXTI_Init(EXTI_InitTypeDef* EXTI_InitStruct);
+void EXTI_StructInit(EXTI_InitTypeDef* EXTI_InitStruct);
+void EXTI_GenerateSWInterrupt(uint32_t EXTI_Line);
+
+ 
+FlagStatus EXTI_GetFlagStatus(uint32_t EXTI_Line);
+void EXTI_ClearFlag(uint32_t EXTI_Line);
+ITStatus EXTI_GetITStatus(uint32_t EXTI_Line);
+void EXTI_ClearITPendingBit(uint32_t EXTI_Line);
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+#line 39 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\stm32f4xx_conf.h"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_flash.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+  
+
+ 
+
+
+  
+typedef enum
+{ 
+  FLASH_BUSY = 1,
+  FLASH_ERROR_RD,
+  FLASH_ERROR_PGS,
+  FLASH_ERROR_PGP,
+  FLASH_ERROR_PGA,
+  FLASH_ERROR_WRP,
+  FLASH_ERROR_PROGRAM,
+  FLASH_ERROR_OPERATION,
+  FLASH_COMPLETE
+}FLASH_Status;
+
+ 
+
+
+
+   
+
+
+
+  
+#line 90 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_flash.h"
+
+
+#line 108 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_flash.h"
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+ 
+#line 155 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_flash.h"
+
+#line 168 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_flash.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+#line 221 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_flash.h"
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+  
+#line 265 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_flash.h"
+
+
+
+
+ 
+
+
+
+ 
+
+
+  
+ 
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+ 
+  
+
+
+   
+#line 325 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_flash.h"
+
+
+ 
+  
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+#line 365 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_flash.h"
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+  
+
+ 
+  
+ 
+ 
+void FLASH_SetLatency(uint32_t FLASH_Latency);
+void FLASH_PrefetchBufferCmd(FunctionalState NewState);
+void FLASH_InstructionCacheCmd(FunctionalState NewState);
+void FLASH_DataCacheCmd(FunctionalState NewState);
+void FLASH_InstructionCacheReset(void);
+void FLASH_DataCacheReset(void);
+
+    
+void         FLASH_Unlock(void);
+void         FLASH_Lock(void);
+FLASH_Status FLASH_EraseSector(uint32_t FLASH_Sector, uint8_t VoltageRange);
+FLASH_Status FLASH_EraseAllSectors(uint8_t VoltageRange);
+FLASH_Status FLASH_EraseAllBank1Sectors(uint8_t VoltageRange);
+FLASH_Status FLASH_EraseAllBank2Sectors(uint8_t VoltageRange);
+FLASH_Status FLASH_ProgramDoubleWord(uint32_t Address, uint64_t Data);
+FLASH_Status FLASH_ProgramWord(uint32_t Address, uint32_t Data);
+FLASH_Status FLASH_ProgramHalfWord(uint32_t Address, uint16_t Data);
+FLASH_Status FLASH_ProgramByte(uint32_t Address, uint8_t Data);
+
+  
+void         FLASH_OB_Unlock(void);
+void         FLASH_OB_Lock(void);
+void         FLASH_OB_WRPConfig(uint32_t OB_WRP, FunctionalState NewState);
+void         FLASH_OB_WRP1Config(uint32_t OB_WRP, FunctionalState NewState);
+void         FLASH_OB_PCROPSelectionConfig(uint8_t OB_PcROP);
+void         FLASH_OB_PCROPConfig(uint32_t OB_PCROP, FunctionalState NewState);
+void         FLASH_OB_PCROP1Config(uint32_t OB_PCROP, FunctionalState NewState);
+void         FLASH_OB_RDPConfig(uint8_t OB_RDP);
+void         FLASH_OB_UserConfig(uint8_t OB_IWDG, uint8_t OB_STOP, uint8_t OB_STDBY);
+void         FLASH_OB_BORConfig(uint8_t OB_BOR);
+void         FLASH_OB_BootConfig(uint8_t OB_BOOT);
+FLASH_Status FLASH_OB_Launch(void);
+uint8_t      FLASH_OB_GetUser(void);
+uint16_t     FLASH_OB_GetWRP(void);
+uint16_t     FLASH_OB_GetWRP1(void);
+uint16_t     FLASH_OB_GetPCROP(void);
+uint16_t     FLASH_OB_GetPCROP1(void);
+FlagStatus   FLASH_OB_GetRDP(void);
+uint8_t      FLASH_OB_GetBOR(void);
+
+ 
+void         FLASH_ITConfig(uint32_t FLASH_IT, FunctionalState NewState);
+FlagStatus   FLASH_GetFlagStatus(uint32_t FLASH_FLAG);
+void         FLASH_ClearFlag(uint32_t FLASH_FLAG);
+FLASH_Status FLASH_GetStatus(void);
+FLASH_Status FLASH_WaitForLastOperation(void);
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+ 
+#line 40 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\stm32f4xx_conf.h"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_gpio.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+  
+
+ 
+
+#line 61 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_gpio.h"
+
+
+
+    
+typedef enum
+{ 
+  GPIO_Mode_IN   = 0x00,  
+  GPIO_Mode_OUT  = 0x01,  
+  GPIO_Mode_AF   = 0x02,  
+  GPIO_Mode_AN   = 0x03   
+}GPIOMode_TypeDef;
+
+
+
+
+
+   
+typedef enum
+{ 
+  GPIO_OType_PP = 0x00,
+  GPIO_OType_OD = 0x01
+}GPIOOType_TypeDef;
+
+
+
+
+
+   
+typedef enum
+{ 
+  GPIO_Low_Speed     = 0x00,  
+  GPIO_Medium_Speed  = 0x01,  
+  GPIO_Fast_Speed    = 0x02,  
+  GPIO_High_Speed    = 0x03   
+}GPIOSpeed_TypeDef;
+
+ 
+
+
+
+
+  
+
+
+
+
+
+  
+typedef enum
+{ 
+  GPIO_PuPd_NOPULL = 0x00,
+  GPIO_PuPd_UP     = 0x01,
+  GPIO_PuPd_DOWN   = 0x02
+}GPIOPuPd_TypeDef;
+
+
+
+
+
+  
+typedef enum
+{ 
+  Bit_RESET = 0,
+  Bit_SET
+}BitAction;
+
+
+
+
+
+  
+typedef struct
+{
+  uint32_t GPIO_Pin;              
+ 
+
+  GPIOMode_TypeDef GPIO_Mode;     
+ 
+
+  GPIOSpeed_TypeDef GPIO_Speed;   
+ 
+
+  GPIOOType_TypeDef GPIO_OType;   
+ 
+
+  GPIOPuPd_TypeDef GPIO_PuPd;     
+ 
+}GPIO_InitTypeDef;
+
+ 
+
+
+
+  
+
+
+
+  
+#line 176 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_gpio.h"
+
+#line 195 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_gpio.h"
+
+
+  
+
+
+
+
+  
+#line 219 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_gpio.h"
+
+#line 236 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_gpio.h"
+
+
+  
+
+
+
+  
+
+
+  
+#line 254 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_gpio.h"
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+#line 278 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_gpio.h"
+
+
+  
+#line 288 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_gpio.h"
+
+
+
+  
+#line 298 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_gpio.h"
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+#line 333 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_gpio.h"
+
+
+
+  
+
+
+
+
+
+
+#line 352 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_gpio.h"
+
+
+  
+#line 363 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_gpio.h"
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+ 
+
+
+
+
+  
+
+
+#line 417 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_gpio.h"
+
+#line 434 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_gpio.h"
+
+
+
+
+
+#line 463 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_gpio.h"
+
+
+
+
+
+
+
+  
+
+
+
+ 
+    
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+ 
+
+ 
+void GPIO_DeInit(GPIO_TypeDef* GPIOx);
+
+ 
+void GPIO_Init(GPIO_TypeDef* GPIOx, GPIO_InitTypeDef* GPIO_InitStruct);
+void GPIO_StructInit(GPIO_InitTypeDef* GPIO_InitStruct);
+void GPIO_PinLockConfig(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+
+ 
+uint8_t GPIO_ReadInputDataBit(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+uint16_t GPIO_ReadInputData(GPIO_TypeDef* GPIOx);
+uint8_t GPIO_ReadOutputDataBit(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+uint16_t GPIO_ReadOutputData(GPIO_TypeDef* GPIOx);
+void GPIO_SetBits(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+void GPIO_ResetBits(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+void GPIO_WriteBit(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, BitAction BitVal);
+void GPIO_Write(GPIO_TypeDef* GPIOx, uint16_t PortVal);
+void GPIO_ToggleBits(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+
+ 
+void GPIO_PinAFConfig(GPIO_TypeDef* GPIOx, uint16_t GPIO_PinSource, uint8_t GPIO_AF);
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+ 
+#line 41 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\stm32f4xx_conf.h"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_i2c.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+
+
+
+ 
+
+typedef struct
+{
+  uint32_t I2C_ClockSpeed;          
+ 
+
+  uint16_t I2C_Mode;                
+ 
+
+  uint16_t I2C_DutyCycle;           
+ 
+
+  uint16_t I2C_OwnAddress1;         
+ 
+
+  uint16_t I2C_Ack;                 
+ 
+
+  uint16_t I2C_AcknowledgedAddress; 
+ 
+}I2C_InitTypeDef;
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+ 
+
+#line 105 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_i2c.h"
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+#line 179 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_i2c.h"
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+#line 249 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_i2c.h"
+
+
+
+#line 259 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_i2c.h"
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+#line 278 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_i2c.h"
+
+
+
+ 
+
+#line 297 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_i2c.h"
+
+
+
+#line 311 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_i2c.h"
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+  
+ 
+
+
+ 
+ 
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+    
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+  
+ 
+
+ 
+
+
+ 
+ 
+
+
+ 
+
+
+
+
+
+
+ 
+
+#line 517 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_i2c.h"
+
+
+ 
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+  
+
+ 
+void I2C_DeInit(I2C_TypeDef* I2Cx);
+
+ 
+void I2C_Init(I2C_TypeDef* I2Cx, I2C_InitTypeDef* I2C_InitStruct);
+void I2C_StructInit(I2C_InitTypeDef* I2C_InitStruct);
+void I2C_Cmd(I2C_TypeDef* I2Cx, FunctionalState NewState);
+void I2C_DigitalFilterConfig(I2C_TypeDef* I2Cx, uint16_t I2C_DigitalFilter);
+void I2C_AnalogFilterCmd(I2C_TypeDef* I2Cx, FunctionalState NewState);
+void I2C_GenerateSTART(I2C_TypeDef* I2Cx, FunctionalState NewState);
+void I2C_GenerateSTOP(I2C_TypeDef* I2Cx, FunctionalState NewState);
+void I2C_Send7bitAddress(I2C_TypeDef* I2Cx, uint8_t Address, uint8_t I2C_Direction);
+void I2C_AcknowledgeConfig(I2C_TypeDef* I2Cx, FunctionalState NewState);
+void I2C_OwnAddress2Config(I2C_TypeDef* I2Cx, uint8_t Address);
+void I2C_DualAddressCmd(I2C_TypeDef* I2Cx, FunctionalState NewState);
+void I2C_GeneralCallCmd(I2C_TypeDef* I2Cx, FunctionalState NewState);
+void I2C_SoftwareResetCmd(I2C_TypeDef* I2Cx, FunctionalState NewState);
+void I2C_StretchClockCmd(I2C_TypeDef* I2Cx, FunctionalState NewState);
+void I2C_FastModeDutyCycleConfig(I2C_TypeDef* I2Cx, uint16_t I2C_DutyCycle);
+void I2C_NACKPositionConfig(I2C_TypeDef* I2Cx, uint16_t I2C_NACKPosition);
+void I2C_SMBusAlertConfig(I2C_TypeDef* I2Cx, uint16_t I2C_SMBusAlert);
+void I2C_ARPCmd(I2C_TypeDef* I2Cx, FunctionalState NewState);
+
+  
+void I2C_SendData(I2C_TypeDef* I2Cx, uint8_t Data);
+uint8_t I2C_ReceiveData(I2C_TypeDef* I2Cx);
+
+  
+void I2C_TransmitPEC(I2C_TypeDef* I2Cx, FunctionalState NewState);
+void I2C_PECPositionConfig(I2C_TypeDef* I2Cx, uint16_t I2C_PECPosition);
+void I2C_CalculatePEC(I2C_TypeDef* I2Cx, FunctionalState NewState);
+uint8_t I2C_GetPEC(I2C_TypeDef* I2Cx);
+
+ 
+void I2C_DMACmd(I2C_TypeDef* I2Cx, FunctionalState NewState);
+void I2C_DMALastTransferCmd(I2C_TypeDef* I2Cx, FunctionalState NewState);
+
+ 
+uint16_t I2C_ReadRegister(I2C_TypeDef* I2Cx, uint8_t I2C_Register);
+void I2C_ITConfig(I2C_TypeDef* I2Cx, uint16_t I2C_IT, FunctionalState NewState);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+ErrorStatus I2C_CheckEvent(I2C_TypeDef* I2Cx, uint32_t I2C_EVENT);
+
+
+
+
+ 
+uint32_t I2C_GetLastEvent(I2C_TypeDef* I2Cx);
+
+
+
+
+ 
+FlagStatus I2C_GetFlagStatus(I2C_TypeDef* I2Cx, uint32_t I2C_FLAG);
+
+
+void I2C_ClearFlag(I2C_TypeDef* I2Cx, uint32_t I2C_FLAG);
+ITStatus I2C_GetITStatus(I2C_TypeDef* I2Cx, uint32_t I2C_IT);
+void I2C_ClearITPendingBit(I2C_TypeDef* I2Cx, uint32_t I2C_IT);
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+ 
+#line 42 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\stm32f4xx_conf.h"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_iwdg.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+ 
+
+
+
+ 
+  
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+ 
+#line 83 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_iwdg.h"
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+ 
+
+ 
+void IWDG_WriteAccessCmd(uint16_t IWDG_WriteAccess);
+void IWDG_SetPrescaler(uint8_t IWDG_Prescaler);
+void IWDG_SetReload(uint16_t Reload);
+void IWDG_ReloadCounter(void);
+
+ 
+void IWDG_Enable(void);
+
+ 
+FlagStatus IWDG_GetFlagStatus(uint16_t IWDG_FLAG);
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+#line 43 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\stm32f4xx_conf.h"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_pwr.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+  
+
+ 
+ 
+
+
+
+  
+
+
+
+  
+#line 66 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_pwr.h"
+
+
+
+
+
+
+
+ 
+
+  
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+#line 119 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_pwr.h"
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+ 
+#line 139 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_pwr.h"
+
+
+ 
+
+
+
+ 
+#line 154 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_pwr.h"
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+  
+
+  
+void PWR_DeInit(void);
+
+  
+void PWR_BackupAccessCmd(FunctionalState NewState);
+
+  
+void PWR_PVDLevelConfig(uint32_t PWR_PVDLevel);
+void PWR_PVDCmd(FunctionalState NewState);
+
+ 
+
+void PWR_WakeUpPinCmd(FunctionalState NewState);
+
+
+
+
+  
+void PWR_BackupRegulatorCmd(FunctionalState NewState);
+void PWR_MainRegulatorModeConfig(uint32_t PWR_Regulator_Voltage);
+void PWR_OverDriveCmd(FunctionalState NewState);
+void PWR_OverDriveSWCmd(FunctionalState NewState);
+void PWR_UnderDriveCmd(FunctionalState NewState);
+
+
+
+
+
+
+
+
+
+
+
+  
+void PWR_FlashPowerDownCmd(FunctionalState NewState);
+
+  
+void PWR_EnterSTOPMode(uint32_t PWR_Regulator, uint8_t PWR_STOPEntry);
+void PWR_EnterUnderDriveSTOPMode(uint32_t PWR_Regulator, uint8_t PWR_STOPEntry);
+void PWR_EnterSTANDBYMode(void);
+
+  
+FlagStatus PWR_GetFlagStatus(uint32_t PWR_FLAG);
+void PWR_ClearFlag(uint32_t PWR_FLAG);
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+#line 44 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\stm32f4xx_conf.h"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rcc.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+  
+
+ 
+typedef struct
+{
+  uint32_t SYSCLK_Frequency;  
+  uint32_t HCLK_Frequency;    
+  uint32_t PCLK1_Frequency;   
+  uint32_t PCLK2_Frequency;   
+}RCC_ClocksTypeDef;
+
+ 
+
+
+
+ 
+  
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+ 
+#line 95 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rcc.h"
+
+
+ 
+
+
+
+ 
+#line 113 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rcc.h"
+
+#line 128 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rcc.h"
+
+
+
+
+
+  
+  
+
+
+ 
+
+#line 151 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rcc.h"
+
+#line 160 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rcc.h"
+
+
+  
+  
+
+
+ 
+#line 181 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rcc.h"
+
+
+  
+  
+
+
+ 
+#line 196 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rcc.h"
+
+
+  
+  
+
+
+ 
+#line 211 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rcc.h"
+
+#line 218 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rcc.h"
+
+
+
+  
+  
+
+
+ 
+
+
+
+
+
+
+
+  
+  
+
+
+ 
+#line 302 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rcc.h"
+
+
+  
+
+#line 355 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rcc.h"
+
+
+
+
+ 
+
+
+
+
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+#line 432 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rcc.h"
+
+#line 486 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rcc.h"
+
+
+
+  
+#line 517 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rcc.h"
+
+
+
+
+
+
+
+  
+  
+
+
+   
+#line 535 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rcc.h"
+
+
+  
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+  
+#line 600 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rcc.h"
+
+
+  
+  
+
+
+  
+#line 629 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rcc.h"
+
+
+
+
+
+
+  
+
+
+
+ 
+#line 651 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rcc.h"
+                                   
+
+
+
+
+
+  
+  
+
+
+ 
+#line 673 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rcc.h"
+                                   
+
+
+
+
+
+  
+  
+
+
+ 
+#line 698 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rcc.h"
+
+#line 706 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rcc.h"
+
+
+
+
+  
+
+
+
+  
+
+ 
+  
+
+ 
+void        RCC_DeInit(void);
+
+ 
+void        RCC_HSEConfig(uint8_t RCC_HSE);
+ErrorStatus RCC_WaitForHSEStartUp(void);
+void        RCC_AdjustHSICalibrationValue(uint8_t HSICalibrationValue);
+void        RCC_HSICmd(FunctionalState NewState);
+void        RCC_LSEConfig(uint8_t RCC_LSE);
+void        RCC_LSICmd(FunctionalState NewState);
+
+void        RCC_PLLCmd(FunctionalState NewState);
+
+
+
+
+
+void        RCC_PLLConfig(uint32_t RCC_PLLSource, uint32_t PLLM, uint32_t PLLN, uint32_t PLLP, uint32_t PLLQ);
+
+
+void        RCC_PLLI2SCmd(FunctionalState NewState);
+
+void        RCC_PLLI2SConfig(uint32_t PLLI2SN, uint32_t PLLI2SR);
+#line 752 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rcc.h"
+
+void        RCC_PLLSAICmd(FunctionalState NewState);
+
+
+
+
+void        RCC_PLLSAIConfig(uint32_t PLLSAIN, uint32_t PLLSAIQ, uint32_t PLLSAIR);
+
+
+void        RCC_ClockSecuritySystemCmd(FunctionalState NewState);
+void        RCC_MCO1Config(uint32_t RCC_MCO1Source, uint32_t RCC_MCO1Div);
+void        RCC_MCO2Config(uint32_t RCC_MCO2Source, uint32_t RCC_MCO2Div);
+
+ 
+void        RCC_SYSCLKConfig(uint32_t RCC_SYSCLKSource);
+uint8_t     RCC_GetSYSCLKSource(void);
+void        RCC_HCLKConfig(uint32_t RCC_SYSCLK);
+void        RCC_PCLK1Config(uint32_t RCC_HCLK);
+void        RCC_PCLK2Config(uint32_t RCC_HCLK);
+void        RCC_GetClocksFreq(RCC_ClocksTypeDef* RCC_Clocks);
+
+ 
+void        RCC_RTCCLKConfig(uint32_t RCC_RTCCLKSource);
+void        RCC_RTCCLKCmd(FunctionalState NewState);
+void        RCC_BackupResetCmd(FunctionalState NewState);
+
+
+
+
+
+
+
+void        RCC_I2SCLKConfig(uint32_t RCC_I2SCLKSource);
+void        RCC_SAIBlockACLKConfig(uint32_t RCC_SAIBlockACLKSource);
+void        RCC_SAIBlockBCLKConfig(uint32_t RCC_SAIBlockBCLKSource);
+
+
+void        RCC_SAIPLLI2SClkDivConfig(uint32_t RCC_PLLI2SDivQ);
+void        RCC_SAIPLLSAIClkDivConfig(uint32_t RCC_PLLSAIDivQ);
+
+void        RCC_LTDCCLKDivConfig(uint32_t RCC_PLLSAIDivR);
+void        RCC_TIMCLKPresConfig(uint32_t RCC_TIMCLKPrescaler);
+
+void        RCC_AHB1PeriphClockCmd(uint32_t RCC_AHB1Periph, FunctionalState NewState);
+void        RCC_AHB2PeriphClockCmd(uint32_t RCC_AHB2Periph, FunctionalState NewState);
+void        RCC_AHB3PeriphClockCmd(uint32_t RCC_AHB3Periph, FunctionalState NewState);
+void        RCC_APB1PeriphClockCmd(uint32_t RCC_APB1Periph, FunctionalState NewState);
+void        RCC_APB2PeriphClockCmd(uint32_t RCC_APB2Periph, FunctionalState NewState);
+
+void        RCC_AHB1PeriphResetCmd(uint32_t RCC_AHB1Periph, FunctionalState NewState);
+void        RCC_AHB2PeriphResetCmd(uint32_t RCC_AHB2Periph, FunctionalState NewState);
+void        RCC_AHB3PeriphResetCmd(uint32_t RCC_AHB3Periph, FunctionalState NewState);
+void        RCC_APB1PeriphResetCmd(uint32_t RCC_APB1Periph, FunctionalState NewState);
+void        RCC_APB2PeriphResetCmd(uint32_t RCC_APB2Periph, FunctionalState NewState);
+
+void        RCC_AHB1PeriphClockLPModeCmd(uint32_t RCC_AHB1Periph, FunctionalState NewState);
+void        RCC_AHB2PeriphClockLPModeCmd(uint32_t RCC_AHB2Periph, FunctionalState NewState);
+void        RCC_AHB3PeriphClockLPModeCmd(uint32_t RCC_AHB3Periph, FunctionalState NewState);
+void        RCC_APB1PeriphClockLPModeCmd(uint32_t RCC_APB1Periph, FunctionalState NewState);
+void        RCC_APB2PeriphClockLPModeCmd(uint32_t RCC_APB2Periph, FunctionalState NewState);
+
+ 
+void        RCC_LSEModeConfig(uint8_t RCC_Mode);
+
+ 
+
+
+
+
+
+ 
+#line 829 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rcc.h"
+
+ 
+void        RCC_ITConfig(uint8_t RCC_IT, FunctionalState NewState);
+FlagStatus  RCC_GetFlagStatus(uint8_t RCC_FLAG);
+void        RCC_ClearFlag(void);
+ITStatus    RCC_GetITStatus(uint8_t RCC_IT);
+void        RCC_ClearITPendingBit(uint8_t RCC_IT);
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+ 
+#line 45 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\stm32f4xx_conf.h"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rtc.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+  
+
+ 
+
+
+
+  
+typedef struct
+{
+  uint32_t RTC_HourFormat;   
+ 
+  
+  uint32_t RTC_AsynchPrediv; 
+ 
+  
+  uint32_t RTC_SynchPrediv;  
+ 
+}RTC_InitTypeDef;
+
+
+
+ 
+typedef struct
+{
+  uint8_t RTC_Hours;    
+
+
+ 
+
+  uint8_t RTC_Minutes;  
+ 
+  
+  uint8_t RTC_Seconds;  
+ 
+
+  uint8_t RTC_H12;      
+ 
+}RTC_TimeTypeDef; 
+
+
+
+ 
+typedef struct
+{
+  uint8_t RTC_WeekDay; 
+ 
+  
+  uint8_t RTC_Month;   
+ 
+
+  uint8_t RTC_Date;     
+ 
+  
+  uint8_t RTC_Year;     
+ 
+}RTC_DateTypeDef;
+
+
+
+ 
+typedef struct
+{
+  RTC_TimeTypeDef RTC_AlarmTime;      
+
+  uint32_t RTC_AlarmMask;            
+ 
+
+  uint32_t RTC_AlarmDateWeekDaySel;  
+ 
+  
+  uint8_t RTC_AlarmDateWeekDay;      
+
+
+
+ 
+}RTC_AlarmTypeDef;
+
+ 
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+  
+
+ 
+
+
+  
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+
+
+
+  
+
+ 
+#line 211 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rtc.h"
+
+
+
+  
+
+
+
+  
+  
+#line 234 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rtc.h"
+
+
+  
+
+
+
+
+  
+#line 250 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rtc.h"
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+#line 280 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rtc.h"
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+  
+
+  
+#line 349 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rtc.h"
+
+
+  
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+#line 379 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rtc.h"
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+ 
+
+  
+
+
+
+
+
+
+  
+
+
+
+  
+#line 459 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rtc.h"
+                                          
+
+
+  
+
+
+
+  
+#line 474 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rtc.h"
+
+
+
+  
+
+
+
+  
+
+
+
+
+ 
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+#line 515 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rtc.h"
+
+
+
+  
+
+
+
+  
+
+
+#line 535 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rtc.h"
+
+
+  
+
+
+
+  
+#line 566 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rtc.h"
+
+
+
+ 
+
+  
+
+  
+#line 582 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rtc.h"
+
+
+
+
+
+
+
+ 
+
+
+
+  
+
+
+
+
+
+ 
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+ 
+
+
+
+ 
+
+#line 699 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rtc.h"
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+  
+#line 739 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rtc.h"
+
+
+  
+
+
+
+  
+#line 752 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rtc.h"
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+
+ 
+  
+
+ 
+ErrorStatus RTC_DeInit(void);
+
+ 
+ErrorStatus RTC_Init(RTC_InitTypeDef* RTC_InitStruct);
+void RTC_StructInit(RTC_InitTypeDef* RTC_InitStruct);
+void RTC_WriteProtectionCmd(FunctionalState NewState);
+ErrorStatus RTC_EnterInitMode(void);
+void RTC_ExitInitMode(void);
+ErrorStatus RTC_WaitForSynchro(void);
+ErrorStatus RTC_RefClockCmd(FunctionalState NewState);
+void RTC_BypassShadowCmd(FunctionalState NewState);
+
+ 
+ErrorStatus RTC_SetTime(uint32_t RTC_Format, RTC_TimeTypeDef* RTC_TimeStruct);
+void RTC_TimeStructInit(RTC_TimeTypeDef* RTC_TimeStruct);
+void RTC_GetTime(uint32_t RTC_Format, RTC_TimeTypeDef* RTC_TimeStruct);
+uint32_t RTC_GetSubSecond(void);
+ErrorStatus RTC_SetDate(uint32_t RTC_Format, RTC_DateTypeDef* RTC_DateStruct);
+void RTC_DateStructInit(RTC_DateTypeDef* RTC_DateStruct);
+void RTC_GetDate(uint32_t RTC_Format, RTC_DateTypeDef* RTC_DateStruct);
+
+ 
+void RTC_SetAlarm(uint32_t RTC_Format, uint32_t RTC_Alarm, RTC_AlarmTypeDef* RTC_AlarmStruct);
+void RTC_AlarmStructInit(RTC_AlarmTypeDef* RTC_AlarmStruct);
+void RTC_GetAlarm(uint32_t RTC_Format, uint32_t RTC_Alarm, RTC_AlarmTypeDef* RTC_AlarmStruct);
+ErrorStatus RTC_AlarmCmd(uint32_t RTC_Alarm, FunctionalState NewState);
+void RTC_AlarmSubSecondConfig(uint32_t RTC_Alarm, uint32_t RTC_AlarmSubSecondValue, uint32_t RTC_AlarmSubSecondMask);
+uint32_t RTC_GetAlarmSubSecond(uint32_t RTC_Alarm);
+
+ 
+void RTC_WakeUpClockConfig(uint32_t RTC_WakeUpClock);
+void RTC_SetWakeUpCounter(uint32_t RTC_WakeUpCounter);
+uint32_t RTC_GetWakeUpCounter(void);
+ErrorStatus RTC_WakeUpCmd(FunctionalState NewState);
+
+ 
+void RTC_DayLightSavingConfig(uint32_t RTC_DayLightSaving, uint32_t RTC_StoreOperation);
+uint32_t RTC_GetStoreOperation(void);
+
+ 
+void RTC_OutputConfig(uint32_t RTC_Output, uint32_t RTC_OutputPolarity);
+
+ 
+ErrorStatus RTC_CoarseCalibConfig(uint32_t RTC_CalibSign, uint32_t Value);
+ErrorStatus RTC_CoarseCalibCmd(FunctionalState NewState);
+void RTC_CalibOutputCmd(FunctionalState NewState);
+void RTC_CalibOutputConfig(uint32_t RTC_CalibOutput);
+ErrorStatus RTC_SmoothCalibConfig(uint32_t RTC_SmoothCalibPeriod, 
+                                  uint32_t RTC_SmoothCalibPlusPulses,
+                                  uint32_t RTC_SmouthCalibMinusPulsesValue);
+
+ 
+void RTC_TimeStampCmd(uint32_t RTC_TimeStampEdge, FunctionalState NewState);
+void RTC_GetTimeStamp(uint32_t RTC_Format, RTC_TimeTypeDef* RTC_StampTimeStruct,
+                                      RTC_DateTypeDef* RTC_StampDateStruct);
+uint32_t RTC_GetTimeStampSubSecond(void);
+
+ 
+void RTC_TamperTriggerConfig(uint32_t RTC_Tamper, uint32_t RTC_TamperTrigger);
+void RTC_TamperCmd(uint32_t RTC_Tamper, FunctionalState NewState);
+void RTC_TamperFilterConfig(uint32_t RTC_TamperFilter);
+void RTC_TamperSamplingFreqConfig(uint32_t RTC_TamperSamplingFreq);
+void RTC_TamperPinsPrechargeDuration(uint32_t RTC_TamperPrechargeDuration);
+void RTC_TimeStampOnTamperDetectionCmd(FunctionalState NewState);
+void RTC_TamperPullUpCmd(FunctionalState NewState);
+
+ 
+void RTC_WriteBackupRegister(uint32_t RTC_BKP_DR, uint32_t Data);
+uint32_t RTC_ReadBackupRegister(uint32_t RTC_BKP_DR);
+
+
+ 
+void RTC_TamperPinSelection(uint32_t RTC_TamperPin);
+void RTC_TimeStampPinSelection(uint32_t RTC_TimeStampPin);
+void RTC_OutputTypeConfig(uint32_t RTC_OutputType);
+
+ 
+ErrorStatus RTC_SynchroShiftConfig(uint32_t RTC_ShiftAdd1S, uint32_t RTC_ShiftSubFS);
+
+ 
+void RTC_ITConfig(uint32_t RTC_IT, FunctionalState NewState);
+FlagStatus RTC_GetFlagStatus(uint32_t RTC_FLAG);
+void RTC_ClearFlag(uint32_t RTC_FLAG);
+ITStatus RTC_GetITStatus(uint32_t RTC_IT);
+void RTC_ClearITPendingBit(uint32_t RTC_IT);
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+ 
+#line 46 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\stm32f4xx_conf.h"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_sdio.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+
+typedef struct
+{
+  uint32_t SDIO_ClockEdge;            
+ 
+
+  uint32_t SDIO_ClockBypass;          
+
+ 
+
+  uint32_t SDIO_ClockPowerSave;       
+
+ 
+
+  uint32_t SDIO_BusWide;              
+ 
+
+  uint32_t SDIO_HardwareFlowControl;  
+ 
+
+  uint8_t SDIO_ClockDiv;              
+ 
+                                           
+} SDIO_InitTypeDef;
+
+typedef struct
+{
+  uint32_t SDIO_Argument;  
+
+
+ 
+
+  uint32_t SDIO_CmdIndex;   
+
+  uint32_t SDIO_Response;  
+ 
+
+  uint32_t SDIO_Wait;      
+ 
+
+  uint32_t SDIO_CPSM;      
+
+ 
+} SDIO_CmdInitTypeDef;
+
+typedef struct
+{
+  uint32_t SDIO_DataTimeOut;     
+
+  uint32_t SDIO_DataLength;      
+ 
+  uint32_t SDIO_DataBlockSize;  
+ 
+ 
+  uint32_t SDIO_TransferDir;    
+
+ 
+ 
+  uint32_t SDIO_TransferMode;   
+ 
+ 
+  uint32_t SDIO_DPSM;           
+
+ 
+} SDIO_DataInitTypeDef;
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+  
+
+
+
+
+ 
+
+#line 225 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_sdio.h"
+
+
+  
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+ 
+
+#line 248 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_sdio.h"
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+  
+
+
+
+ 
+
+#line 286 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_sdio.h"
+
+
+ 
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+ 
+
+#line 333 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_sdio.h"
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+#line 424 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_sdio.h"
+
+
+
+#line 451 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_sdio.h"
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+ 
+ 
+void SDIO_DeInit(void);
+
+ 
+void SDIO_Init(SDIO_InitTypeDef* SDIO_InitStruct);
+void SDIO_StructInit(SDIO_InitTypeDef* SDIO_InitStruct);
+void SDIO_ClockCmd(FunctionalState NewState);
+void SDIO_SetPowerState(uint32_t SDIO_PowerState);
+uint32_t SDIO_GetPowerState(void);
+
+ 
+void SDIO_SendCommand(SDIO_CmdInitTypeDef *SDIO_CmdInitStruct);
+void SDIO_CmdStructInit(SDIO_CmdInitTypeDef* SDIO_CmdInitStruct);
+uint8_t SDIO_GetCommandResponse(void);
+uint32_t SDIO_GetResponse(uint32_t SDIO_RESP);
+
+ 
+void SDIO_DataConfig(SDIO_DataInitTypeDef* SDIO_DataInitStruct);
+void SDIO_DataStructInit(SDIO_DataInitTypeDef* SDIO_DataInitStruct);
+uint32_t SDIO_GetDataCounter(void);
+uint32_t SDIO_ReadData(void);
+void SDIO_WriteData(uint32_t Data);
+uint32_t SDIO_GetFIFOCount(void);
+
+ 
+void SDIO_StartSDIOReadWait(FunctionalState NewState);
+void SDIO_StopSDIOReadWait(FunctionalState NewState);
+void SDIO_SetSDIOReadWaitMode(uint32_t SDIO_ReadWaitMode);
+void SDIO_SetSDIOOperation(FunctionalState NewState);
+void SDIO_SendSDIOSuspendCmd(FunctionalState NewState);
+
+ 
+void SDIO_CommandCompletionCmd(FunctionalState NewState);
+void SDIO_CEATAITCmd(FunctionalState NewState);
+void SDIO_SendCEATACmd(FunctionalState NewState);
+
+ 
+void SDIO_DMACmd(FunctionalState NewState);
+
+ 
+void SDIO_ITConfig(uint32_t SDIO_IT, FunctionalState NewState);
+FlagStatus SDIO_GetFlagStatus(uint32_t SDIO_FLAG);
+void SDIO_ClearFlag(uint32_t SDIO_FLAG);
+ITStatus SDIO_GetITStatus(uint32_t SDIO_IT);
+void SDIO_ClearITPendingBit(uint32_t SDIO_IT);
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+#line 47 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\stm32f4xx_conf.h"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_spi.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+  
+
+ 
+
+
+
+ 
+
+typedef struct
+{
+  uint16_t SPI_Direction;           
+ 
+
+  uint16_t SPI_Mode;                
+ 
+
+  uint16_t SPI_DataSize;            
+ 
+
+  uint16_t SPI_CPOL;                
+ 
+
+  uint16_t SPI_CPHA;                
+ 
+
+  uint16_t SPI_NSS;                 
+
+ 
+ 
+  uint16_t SPI_BaudRatePrescaler;   
+
+
+
+ 
+
+  uint16_t SPI_FirstBit;            
+ 
+
+  uint16_t SPI_CRCPolynomial;        
+}SPI_InitTypeDef;
+
+
+
+ 
+
+typedef struct
+{
+
+  uint16_t I2S_Mode;         
+ 
+
+  uint16_t I2S_Standard;     
+ 
+
+  uint16_t I2S_DataFormat;   
+ 
+
+  uint16_t I2S_MCLKOutput;   
+ 
+
+  uint32_t I2S_AudioFreq;    
+ 
+
+  uint16_t I2S_CPOL;         
+ 
+}I2S_InitTypeDef;
+
+ 
+
+
+
+ 
+
+#line 125 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_spi.h"
+
+#line 134 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_spi.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+  
+#line 159 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_spi.h"
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+#line 243 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_spi.h"
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+#line 271 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_spi.h"
+
+
+ 
+  
+
+
+
+ 
+
+#line 290 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_spi.h"
+
+
+ 
+  
+
+
+ 
+
+#line 306 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_spi.h"
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+#line 336 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_spi.h"
+
+
+
+
+
+
+ 
+            
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+#line 443 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_spi.h"
+
+#line 450 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_spi.h"
+
+
+ 
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+ 
+
+#line 486 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_spi.h"
+
+
+ 
+  
+
+
+ 
+
+ 
+  
+
+  
+void SPI_I2S_DeInit(SPI_TypeDef* SPIx);
+
+ 
+void SPI_Init(SPI_TypeDef* SPIx, SPI_InitTypeDef* SPI_InitStruct);
+void I2S_Init(SPI_TypeDef* SPIx, I2S_InitTypeDef* I2S_InitStruct);
+void SPI_StructInit(SPI_InitTypeDef* SPI_InitStruct);
+void I2S_StructInit(I2S_InitTypeDef* I2S_InitStruct);
+void SPI_Cmd(SPI_TypeDef* SPIx, FunctionalState NewState);
+void I2S_Cmd(SPI_TypeDef* SPIx, FunctionalState NewState);
+void SPI_DataSizeConfig(SPI_TypeDef* SPIx, uint16_t SPI_DataSize);
+void SPI_BiDirectionalLineConfig(SPI_TypeDef* SPIx, uint16_t SPI_Direction);
+void SPI_NSSInternalSoftwareConfig(SPI_TypeDef* SPIx, uint16_t SPI_NSSInternalSoft);
+void SPI_SSOutputCmd(SPI_TypeDef* SPIx, FunctionalState NewState);
+void SPI_TIModeCmd(SPI_TypeDef* SPIx, FunctionalState NewState);
+
+void I2S_FullDuplexConfig(SPI_TypeDef* I2Sxext, I2S_InitTypeDef* I2S_InitStruct);
+
+  
+void SPI_I2S_SendData(SPI_TypeDef* SPIx, uint16_t Data);
+uint16_t SPI_I2S_ReceiveData(SPI_TypeDef* SPIx);
+
+ 
+void SPI_CalculateCRC(SPI_TypeDef* SPIx, FunctionalState NewState);
+void SPI_TransmitCRC(SPI_TypeDef* SPIx);
+uint16_t SPI_GetCRC(SPI_TypeDef* SPIx, uint8_t SPI_CRC);
+uint16_t SPI_GetCRCPolynomial(SPI_TypeDef* SPIx);
+
+ 
+void SPI_I2S_DMACmd(SPI_TypeDef* SPIx, uint16_t SPI_I2S_DMAReq, FunctionalState NewState);
+
+ 
+void SPI_I2S_ITConfig(SPI_TypeDef* SPIx, uint8_t SPI_I2S_IT, FunctionalState NewState);
+FlagStatus SPI_I2S_GetFlagStatus(SPI_TypeDef* SPIx, uint16_t SPI_I2S_FLAG);
+void SPI_I2S_ClearFlag(SPI_TypeDef* SPIx, uint16_t SPI_I2S_FLAG);
+ITStatus SPI_I2S_GetITStatus(SPI_TypeDef* SPIx, uint8_t SPI_I2S_IT);
+void SPI_I2S_ClearITPendingBit(SPI_TypeDef* SPIx, uint8_t SPI_I2S_IT);
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+#line 48 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\stm32f4xx_conf.h"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_syscfg.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+  
+
+ 
+ 
+  
+
+
+  
+
+
+
+  
+#line 69 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_syscfg.h"
+
+#line 81 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_syscfg.h"
+                                         
+
+
+  
+
+
+
+
+  
+#line 122 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_syscfg.h"
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#line 153 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_syscfg.h"
+
+
+
+
+
+
+
+#line 167 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_syscfg.h"
+
+#line 175 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_syscfg.h"
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+ 
+  
+ 
+void       SYSCFG_DeInit(void);
+void       SYSCFG_MemoryRemapConfig(uint8_t SYSCFG_MemoryRemap);
+void       SYSCFG_MemorySwappingBank(FunctionalState NewState);
+void       SYSCFG_EXTILineConfig(uint8_t EXTI_PortSourceGPIOx, uint8_t EXTI_PinSourcex);
+void       SYSCFG_ETH_MediaInterfaceConfig(uint32_t SYSCFG_ETH_MediaInterface); 
+void       SYSCFG_CompensationCellCmd(FunctionalState NewState); 
+FlagStatus SYSCFG_GetCompensationCellStatus(void);
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+ 
+#line 49 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\stm32f4xx_conf.h"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_tim.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+  
+
+ 
+
+
+
+
+ 
+
+typedef struct
+{
+  uint16_t TIM_Prescaler;         
+ 
+
+  uint16_t TIM_CounterMode;       
+ 
+
+  uint32_t TIM_Period;            
+
+  
+
+  uint16_t TIM_ClockDivision;     
+ 
+
+  uint8_t TIM_RepetitionCounter;  
+
+
+
+
+
+
+ 
+} TIM_TimeBaseInitTypeDef; 
+
+
+
+ 
+
+typedef struct
+{
+  uint16_t TIM_OCMode;        
+ 
+
+  uint16_t TIM_OutputState;   
+ 
+
+  uint16_t TIM_OutputNState;  
+
+ 
+
+  uint32_t TIM_Pulse;         
+ 
+
+  uint16_t TIM_OCPolarity;    
+ 
+
+  uint16_t TIM_OCNPolarity;   
+
+ 
+
+  uint16_t TIM_OCIdleState;   
+
+ 
+
+  uint16_t TIM_OCNIdleState;  
+
+ 
+} TIM_OCInitTypeDef;
+
+
+
+ 
+
+typedef struct
+{
+
+  uint16_t TIM_Channel;      
+ 
+
+  uint16_t TIM_ICPolarity;   
+ 
+
+  uint16_t TIM_ICSelection;  
+ 
+
+  uint16_t TIM_ICPrescaler;  
+ 
+
+  uint16_t TIM_ICFilter;     
+ 
+} TIM_ICInitTypeDef;
+
+
+
+
+ 
+
+typedef struct
+{
+
+  uint16_t TIM_OSSRState;        
+ 
+
+  uint16_t TIM_OSSIState;        
+ 
+
+  uint16_t TIM_LOCKLevel;        
+  
+
+  uint16_t TIM_DeadTime;         
+
+ 
+
+  uint16_t TIM_Break;            
+ 
+
+  uint16_t TIM_BreakPolarity;    
+ 
+
+  uint16_t TIM_AutomaticOutput;  
+ 
+} TIM_BDTRInitTypeDef;
+
+ 
+
+
+
+ 
+
+#line 189 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_tim.h"
+                                          
+#line 202 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_tim.h"
+                                     
+ 
+#line 212 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_tim.h"
+ 
+#line 219 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_tim.h"
+ 
+
+
+ 
+#line 231 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_tim.h"
+                                
+
+
+
+
+
+
+ 
+
+#line 260 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_tim.h"
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+
+
+
+
+                                 
+
+
+
+
+                                 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+#line 309 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_tim.h"
+
+
+ 
+
+
+
+ 
+
+#line 327 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_tim.h"
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+  
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+#line 451 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_tim.h"
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+#line 513 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_tim.h"
+
+
+  
+
+
+
+ 
+
+#line 529 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_tim.h"
+
+
+  
+
+
+
+ 
+
+#line 545 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_tim.h"
+
+
+  
+
+
+
+ 
+
+#line 562 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_tim.h"
+
+#line 571 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_tim.h"
+
+
+  
+
+
+
+ 
+
+#line 619 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_tim.h"
+
+
+  
+
+
+
+ 
+
+#line 663 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_tim.h"
+
+
+  
+
+
+
+ 
+
+#line 679 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_tim.h"
+
+
+
+  
+
+
+
+ 
+
+#line 696 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_tim.h"
+
+
+  
+
+
+
+ 
+
+#line 724 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_tim.h"
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+#line 785 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_tim.h"
+
+
+  
+
+
+
+
+ 
+
+#line 803 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_tim.h"
+  
+
+
+  
+
+
+
+ 
+
+#line 818 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_tim.h"
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+
+
+
+
+                                     
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+#line 879 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_tim.h"
+
+
+  
+
+
+
+ 
+
+#line 895 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_tim.h"
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#line 937 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_tim.h"
+
+
+
+  
+
+
+ 
+
+#line 969 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_tim.h"
+
+
+
+  
+
+
+
+ 
+
+
+
+
+  
+
+
+
+ 
+
+
+
+
+  
+
+
+
+ 
+
+#line 1014 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_tim.h"
+
+
+ 
+
+
+
+ 
+
+ 
+  
+
+ 
+void TIM_DeInit(TIM_TypeDef* TIMx);
+void TIM_TimeBaseInit(TIM_TypeDef* TIMx, TIM_TimeBaseInitTypeDef* TIM_TimeBaseInitStruct);
+void TIM_TimeBaseStructInit(TIM_TimeBaseInitTypeDef* TIM_TimeBaseInitStruct);
+void TIM_PrescalerConfig(TIM_TypeDef* TIMx, uint16_t Prescaler, uint16_t TIM_PSCReloadMode);
+void TIM_CounterModeConfig(TIM_TypeDef* TIMx, uint16_t TIM_CounterMode);
+void TIM_SetCounter(TIM_TypeDef* TIMx, uint32_t Counter);
+void TIM_SetAutoreload(TIM_TypeDef* TIMx, uint32_t Autoreload);
+uint32_t TIM_GetCounter(TIM_TypeDef* TIMx);
+uint16_t TIM_GetPrescaler(TIM_TypeDef* TIMx);
+void TIM_UpdateDisableConfig(TIM_TypeDef* TIMx, FunctionalState NewState);
+void TIM_UpdateRequestConfig(TIM_TypeDef* TIMx, uint16_t TIM_UpdateSource);
+void TIM_ARRPreloadConfig(TIM_TypeDef* TIMx, FunctionalState NewState);
+void TIM_SelectOnePulseMode(TIM_TypeDef* TIMx, uint16_t TIM_OPMode);
+void TIM_SetClockDivision(TIM_TypeDef* TIMx, uint16_t TIM_CKD);
+void TIM_Cmd(TIM_TypeDef* TIMx, FunctionalState NewState);
+
+ 
+void TIM_OC1Init(TIM_TypeDef* TIMx, TIM_OCInitTypeDef* TIM_OCInitStruct);
+void TIM_OC2Init(TIM_TypeDef* TIMx, TIM_OCInitTypeDef* TIM_OCInitStruct);
+void TIM_OC3Init(TIM_TypeDef* TIMx, TIM_OCInitTypeDef* TIM_OCInitStruct);
+void TIM_OC4Init(TIM_TypeDef* TIMx, TIM_OCInitTypeDef* TIM_OCInitStruct);
+void TIM_OCStructInit(TIM_OCInitTypeDef* TIM_OCInitStruct);
+void TIM_SelectOCxM(TIM_TypeDef* TIMx, uint16_t TIM_Channel, uint16_t TIM_OCMode);
+void TIM_SetCompare1(TIM_TypeDef* TIMx, uint32_t Compare1);
+void TIM_SetCompare2(TIM_TypeDef* TIMx, uint32_t Compare2);
+void TIM_SetCompare3(TIM_TypeDef* TIMx, uint32_t Compare3);
+void TIM_SetCompare4(TIM_TypeDef* TIMx, uint32_t Compare4);
+void TIM_ForcedOC1Config(TIM_TypeDef* TIMx, uint16_t TIM_ForcedAction);
+void TIM_ForcedOC2Config(TIM_TypeDef* TIMx, uint16_t TIM_ForcedAction);
+void TIM_ForcedOC3Config(TIM_TypeDef* TIMx, uint16_t TIM_ForcedAction);
+void TIM_ForcedOC4Config(TIM_TypeDef* TIMx, uint16_t TIM_ForcedAction);
+void TIM_OC1PreloadConfig(TIM_TypeDef* TIMx, uint16_t TIM_OCPreload);
+void TIM_OC2PreloadConfig(TIM_TypeDef* TIMx, uint16_t TIM_OCPreload);
+void TIM_OC3PreloadConfig(TIM_TypeDef* TIMx, uint16_t TIM_OCPreload);
+void TIM_OC4PreloadConfig(TIM_TypeDef* TIMx, uint16_t TIM_OCPreload);
+void TIM_OC1FastConfig(TIM_TypeDef* TIMx, uint16_t TIM_OCFast);
+void TIM_OC2FastConfig(TIM_TypeDef* TIMx, uint16_t TIM_OCFast);
+void TIM_OC3FastConfig(TIM_TypeDef* TIMx, uint16_t TIM_OCFast);
+void TIM_OC4FastConfig(TIM_TypeDef* TIMx, uint16_t TIM_OCFast);
+void TIM_ClearOC1Ref(TIM_TypeDef* TIMx, uint16_t TIM_OCClear);
+void TIM_ClearOC2Ref(TIM_TypeDef* TIMx, uint16_t TIM_OCClear);
+void TIM_ClearOC3Ref(TIM_TypeDef* TIMx, uint16_t TIM_OCClear);
+void TIM_ClearOC4Ref(TIM_TypeDef* TIMx, uint16_t TIM_OCClear);
+void TIM_OC1PolarityConfig(TIM_TypeDef* TIMx, uint16_t TIM_OCPolarity);
+void TIM_OC1NPolarityConfig(TIM_TypeDef* TIMx, uint16_t TIM_OCNPolarity);
+void TIM_OC2PolarityConfig(TIM_TypeDef* TIMx, uint16_t TIM_OCPolarity);
+void TIM_OC2NPolarityConfig(TIM_TypeDef* TIMx, uint16_t TIM_OCNPolarity);
+void TIM_OC3PolarityConfig(TIM_TypeDef* TIMx, uint16_t TIM_OCPolarity);
+void TIM_OC3NPolarityConfig(TIM_TypeDef* TIMx, uint16_t TIM_OCNPolarity);
+void TIM_OC4PolarityConfig(TIM_TypeDef* TIMx, uint16_t TIM_OCPolarity);
+void TIM_CCxCmd(TIM_TypeDef* TIMx, uint16_t TIM_Channel, uint16_t TIM_CCx);
+void TIM_CCxNCmd(TIM_TypeDef* TIMx, uint16_t TIM_Channel, uint16_t TIM_CCxN);
+
+ 
+void TIM_ICInit(TIM_TypeDef* TIMx, TIM_ICInitTypeDef* TIM_ICInitStruct);
+void TIM_ICStructInit(TIM_ICInitTypeDef* TIM_ICInitStruct);
+void TIM_PWMIConfig(TIM_TypeDef* TIMx, TIM_ICInitTypeDef* TIM_ICInitStruct);
+uint32_t TIM_GetCapture1(TIM_TypeDef* TIMx);
+uint32_t TIM_GetCapture2(TIM_TypeDef* TIMx);
+uint32_t TIM_GetCapture3(TIM_TypeDef* TIMx);
+uint32_t TIM_GetCapture4(TIM_TypeDef* TIMx);
+void TIM_SetIC1Prescaler(TIM_TypeDef* TIMx, uint16_t TIM_ICPSC);
+void TIM_SetIC2Prescaler(TIM_TypeDef* TIMx, uint16_t TIM_ICPSC);
+void TIM_SetIC3Prescaler(TIM_TypeDef* TIMx, uint16_t TIM_ICPSC);
+void TIM_SetIC4Prescaler(TIM_TypeDef* TIMx, uint16_t TIM_ICPSC);
+
+ 
+void TIM_BDTRConfig(TIM_TypeDef* TIMx, TIM_BDTRInitTypeDef *TIM_BDTRInitStruct);
+void TIM_BDTRStructInit(TIM_BDTRInitTypeDef* TIM_BDTRInitStruct);
+void TIM_CtrlPWMOutputs(TIM_TypeDef* TIMx, FunctionalState NewState);
+void TIM_SelectCOM(TIM_TypeDef* TIMx, FunctionalState NewState);
+void TIM_CCPreloadControl(TIM_TypeDef* TIMx, FunctionalState NewState);
+
+ 
+void TIM_ITConfig(TIM_TypeDef* TIMx, uint16_t TIM_IT, FunctionalState NewState);
+void TIM_GenerateEvent(TIM_TypeDef* TIMx, uint16_t TIM_EventSource);
+FlagStatus TIM_GetFlagStatus(TIM_TypeDef* TIMx, uint16_t TIM_FLAG);
+void TIM_ClearFlag(TIM_TypeDef* TIMx, uint16_t TIM_FLAG);
+ITStatus TIM_GetITStatus(TIM_TypeDef* TIMx, uint16_t TIM_IT);
+void TIM_ClearITPendingBit(TIM_TypeDef* TIMx, uint16_t TIM_IT);
+void TIM_DMAConfig(TIM_TypeDef* TIMx, uint16_t TIM_DMABase, uint16_t TIM_DMABurstLength);
+void TIM_DMACmd(TIM_TypeDef* TIMx, uint16_t TIM_DMASource, FunctionalState NewState);
+void TIM_SelectCCDMA(TIM_TypeDef* TIMx, FunctionalState NewState);
+
+ 
+void TIM_InternalClockConfig(TIM_TypeDef* TIMx);
+void TIM_ITRxExternalClockConfig(TIM_TypeDef* TIMx, uint16_t TIM_InputTriggerSource);
+void TIM_TIxExternalClockConfig(TIM_TypeDef* TIMx, uint16_t TIM_TIxExternalCLKSource,
+                                uint16_t TIM_ICPolarity, uint16_t ICFilter);
+void TIM_ETRClockMode1Config(TIM_TypeDef* TIMx, uint16_t TIM_ExtTRGPrescaler, uint16_t TIM_ExtTRGPolarity,
+                             uint16_t ExtTRGFilter);
+void TIM_ETRClockMode2Config(TIM_TypeDef* TIMx, uint16_t TIM_ExtTRGPrescaler, 
+                             uint16_t TIM_ExtTRGPolarity, uint16_t ExtTRGFilter);
+
+ 
+void TIM_SelectInputTrigger(TIM_TypeDef* TIMx, uint16_t TIM_InputTriggerSource);
+void TIM_SelectOutputTrigger(TIM_TypeDef* TIMx, uint16_t TIM_TRGOSource);
+void TIM_SelectSlaveMode(TIM_TypeDef* TIMx, uint16_t TIM_SlaveMode);
+void TIM_SelectMasterSlaveMode(TIM_TypeDef* TIMx, uint16_t TIM_MasterSlaveMode);
+void TIM_ETRConfig(TIM_TypeDef* TIMx, uint16_t TIM_ExtTRGPrescaler, uint16_t TIM_ExtTRGPolarity,
+                   uint16_t ExtTRGFilter);
+
+    
+void TIM_EncoderInterfaceConfig(TIM_TypeDef* TIMx, uint16_t TIM_EncoderMode,
+                                uint16_t TIM_IC1Polarity, uint16_t TIM_IC2Polarity);
+void TIM_SelectHallSensor(TIM_TypeDef* TIMx, FunctionalState NewState);
+
+ 
+void TIM_RemapConfig(TIM_TypeDef* TIMx, uint16_t TIM_Remap);
+
+
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+ 
+#line 50 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\stm32f4xx_conf.h"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_usart.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+  
+
+  
+
+
+
+  
+  
+typedef struct
+{
+  uint32_t USART_BaudRate;            
+
+
+
+ 
+
+  uint16_t USART_WordLength;          
+ 
+
+  uint16_t USART_StopBits;            
+ 
+
+  uint16_t USART_Parity;              
+
+
+
+
+ 
+ 
+  uint16_t USART_Mode;                
+ 
+
+  uint16_t USART_HardwareFlowControl; 
+
+ 
+} USART_InitTypeDef;
+
+
+
+  
+  
+typedef struct
+{
+
+  uint16_t USART_Clock;   
+ 
+
+  uint16_t USART_CPOL;    
+ 
+
+  uint16_t USART_CPHA;    
+ 
+
+  uint16_t USART_LastBit; 
+
+ 
+} USART_ClockInitTypeDef;
+
+ 
+
+
+
+  
+  
+#line 118 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_usart.h"
+
+
+
+
+
+
+
+
+  
+  
+
+
+                                    
+
+
+
+
+  
+
+
+
+  
+  
+#line 149 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_usart.h"
+
+
+  
+
+
+
+  
+  
+#line 163 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_usart.h"
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+  
+
+
+
+  
+#line 190 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_usart.h"
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+ 
+  
+
+
+
+
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+  
+#line 257 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_usart.h"
+
+
+
+ 
+
+
+
+ 
+
+#line 278 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_usart.h"
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+  
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+#line 350 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_usart.h"
+                              
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+ 
+   
+
+  
+void USART_DeInit(USART_TypeDef* USARTx);
+
+ 
+void USART_Init(USART_TypeDef* USARTx, USART_InitTypeDef* USART_InitStruct);
+void USART_StructInit(USART_InitTypeDef* USART_InitStruct);
+void USART_ClockInit(USART_TypeDef* USARTx, USART_ClockInitTypeDef* USART_ClockInitStruct);
+void USART_ClockStructInit(USART_ClockInitTypeDef* USART_ClockInitStruct);
+void USART_Cmd(USART_TypeDef* USARTx, FunctionalState NewState);
+void USART_SetPrescaler(USART_TypeDef* USARTx, uint8_t USART_Prescaler);
+void USART_OverSampling8Cmd(USART_TypeDef* USARTx, FunctionalState NewState);
+void USART_OneBitMethodCmd(USART_TypeDef* USARTx, FunctionalState NewState);
+
+  
+void USART_SendData(USART_TypeDef* USARTx, uint16_t Data);
+uint16_t USART_ReceiveData(USART_TypeDef* USARTx);
+
+ 
+void USART_SetAddress(USART_TypeDef* USARTx, uint8_t USART_Address);
+void USART_WakeUpConfig(USART_TypeDef* USARTx, uint16_t USART_WakeUp);
+void USART_ReceiverWakeUpCmd(USART_TypeDef* USARTx, FunctionalState NewState);
+
+ 
+void USART_LINBreakDetectLengthConfig(USART_TypeDef* USARTx, uint16_t USART_LINBreakDetectLength);
+void USART_LINCmd(USART_TypeDef* USARTx, FunctionalState NewState);
+void USART_SendBreak(USART_TypeDef* USARTx);
+
+ 
+void USART_HalfDuplexCmd(USART_TypeDef* USARTx, FunctionalState NewState);
+
+ 
+void USART_SmartCardCmd(USART_TypeDef* USARTx, FunctionalState NewState);
+void USART_SmartCardNACKCmd(USART_TypeDef* USARTx, FunctionalState NewState);
+void USART_SetGuardTime(USART_TypeDef* USARTx, uint8_t USART_GuardTime);
+
+ 
+void USART_IrDAConfig(USART_TypeDef* USARTx, uint16_t USART_IrDAMode);
+void USART_IrDACmd(USART_TypeDef* USARTx, FunctionalState NewState);
+
+ 
+void USART_DMACmd(USART_TypeDef* USARTx, uint16_t USART_DMAReq, FunctionalState NewState);
+
+ 
+void USART_ITConfig(USART_TypeDef* USARTx, uint16_t USART_IT, FunctionalState NewState);
+FlagStatus USART_GetFlagStatus(USART_TypeDef* USARTx, uint16_t USART_FLAG);
+void USART_ClearFlag(USART_TypeDef* USARTx, uint16_t USART_FLAG);
+ITStatus USART_GetITStatus(USART_TypeDef* USARTx, uint16_t USART_IT);
+void USART_ClearITPendingBit(USART_TypeDef* USARTx, uint16_t USART_IT);
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+ 
+#line 51 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\stm32f4xx_conf.h"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_wwdg.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+  
+
+ 
+ 
+
+
+
+  
+  
+
+
+ 
+  
+#line 69 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_wwdg.h"
+
+
+
+  
+
+
+
+  
+
+ 
+ 
+  
+   
+void WWDG_DeInit(void);
+
+ 
+void WWDG_SetPrescaler(uint32_t WWDG_Prescaler);
+void WWDG_SetWindowValue(uint8_t WindowValue);
+void WWDG_EnableIT(void);
+void WWDG_SetCounter(uint8_t Counter);
+
+ 
+void WWDG_Enable(uint8_t Counter);
+
+ 
+FlagStatus WWDG_GetFlagStatus(void);
+void WWDG_ClearFlag(void);
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+ 
+#line 52 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\stm32f4xx_conf.h"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\misc.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+
+
+
+ 
+
+typedef struct
+{
+  uint8_t NVIC_IRQChannel;                    
+
+
+ 
+
+  uint8_t NVIC_IRQChannelPreemptionPriority;  
+
+
+ 
+
+  uint8_t NVIC_IRQChannelSubPriority;         
+
+
+ 
+
+  FunctionalState NVIC_IRQChannelCmd;         
+
+    
+} NVIC_InitTypeDef;
+ 
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+#line 104 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\misc.h"
+
+
+ 
+
+
+
+ 
+
+#line 122 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\misc.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+ 
+
+void NVIC_PriorityGroupConfig(uint32_t NVIC_PriorityGroup);
+void NVIC_Init(NVIC_InitTypeDef* NVIC_InitStruct);
+void NVIC_SetVectorTable(uint32_t NVIC_VectTab, uint32_t Offset);
+void NVIC_SystemLPConfig(uint8_t LowPowerMode, FunctionalState NewState);
+void SysTick_CLKSourceConfig(uint32_t SysTick_CLKSource);
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+#line 53 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\stm32f4xx_conf.h"
+
+#line 66 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\stm32f4xx_conf.h"
+
+#line 78 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\stm32f4xx_conf.h"
+
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_cryp.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+  
+
+ 
+
+
+
+  
+typedef struct
+{
+  uint32_t CRYP_AlgoDir;   
+ 
+  uint32_t CRYP_AlgoMode;  
+
+ 
+  uint32_t CRYP_DataType;  
+  
+  uint32_t CRYP_KeySize;   
+
+ 
+}CRYP_InitTypeDef;
+
+
+
+  
+typedef struct
+{
+  uint32_t CRYP_Key0Left;   
+  uint32_t CRYP_Key0Right;  
+  uint32_t CRYP_Key1Left;   
+  uint32_t CRYP_Key1Right;  
+  uint32_t CRYP_Key2Left;   
+  uint32_t CRYP_Key2Right;  
+  uint32_t CRYP_Key3Left;   
+  uint32_t CRYP_Key3Right;  
+}CRYP_KeyInitTypeDef;
+
+
+  
+typedef struct
+{
+  uint32_t CRYP_IV0Left;   
+  uint32_t CRYP_IV0Right;  
+  uint32_t CRYP_IV1Left;   
+  uint32_t CRYP_IV1Right;  
+}CRYP_IVInitTypeDef;
+
+
+
+  
+typedef struct
+{
+   
+  uint32_t CR_CurrentConfig;
+   
+  uint32_t CRYP_IV0LR;
+  uint32_t CRYP_IV0RR;
+  uint32_t CRYP_IV1LR;
+  uint32_t CRYP_IV1RR;
+   
+  uint32_t CRYP_K0LR;
+  uint32_t CRYP_K0RR;
+  uint32_t CRYP_K1LR;
+  uint32_t CRYP_K1RR;
+  uint32_t CRYP_K2LR;
+  uint32_t CRYP_K2RR;
+  uint32_t CRYP_K3LR;
+  uint32_t CRYP_K3RR;
+  uint32_t CRYP_CSGCMCCMR[8];
+  uint32_t CRYP_CSGCMR[8];
+}CRYP_Context;
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+  
+ 
+
+
+ 
+
+ 
+
+
+
+ 
+
+
+
+ 
+#line 155 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_cryp.h"
+
+#line 166 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_cryp.h"
+
+
+  
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+ 
+#line 200 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_cryp.h"
+
+
+ 
+                                     
+
+
+ 
+#line 213 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_cryp.h"
+
+
+ 
+
+
+
+ 
+#line 232 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_cryp.h"
+
+#line 240 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_cryp.h"
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+  
+
+
+
+  
+
+ 
+ 
+
+ 
+void CRYP_DeInit(void);
+
+ 
+void CRYP_Init(CRYP_InitTypeDef* CRYP_InitStruct);
+void CRYP_StructInit(CRYP_InitTypeDef* CRYP_InitStruct);
+void CRYP_KeyInit(CRYP_KeyInitTypeDef* CRYP_KeyInitStruct);
+void CRYP_KeyStructInit(CRYP_KeyInitTypeDef* CRYP_KeyInitStruct);
+void CRYP_IVInit(CRYP_IVInitTypeDef* CRYP_IVInitStruct);
+void CRYP_IVStructInit(CRYP_IVInitTypeDef* CRYP_IVInitStruct);
+void CRYP_Cmd(FunctionalState NewState);
+void CRYP_PhaseConfig(uint32_t CRYP_Phase);
+void CRYP_FIFOFlush(void);
+ 
+void CRYP_DataIn(uint32_t Data);
+uint32_t CRYP_DataOut(void);
+
+ 
+ErrorStatus CRYP_SaveContext(CRYP_Context* CRYP_ContextSave,
+                             CRYP_KeyInitTypeDef* CRYP_KeyInitStruct);
+void CRYP_RestoreContext(CRYP_Context* CRYP_ContextRestore);
+
+ 
+void CRYP_DMACmd(uint8_t CRYP_DMAReq, FunctionalState NewState);
+
+ 
+void CRYP_ITConfig(uint8_t CRYP_IT, FunctionalState NewState);
+ITStatus CRYP_GetITStatus(uint8_t CRYP_IT);
+FunctionalState CRYP_GetCmdStatus(void);
+FlagStatus CRYP_GetFlagStatus(uint8_t CRYP_FLAG);
+
+ 
+ErrorStatus CRYP_AES_ECB(uint8_t Mode,
+                         uint8_t *Key, uint16_t Keysize,
+                         uint8_t *Input, uint32_t Ilength,
+                         uint8_t *Output);
+
+ErrorStatus CRYP_AES_CBC(uint8_t Mode,
+                         uint8_t InitVectors[16],
+                         uint8_t *Key, uint16_t Keysize,
+                         uint8_t *Input, uint32_t Ilength,
+                         uint8_t *Output);
+
+ErrorStatus CRYP_AES_CTR(uint8_t Mode,
+                         uint8_t InitVectors[16],
+                         uint8_t *Key, uint16_t Keysize,
+                         uint8_t *Input, uint32_t Ilength,
+                         uint8_t *Output);
+
+ErrorStatus CRYP_AES_GCM(uint8_t Mode, uint8_t InitVectors[16],
+                         uint8_t *Key, uint16_t Keysize,
+                         uint8_t *Input, uint32_t ILength,
+                         uint8_t *Header, uint32_t HLength,
+                         uint8_t *Output, uint8_t *AuthTAG);
+
+ErrorStatus CRYP_AES_CCM(uint8_t Mode, 
+                         uint8_t* Nonce, uint32_t NonceSize,
+                         uint8_t* Key, uint16_t Keysize,
+                         uint8_t* Input, uint32_t ILength,
+                         uint8_t* Header, uint32_t HLength, uint8_t *HBuffer,
+                         uint8_t* Output,
+                         uint8_t* AuthTAG, uint32_t TAGSize);
+
+ 
+ErrorStatus CRYP_TDES_ECB(uint8_t Mode,
+                           uint8_t Key[24], 
+                           uint8_t *Input, uint32_t Ilength,
+                           uint8_t *Output);
+
+ErrorStatus CRYP_TDES_CBC(uint8_t Mode,
+                          uint8_t Key[24],
+                          uint8_t InitVectors[8],
+                          uint8_t *Input, uint32_t Ilength,
+                          uint8_t *Output);
+
+ 
+ErrorStatus CRYP_DES_ECB(uint8_t Mode,
+                         uint8_t Key[8],
+                         uint8_t *Input, uint32_t Ilength,
+                         uint8_t *Output);
+
+ErrorStatus CRYP_DES_CBC(uint8_t Mode,
+                         uint8_t Key[8],
+                         uint8_t InitVectors[8],
+                         uint8_t *Input,uint32_t Ilength,
+                         uint8_t *Output);
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+  
+
+ 
+#line 81 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\stm32f4xx_conf.h"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_hash.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+  
+
+ 
+
+
+
+  
+typedef struct
+{
+  uint32_t HASH_AlgoSelection; 
+ 
+  uint32_t HASH_AlgoMode;      
+ 
+  uint32_t HASH_DataType;      
+
+ 
+  uint32_t HASH_HMACKeyType;   
+ 
+}HASH_InitTypeDef;
+
+
+
+  
+typedef struct
+{
+  uint32_t Data[8];      
+
+
+ 
+} HASH_MsgDigest; 
+
+
+
+  
+typedef struct
+{
+  uint32_t HASH_IMR; 
+  uint32_t HASH_STR;      
+  uint32_t HASH_CR;     
+  uint32_t HASH_CSR[54];       
+}HASH_Context;
+
+ 
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+  
+
+
+
+
+
+
+
+ 
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+  
+
+
+
+
+
+
+
+ 
+
+
+
+   
+
+
+
+
+ 
+
+
+
+   
+
+
+
+
+
+				   
+
+
+ 
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+ 
+  
+  
+ 
+void HASH_DeInit(void);
+
+ 
+void HASH_Init(HASH_InitTypeDef* HASH_InitStruct);
+void HASH_StructInit(HASH_InitTypeDef* HASH_InitStruct);
+void HASH_Reset(void);
+
+ 
+void HASH_DataIn(uint32_t Data);
+uint8_t HASH_GetInFIFOWordsNbr(void);
+void HASH_SetLastWordValidBitsNbr(uint16_t ValidNumber);
+void HASH_StartDigest(void);
+void HASH_AutoStartDigest(FunctionalState NewState);
+void HASH_GetDigest(HASH_MsgDigest* HASH_MessageDigest);
+
+ 
+void HASH_SaveContext(HASH_Context* HASH_ContextSave);
+void HASH_RestoreContext(HASH_Context* HASH_ContextRestore);
+
+ 
+void HASH_DMACmd(FunctionalState NewState);
+
+ 
+void HASH_ITConfig(uint32_t HASH_IT, FunctionalState NewState);
+FlagStatus HASH_GetFlagStatus(uint32_t HASH_FLAG);
+void HASH_ClearFlag(uint32_t HASH_FLAG);
+ITStatus HASH_GetITStatus(uint32_t HASH_IT);
+void HASH_ClearITPendingBit(uint32_t HASH_IT);
+
+ 
+ErrorStatus HASH_SHA1(uint8_t *Input, uint32_t Ilen, uint8_t Output[20]);
+ErrorStatus HMAC_SHA1(uint8_t *Key, uint32_t Keylen,
+                      uint8_t *Input, uint32_t Ilen,
+                      uint8_t Output[20]);
+
+ 
+ErrorStatus HASH_MD5(uint8_t *Input, uint32_t Ilen, uint8_t Output[16]);
+ErrorStatus HMAC_MD5(uint8_t *Key, uint32_t Keylen,
+                     uint8_t *Input, uint32_t Ilen,
+                     uint8_t Output[16]);
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+ 
+#line 82 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\stm32f4xx_conf.h"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_rng.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+  
+
+ 
+  
+
+
+
+ 
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+   
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+ 
+  
+
+  
+void RNG_DeInit(void);
+
+ 
+void RNG_Cmd(FunctionalState NewState);
+
+ 
+uint32_t RNG_GetRandomNumber(void);
+
+ 
+void RNG_ITConfig(FunctionalState NewState);
+FlagStatus RNG_GetFlagStatus(uint8_t RNG_FLAG);
+void RNG_ClearFlag(uint8_t RNG_FLAG);
+ITStatus RNG_GetITStatus(uint8_t RNG_IT);
+void RNG_ClearITPendingBit(uint8_t RNG_IT);
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+ 
+#line 83 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\stm32f4xx_conf.h"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_can.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+ 
+typedef struct
+{
+  uint16_t CAN_Prescaler;   
+ 
+  
+  uint8_t CAN_Mode;         
+ 
+
+  uint8_t CAN_SJW;          
+
+
+ 
+
+  uint8_t CAN_BS1;          
+
+ 
+
+  uint8_t CAN_BS2;          
+ 
+  
+  FunctionalState CAN_TTCM; 
+ 
+  
+  FunctionalState CAN_ABOM;  
+ 
+
+  FunctionalState CAN_AWUM;  
+ 
+
+  FunctionalState CAN_NART;  
+ 
+
+  FunctionalState CAN_RFLM;  
+ 
+
+  FunctionalState CAN_TXFP;  
+ 
+} CAN_InitTypeDef;
+
+
+
+ 
+typedef struct
+{
+  uint16_t CAN_FilterIdHigh;         
+
+ 
+
+  uint16_t CAN_FilterIdLow;          
+
+ 
+
+  uint16_t CAN_FilterMaskIdHigh;     
+
+
+ 
+
+  uint16_t CAN_FilterMaskIdLow;      
+
+
+ 
+
+  uint16_t CAN_FilterFIFOAssignment; 
+ 
+  
+  uint8_t CAN_FilterNumber;           
+
+  uint8_t CAN_FilterMode;            
+ 
+
+  uint8_t CAN_FilterScale;           
+ 
+
+  FunctionalState CAN_FilterActivation; 
+ 
+} CAN_FilterInitTypeDef;
+
+
+
+ 
+typedef struct
+{
+  uint32_t StdId;  
+ 
+
+  uint32_t ExtId;  
+ 
+
+  uint8_t IDE;     
+
+ 
+
+  uint8_t RTR;     
+
+ 
+
+  uint8_t DLC;     
+
+ 
+
+  uint8_t Data[8]; 
+ 
+} CanTxMsg;
+
+
+
+ 
+typedef struct
+{
+  uint32_t StdId;  
+ 
+
+  uint32_t ExtId;  
+ 
+
+  uint8_t IDE;     
+
+ 
+
+  uint8_t RTR;     
+
+ 
+
+  uint8_t DLC;     
+ 
+
+  uint8_t Data[8]; 
+ 
+
+  uint8_t FMI;     
+
+ 
+} CanRxMsg;
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+ 
+
+
+   
+
+
+
+
+
+
+
+
+
+
+ 
+  
+
+
+
+   
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+#line 289 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_can.h"
+
+
+
+
+ 
+
+
+
+ 
+#line 306 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_can.h"
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+ 	
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 	
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+                                                          
+#line 481 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_can.h"
+
+
+ 
+
+
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+
+ 
+#line 505 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_can.h"
+
+ 
+
+
+
+ 
+
+ 
+
+
+
+
+
+#line 526 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_can.h"
+
+
+
+
+
+
+
+
+ 
+
+  
+
+
+  
+
+
+ 
+#line 549 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_can.h"
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+
+#line 574 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_can.h"
+
+#line 581 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_can.h"
+
+
+ 
+
+
+
+ 
+
+ 
+   
+
+  
+void CAN_DeInit(CAN_TypeDef* CANx);
+
+  
+uint8_t CAN_Init(CAN_TypeDef* CANx, CAN_InitTypeDef* CAN_InitStruct);
+void CAN_FilterInit(CAN_FilterInitTypeDef* CAN_FilterInitStruct);
+void CAN_StructInit(CAN_InitTypeDef* CAN_InitStruct);
+void CAN_SlaveStartBank(uint8_t CAN_BankNumber); 
+void CAN_DBGFreeze(CAN_TypeDef* CANx, FunctionalState NewState);
+void CAN_TTComModeCmd(CAN_TypeDef* CANx, FunctionalState NewState);
+
+ 
+uint8_t CAN_Transmit(CAN_TypeDef* CANx, CanTxMsg* TxMessage);
+uint8_t CAN_TransmitStatus(CAN_TypeDef* CANx, uint8_t TransmitMailbox);
+void CAN_CancelTransmit(CAN_TypeDef* CANx, uint8_t Mailbox);
+
+ 
+void CAN_Receive(CAN_TypeDef* CANx, uint8_t FIFONumber, CanRxMsg* RxMessage);
+void CAN_FIFORelease(CAN_TypeDef* CANx, uint8_t FIFONumber);
+uint8_t CAN_MessagePending(CAN_TypeDef* CANx, uint8_t FIFONumber);
+
+ 
+uint8_t CAN_OperatingModeRequest(CAN_TypeDef* CANx, uint8_t CAN_OperatingMode);
+uint8_t CAN_Sleep(CAN_TypeDef* CANx);
+uint8_t CAN_WakeUp(CAN_TypeDef* CANx);
+
+ 
+uint8_t CAN_GetLastErrorCode(CAN_TypeDef* CANx);
+uint8_t CAN_GetReceiveErrorCounter(CAN_TypeDef* CANx);
+uint8_t CAN_GetLSBTransmitErrorCounter(CAN_TypeDef* CANx);
+
+ 
+void CAN_ITConfig(CAN_TypeDef* CANx, uint32_t CAN_IT, FunctionalState NewState);
+FlagStatus CAN_GetFlagStatus(CAN_TypeDef* CANx, uint32_t CAN_FLAG);
+void CAN_ClearFlag(CAN_TypeDef* CANx, uint32_t CAN_FLAG);
+ITStatus CAN_GetITStatus(CAN_TypeDef* CANx, uint32_t CAN_IT);
+void CAN_ClearITPendingBit(CAN_TypeDef* CANx, uint32_t CAN_IT);
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+#line 84 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\stm32f4xx_conf.h"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_dac.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+
+
+
+ 
+
+typedef struct
+{
+  uint32_t DAC_Trigger;                      
+ 
+
+  uint32_t DAC_WaveGeneration;               
+
+ 
+
+  uint32_t DAC_LFSRUnmask_TriangleAmplitude; 
+
+ 
+
+  uint32_t DAC_OutputBuffer;                 
+ 
+}DAC_InitTypeDef;
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+#line 89 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_dac.h"
+
+
+
+
+#line 102 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_dac.h"
+
+
+
+ 
+
+
+
+ 
+
+#line 117 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_dac.h"
+
+
+ 
+
+
+
+ 
+
+#line 149 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_dac.h"
+
+#line 174 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_dac.h"
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+#line 212 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_dac.h"
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+ 
+  
+
+
+    
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+   
+
+   
+void DAC_DeInit(void);
+
+ 
+void DAC_Init(uint32_t DAC_Channel, DAC_InitTypeDef* DAC_InitStruct);
+void DAC_StructInit(DAC_InitTypeDef* DAC_InitStruct);
+void DAC_Cmd(uint32_t DAC_Channel, FunctionalState NewState);
+void DAC_SoftwareTriggerCmd(uint32_t DAC_Channel, FunctionalState NewState);
+void DAC_DualSoftwareTriggerCmd(FunctionalState NewState);
+void DAC_WaveGenerationCmd(uint32_t DAC_Channel, uint32_t DAC_Wave, FunctionalState NewState);
+void DAC_SetChannel1Data(uint32_t DAC_Align, uint16_t Data);
+void DAC_SetChannel2Data(uint32_t DAC_Align, uint16_t Data);
+void DAC_SetDualChannelData(uint32_t DAC_Align, uint16_t Data2, uint16_t Data1);
+uint16_t DAC_GetDataOutputValue(uint32_t DAC_Channel);
+
+ 
+void DAC_DMACmd(uint32_t DAC_Channel, FunctionalState NewState);
+
+ 
+void DAC_ITConfig(uint32_t DAC_Channel, uint32_t DAC_IT, FunctionalState NewState);
+FlagStatus DAC_GetFlagStatus(uint32_t DAC_Channel, uint32_t DAC_FLAG);
+void DAC_ClearFlag(uint32_t DAC_Channel, uint32_t DAC_FLAG);
+ITStatus DAC_GetITStatus(uint32_t DAC_Channel, uint32_t DAC_IT);
+void DAC_ClearITPendingBit(uint32_t DAC_Channel, uint32_t DAC_IT);
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+#line 85 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\stm32f4xx_conf.h"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_dcmi.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+  
+
+ 
+
+
+  
+typedef struct
+{
+  uint16_t DCMI_CaptureMode;      
+ 
+
+  uint16_t DCMI_SynchroMode;      
+ 
+
+  uint16_t DCMI_PCKPolarity;      
+ 
+
+  uint16_t DCMI_VSPolarity;       
+ 
+
+  uint16_t DCMI_HSPolarity;       
+ 
+
+  uint16_t DCMI_CaptureRate;      
+ 
+
+  uint16_t DCMI_ExtendedDataMode; 
+ 
+} DCMI_InitTypeDef;
+
+
+
+  
+typedef struct
+{
+  uint16_t DCMI_VerticalStartLine;      
+ 
+
+  uint16_t DCMI_HorizontalOffsetCount;  
+ 
+
+  uint16_t DCMI_VerticalLineCount;      
+ 
+
+  uint16_t DCMI_CaptureCount;           
+
+ 
+} DCMI_CROPInitTypeDef;
+
+
+
+  
+typedef struct
+{
+  uint8_t DCMI_FrameStartCode;  
+  uint8_t DCMI_LineStartCode;   
+  uint8_t DCMI_LineEndCode;     
+  uint8_t DCMI_FrameEndCode;    
+} DCMI_CodesInitTypeDef;
+
+ 
+
+
+
+ 
+
+
+
+  
+#line 120 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_dcmi.h"
+
+
+  
+
+
+
+
+  
+#line 134 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_dcmi.h"
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+#line 184 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_dcmi.h"
+
+
+  
+
+
+
+
+  
+#line 200 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_dcmi.h"
+
+
+  
+
+
+
+
+  
+#line 219 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_dcmi.h"
+
+
+  
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+#line 262 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_dcmi.h"
+                                
+
+
+
+  
+
+
+
+  
+
+ 
+  
+
+  
+void DCMI_DeInit(void);
+
+ 
+void DCMI_Init(DCMI_InitTypeDef* DCMI_InitStruct);
+void DCMI_StructInit(DCMI_InitTypeDef* DCMI_InitStruct);
+void DCMI_CROPConfig(DCMI_CROPInitTypeDef* DCMI_CROPInitStruct);
+void DCMI_CROPCmd(FunctionalState NewState);
+void DCMI_SetEmbeddedSynchroCodes(DCMI_CodesInitTypeDef* DCMI_CodesInitStruct);
+void DCMI_JPEGCmd(FunctionalState NewState);
+
+ 
+void DCMI_Cmd(FunctionalState NewState);
+void DCMI_CaptureCmd(FunctionalState NewState);
+uint32_t DCMI_ReadData(void);
+
+ 
+void DCMI_ITConfig(uint16_t DCMI_IT, FunctionalState NewState);
+FlagStatus DCMI_GetFlagStatus(uint16_t DCMI_FLAG);
+void DCMI_ClearFlag(uint16_t DCMI_FLAG);
+ITStatus DCMI_GetITStatus(uint16_t DCMI_IT);
+void DCMI_ClearITPendingBit(uint16_t DCMI_IT);
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+ 
+#line 86 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\stm32f4xx_conf.h"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_fsmc.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+
+
+
+ 
+typedef struct
+{
+  uint32_t FSMC_AddressSetupTime;       
+
+
+ 
+
+  uint32_t FSMC_AddressHoldTime;        
+
+
+ 
+
+  uint32_t FSMC_DataSetupTime;          
+
+
+ 
+
+  uint32_t FSMC_BusTurnAroundDuration;  
+
+
+ 
+
+  uint32_t FSMC_CLKDivision;            
+
+ 
+
+  uint32_t FSMC_DataLatency;            
+
+
+
+
+
+ 
+
+  uint32_t FSMC_AccessMode;             
+ 
+}FSMC_NORSRAMTimingInitTypeDef;
+
+
+
+ 
+typedef struct
+{
+  uint32_t FSMC_Bank;                
+ 
+
+  uint32_t FSMC_DataAddressMux;      
+
+ 
+
+  uint32_t FSMC_MemoryType;          
+
+ 
+
+  uint32_t FSMC_MemoryDataWidth;     
+ 
+
+  uint32_t FSMC_BurstAccessMode;     
+
+ 
+
+  uint32_t FSMC_AsynchronousWait;     
+
+                                           
+
+  uint32_t FSMC_WaitSignalPolarity;  
+
+ 
+
+  uint32_t FSMC_WrapMode;            
+
+ 
+
+  uint32_t FSMC_WaitSignalActive;    
+
+
+ 
+
+  uint32_t FSMC_WriteOperation;      
+ 
+
+  uint32_t FSMC_WaitSignal;          
+
+ 
+
+  uint32_t FSMC_ExtendedMode;        
+ 
+
+  uint32_t FSMC_WriteBurst;          
+  
+
+  FSMC_NORSRAMTimingInitTypeDef* FSMC_ReadWriteTimingStruct;    
+
+  FSMC_NORSRAMTimingInitTypeDef* FSMC_WriteTimingStruct;            
+}FSMC_NORSRAMInitTypeDef;
+
+
+
+ 
+typedef struct
+{
+  uint32_t FSMC_SetupTime;      
+
+
+
+ 
+
+  uint32_t FSMC_WaitSetupTime;  
+
+
+
+ 
+
+  uint32_t FSMC_HoldSetupTime;  
+
+
+
+
+ 
+
+  uint32_t FSMC_HiZSetupTime;   
+
+
+
+ 
+}FSMC_NAND_PCCARDTimingInitTypeDef;
+
+
+
+ 
+typedef struct
+{
+  uint32_t FSMC_Bank;              
+ 
+
+  uint32_t FSMC_Waitfeature;      
+ 
+
+  uint32_t FSMC_MemoryDataWidth;  
+ 
+
+  uint32_t FSMC_ECC;              
+ 
+
+  uint32_t FSMC_ECCPageSize;      
+ 
+
+  uint32_t FSMC_TCLRSetupTime;    
+
+ 
+
+  uint32_t FSMC_TARSetupTime;     
+
+  
+
+  FSMC_NAND_PCCARDTimingInitTypeDef*  FSMC_CommonSpaceTimingStruct;     
+
+  FSMC_NAND_PCCARDTimingInitTypeDef*  FSMC_AttributeSpaceTimingStruct;  
+}FSMC_NANDInitTypeDef;
+
+
+
+ 
+
+typedef struct
+{
+  uint32_t FSMC_Waitfeature;    
+ 
+
+  uint32_t FSMC_TCLRSetupTime;  
+
+ 
+
+  uint32_t FSMC_TARSetupTime;   
+
+  
+
+  
+  FSMC_NAND_PCCARDTimingInitTypeDef*  FSMC_CommonSpaceTimingStruct;  
+
+  FSMC_NAND_PCCARDTimingInitTypeDef*  FSMC_AttributeSpaceTimingStruct;    
+  
+  FSMC_NAND_PCCARDTimingInitTypeDef*  FSMC_IOSpaceTimingStruct;    
+}FSMC_PCCARDInitTypeDef;
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+   
+
+
+
+
+ 
+
+
+
+     
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+#line 314 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_fsmc.h"
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+    
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+#line 491 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_fsmc.h"
+
+
+ 
+
+
+
+ 
+  
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+ 
+#line 541 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_fsmc.h"
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+#line 603 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_fsmc.h"
+
+
+ 
+
+
+
+ 
+#line 618 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\STM32F4xx_StdPeriph_Driver\\inc\\stm32f4xx_fsmc.h"
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+ 
+  
+
+ 
+void FSMC_NORSRAMDeInit(uint32_t FSMC_Bank);
+void FSMC_NORSRAMInit(FSMC_NORSRAMInitTypeDef* FSMC_NORSRAMInitStruct);
+void FSMC_NORSRAMStructInit(FSMC_NORSRAMInitTypeDef* FSMC_NORSRAMInitStruct);
+void FSMC_NORSRAMCmd(uint32_t FSMC_Bank, FunctionalState NewState);
+
+ 
+void FSMC_NANDDeInit(uint32_t FSMC_Bank);
+void FSMC_NANDInit(FSMC_NANDInitTypeDef* FSMC_NANDInitStruct);
+void FSMC_NANDStructInit(FSMC_NANDInitTypeDef* FSMC_NANDInitStruct);
+void FSMC_NANDCmd(uint32_t FSMC_Bank, FunctionalState NewState);
+void FSMC_NANDECCCmd(uint32_t FSMC_Bank, FunctionalState NewState);
+uint32_t FSMC_GetECC(uint32_t FSMC_Bank);
+
+ 
+void FSMC_PCCARDDeInit(void);
+void FSMC_PCCARDInit(FSMC_PCCARDInitTypeDef* FSMC_PCCARDInitStruct);
+void FSMC_PCCARDStructInit(FSMC_PCCARDInitTypeDef* FSMC_PCCARDInitStruct);
+void FSMC_PCCARDCmd(FunctionalState NewState);
+
+ 
+void FSMC_ITConfig(uint32_t FSMC_Bank, uint32_t FSMC_IT, FunctionalState NewState);
+FlagStatus FSMC_GetFlagStatus(uint32_t FSMC_Bank, uint32_t FSMC_FLAG);
+void FSMC_ClearFlag(uint32_t FSMC_Bank, uint32_t FSMC_FLAG);
+ITStatus FSMC_GetITStatus(uint32_t FSMC_Bank, uint32_t FSMC_IT);
+void FSMC_ClearITPendingBit(uint32_t FSMC_Bank, uint32_t FSMC_IT);
+
+
+
+
+
+
+
+
+ 
+
+
+
+  
+
+ 
+#line 87 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\stm32f4xx_conf.h"
+
+
+
+
+
+
+#line 99 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\stm32f4xx_conf.h"
+
+
+ 
+ 
+
+
+
+ 
+   
+
+
+
+ 
+ 
+
+ 
+#line 131 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\stm32f4xx_conf.h"
+
+
+
+ 
+#line 9911 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\Libraries\\CMSIS\\Include\\stm32f4xx.h"
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+  
+
+ 
+
+ 
+#line 5 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\app\\user_task.h"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\FreeRTOS\\include\\FreeRTOS.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+#line 1 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\stddef.h"
+ 
+ 
+
+
+
+
+  #pragma system_include
+
+
+#line 1 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\ycheck.h"
+ 
+ 
+
+ 
+
+
+  #pragma system_include
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+#line 11 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\stddef.h"
+#line 1 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\ysizet.h"
+ 
+ 
+
+
+
+
+
+  #pragma system_include
+
+
+#line 1 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\ycheck.h"
+ 
+ 
+
+ 
+
+
+  #pragma system_include
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+#line 12 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\ysizet.h"
+
+
+ 
+
+
+
+  typedef _Sizet size_t;
+
+
+
+
+typedef unsigned int __data_size_t;
+
+
+
+
+#line 13 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\stddef.h"
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+
+
+  typedef   signed int ptrdiff_t;
+
+
+
+
+  typedef   _Wchart wchar_t;
+
+
+
+
+
+
+
+
+
+    typedef union
+    {
+      long long _ll;
+      long double _ld;
+      void *_vp;
+    } _Max_align_t;
+    typedef _Max_align_t max_align_t;
+
+
+
+#line 58 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\stddef.h"
+
+
+
+
+
+
+ 
+#line 35 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\FreeRTOS\\include\\FreeRTOS.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\FreeRTOS\\include\\FreeRTOSConfig.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+	extern uint32_t SystemCoreClock;
+
+
+#line 70 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\FreeRTOS\\include\\FreeRTOSConfig.h"
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+ 
+#line 90 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\FreeRTOS\\include\\FreeRTOSConfig.h"
+
+ 
+
+	 
+
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+ 
+
+	
+
+ 
+
+	
+
+ 
+
+
+
+
+
+
+#line 57 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\FreeRTOS\\include\\FreeRTOS.h"
+
+ 
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\FreeRTOS\\include\\projdefs.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+typedef void (*TaskFunction_t)( void * );
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+ 
+#line 110 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\FreeRTOS\\include\\projdefs.h"
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+#line 60 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\FreeRTOS\\include\\FreeRTOS.h"
+
+ 
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\FreeRTOS\\include\\portable.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\FreeRTOS\\include\\deprecated_definitions.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#line 218 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\FreeRTOS\\include\\deprecated_definitions.h"
+
+#line 226 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\FreeRTOS\\include\\deprecated_definitions.h"
+
+
+
+
+
+
+
+#line 240 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\FreeRTOS\\include\\deprecated_definitions.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#line 46 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\FreeRTOS\\include\\portable.h"
+
+
+
+
+ 
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\FreeRTOS\\portable\\IAR\\ARM_CM4F\\portmacro.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+#line 1 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\intrinsics.h"
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+  #pragma system_include
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+#line 1 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\iar_intrinsics_common.h"
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+  #pragma system_include
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+ 
+#line 57 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\iar_intrinsics_common.h"
+
+ 
+
+
+   
+#line 68 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\iar_intrinsics_common.h"
+
+   
+#line 78 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\iar_intrinsics_common.h"
+
+   
+
+
+
+
+
+
+
+
+ 
+#line 112 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\iar_intrinsics_common.h"
+
+
+#line 33 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\intrinsics.h"
+
+
+
+
+
+
+
+
+   
+#line 72 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\intrinsics.h"
+
+
+     
+#line 88 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\intrinsics.h"
+
+#line 99 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\intrinsics.h"
+
+#line 106 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\intrinsics.h"
+
+ 
+#line 114 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\intrinsics.h"
+
+ 
+#line 122 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\intrinsics.h"
+
+ 
+#line 148 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\intrinsics.h"
+
+ 
+#line 162 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\intrinsics.h"
+
+ 
+#line 176 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\intrinsics.h"
+
+ 
+#line 190 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\intrinsics.h"
+
+ 
+#line 204 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\intrinsics.h"
+
+ 
+#line 212 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\intrinsics.h"
+
+ 
+#line 238 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\intrinsics.h"
+
+
+
+ 
+#line 284 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\intrinsics.h"
+
+ 
+#line 298 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\intrinsics.h"
+
+ 
+#line 318 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\intrinsics.h"
+
+
+   
+#line 336 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\intrinsics.h"
+
+ 
+#line 344 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\intrinsics.h"
+
+ 
+#line 355 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\intrinsics.h"
+
+ 
+#line 383 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\intrinsics.h"
+
+#line 390 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\intrinsics.h"
+
+
+
+
+
+ 
+#line 402 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\intrinsics.h"
+
+#line 409 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\intrinsics.h"
+
+#line 422 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\intrinsics.h"
+
+#line 435 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\intrinsics.h"
+
+
+
+
+
+#line 452 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\intrinsics.h"
+
+#line 462 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\intrinsics.h"
+
+#line 469 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\intrinsics.h"
+
+
+   
+#line 767 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\intrinsics.h"
+
+ 
+#line 778 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\intrinsics.h"
+
+ 
+#line 792 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\intrinsics.h"
+
+#line 799 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\intrinsics.h"
+
+#line 47 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\FreeRTOS\\portable\\IAR\\ARM_CM4F\\portmacro.h"
+
+ 
+#line 56 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\FreeRTOS\\portable\\IAR\\ARM_CM4F\\portmacro.h"
+
+typedef uint32_t StackType_t;
+typedef long BaseType_t;
+typedef unsigned long UBaseType_t;
+
+
+
+
+
+	typedef uint32_t TickType_t;
+
+
+	
+ 
+
+
+ 
+
+ 
+
+
+
+ 
+
+ 
+
+
+ 
+
+
+ 
+#line 94 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\FreeRTOS\\portable\\IAR\\ARM_CM4F\\portmacro.h"
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+	 
+
+
+
+
+	 
+
+
+
+	 
+
+
+
+
+ 
+
+ 
+extern void vPortEnterCritical( void );
+extern void vPortExitCritical( void );
+
+#line 135 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\FreeRTOS\\portable\\IAR\\ARM_CM4F\\portmacro.h"
+
+
+
+
+
+
+ 
+
+ 
+
+	extern void vPortSuppressTicksAndSleep( TickType_t xExpectedIdleTime );
+
+
+
+ 
+
+
+
+ 
+
+
+ 
+
+
+	void vPortValidateInterruptPriority( void );
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+inline __attribute__(( always_inline)) static BaseType_t xPortIsInsideInterrupt( void )
+{
+uint32_t ulCurrentInterrupt;
+BaseType_t xReturn;
+
+	 
+	__asm volatile( "mrs %0, ipsr" : "=r"( ulCurrentInterrupt ) :: "memory" );
+
+	if( ulCurrentInterrupt == 0 )
+	{
+		xReturn = ( ( BaseType_t ) 0 );
+	}
+	else
+	{
+		xReturn = ( ( BaseType_t ) 1 );
+	}
+
+	return xReturn;
+}
+
+ 
+
+
+
+ 
+#pragma diag_suppress=Pe191
+#pragma diag_suppress=Pa082
+
+
+
+
+
+
+
+#line 53 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\FreeRTOS\\include\\portable.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\FreeRTOS\\include\\mpu_wrappers.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+#line 179 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\FreeRTOS\\include\\mpu_wrappers.h"
+
+
+
+
+
+
+
+
+
+
+
+#line 100 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\FreeRTOS\\include\\portable.h"
+
+
+
+
+
+
+ 
+#line 117 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\FreeRTOS\\include\\portable.h"
+		StackType_t *pxPortInitialiseStack( StackType_t *pxTopOfStack, TaskFunction_t pxCode, void *pvParameters ) ;
+
+
+
+
+ 
+typedef struct HeapRegion
+{
+	uint8_t *pucStartAddress;
+	size_t xSizeInBytes;
+} HeapRegion_t;
+
+ 
+typedef struct xHeapStats
+{
+	size_t xAvailableHeapSpaceInBytes;		 
+	size_t xSizeOfLargestFreeBlockInBytes; 	 
+	size_t xSizeOfSmallestFreeBlockInBytes;  
+	size_t xNumberOfFreeBlocks;				 
+	size_t xMinimumEverFreeBytesRemaining;	 
+	size_t xNumberOfSuccessfulAllocations;	 
+	size_t xNumberOfSuccessfulFrees;		 
+} HeapStats_t;
+
+
+
+
+
+
+
+
+
+
+
+ 
+void vPortDefineHeapRegions( const HeapRegion_t * const pxHeapRegions ) ;
+
+
+
+
+ 
+void vPortGetHeapStats( HeapStats_t *pxHeapStats );
+
+
+
+ 
+void *pvPortMalloc( size_t xSize ) ;
+void vPortFree( void *pv ) ;
+void vPortInitialiseBlocks( void ) ;
+size_t xPortGetFreeHeapSize( void ) ;
+size_t xPortGetMinimumEverFreeHeapSize( void ) ;
+
+
+
+
+ 
+BaseType_t xPortStartScheduler( void ) ;
+
+
+
+
+
+ 
+void vPortEndScheduler( void ) ;
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+#line 63 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\FreeRTOS\\include\\FreeRTOS.h"
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#line 243 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\FreeRTOS\\include\\FreeRTOS.h"
+
+
+
+
+
+ 
+#line 255 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\FreeRTOS\\include\\FreeRTOS.h"
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+	
+ 
+
+
+
+
+	
+ 
+
+
+
+
+	
+ 
+
+
+
+
+	
+ 
+
+
+
+
+	 
+
+
+
+
+	 
+
+
+
+
+	
+ 
+
+
+
+
+	
+
+
+
+ 
+
+
+
+
+	
+
+
+ 
+
+
+
+
+	
+
+
+ 
+
+
+
+
+	
+
+
+ 
+
+
+
+
+	
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#line 732 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\FreeRTOS\\include\\FreeRTOS.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	 
+
+
+
+
+	 
+
+
+
+
+	
+ 
+
+
+
+
+	
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#line 896 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\FreeRTOS\\include\\FreeRTOS.h"
+	
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+	
+ 
+
+
+
+
+	
+ 
+
+
+
+#line 957 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\FreeRTOS\\include\\FreeRTOS.h"
+
+	
+ 
+
+
+
+
+
+	
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+struct xSTATIC_LIST_ITEM
+{
+
+
+
+	TickType_t xDummy2;
+	void *pvDummy3[ 4 ];
+
+
+
+};
+typedef struct xSTATIC_LIST_ITEM StaticListItem_t;
+
+ 
+struct xSTATIC_MINI_LIST_ITEM
+{
+
+
+
+	TickType_t xDummy2;
+	void *pvDummy3[ 2 ];
+};
+typedef struct xSTATIC_MINI_LIST_ITEM StaticMiniListItem_t;
+
+ 
+typedef struct xSTATIC_LIST
+{
+
+
+
+	UBaseType_t uxDummy2;
+	void *pvDummy3;
+	StaticMiniListItem_t xDummy4;
+
+
+
+} StaticList_t;
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+typedef struct xSTATIC_TCB
+{
+	void				*pxDummy1;
+
+
+
+	StaticListItem_t	xDummy3[ 2 ];
+	UBaseType_t			uxDummy5;
+	void				*pxDummy6;
+	uint8_t				ucDummy7[ ( 10 ) ];
+#line 1129 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\FreeRTOS\\include\\FreeRTOS.h"
+		UBaseType_t		uxDummy10[ 2 ];
+
+
+		UBaseType_t		uxDummy12[ 2 ];
+#line 1147 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\FreeRTOS\\include\\FreeRTOS.h"
+		uint32_t 		ulDummy18;
+		uint8_t 		ucDummy19;
+
+
+
+
+
+#line 1160 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\FreeRTOS\\include\\FreeRTOS.h"
+} StaticTask_t;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+typedef struct xSTATIC_QUEUE
+{
+	void *pvDummy1[ 3 ];
+
+	union
+	{
+		void *pvDummy2;
+		UBaseType_t uxDummy2;
+	} u;
+
+	StaticList_t xDummy3[ 2 ];
+	UBaseType_t uxDummy4[ 3 ];
+	uint8_t ucDummy5[ 2 ];
+
+
+
+
+
+
+
+
+
+
+		UBaseType_t uxDummy8;
+		uint8_t ucDummy9;
+
+
+} StaticQueue_t;
+typedef StaticQueue_t StaticSemaphore_t;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+typedef struct xSTATIC_EVENT_GROUP
+{
+	TickType_t xDummy1;
+	StaticList_t xDummy2;
+
+
+		UBaseType_t uxDummy3;
+
+
+
+
+
+
+} StaticEventGroup_t;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+typedef struct xSTATIC_TIMER
+{
+	void				*pvDummy1;
+	StaticListItem_t	xDummy2;
+	TickType_t			xDummy3;
+	void 				*pvDummy5;
+	TaskFunction_t		pvDummy6;
+
+		UBaseType_t		uxDummy7;
+
+	uint8_t 			ucDummy8;
+
+} StaticTimer_t;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+typedef struct xSTATIC_STREAM_BUFFER
+{
+	size_t uxDummy1[ 4 ];
+	void * pvDummy2[ 3 ];
+	uint8_t ucDummy3;
+
+		UBaseType_t uxDummy4;
+
+} StaticStreamBuffer_t;
+
+ 
+typedef StaticStreamBuffer_t StaticMessageBuffer_t;
+
+
+
+
+
+
+
+#line 6 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\app\\user_task.h"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\FreeRTOS\\include\\task.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\FreeRTOS\\include\\list.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+	 
+#line 134 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\FreeRTOS\\include\\list.h"
+
+
+
+
+ 
+struct xLIST;
+struct xLIST_ITEM
+{
+				 
+	 TickType_t xItemValue;			 
+	struct xLIST_ITEM *  pxNext;		 
+	struct xLIST_ITEM *  pxPrevious;	 
+	void * pvOwner;										 
+	struct xLIST *  pvContainer;		 
+				 
+};
+typedef struct xLIST_ITEM ListItem_t;					 
+
+struct xMINI_LIST_ITEM
+{
+				 
+	 TickType_t xItemValue;
+	struct xLIST_ITEM *  pxNext;
+	struct xLIST_ITEM *  pxPrevious;
+};
+typedef struct xMINI_LIST_ITEM MiniListItem_t;
+
+
+
+ 
+typedef struct xLIST
+{
+					 
+	volatile UBaseType_t uxNumberOfItems;
+	ListItem_t *  pxIndex;			 
+	MiniListItem_t xListEnd;							 
+					 
+} List_t;
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+#line 289 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\FreeRTOS\\include\\list.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+ 
+void vListInitialise( List_t * const pxList ) ;
+
+
+
+
+
+
+
+
+
+ 
+void vListInitialiseItem( ListItem_t * const pxItem ) ;
+
+
+
+
+
+
+
+
+
+
+
+ 
+void vListInsert( List_t * const pxList, ListItem_t * const pxNewListItem ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+void vListInsertEnd( List_t * const pxList, ListItem_t * const pxNewListItem ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+UBaseType_t uxListRemove( ListItem_t * const pxItemToRemove ) ;
+
+
+
+
+
+
+
+#line 37 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\FreeRTOS\\include\\task.h"
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+struct tskTaskControlBlock;  
+typedef struct tskTaskControlBlock* TaskHandle_t;
+
+
+
+
+ 
+typedef BaseType_t (*TaskHookFunction_t)( void * );
+
+ 
+typedef enum
+{
+	eRunning = 0,	 
+	eReady,			 
+	eBlocked,		 
+	eSuspended,		 
+	eDeleted,		 
+	eInvalid		 
+} eTaskState;
+
+ 
+typedef enum
+{
+	eNoAction = 0,				 
+	eSetBits,					 
+	eIncrement,					 
+	eSetValueWithOverwrite,		 
+	eSetValueWithoutOverwrite	 
+} eNotifyAction;
+
+
+
+ 
+typedef struct xTIME_OUT
+{
+	BaseType_t xOverflowCount;
+	TickType_t xTimeOnEntering;
+} TimeOut_t;
+
+
+
+ 
+typedef struct xMEMORY_REGION
+{
+	void *pvBaseAddress;
+	uint32_t ulLengthInBytes;
+	uint32_t ulParameters;
+} MemoryRegion_t;
+
+
+
+ 
+typedef struct xTASK_PARAMETERS
+{
+	TaskFunction_t pvTaskCode;
+	const char * const pcName;	 
+	uint16_t usStackDepth;
+	void *pvParameters;
+	UBaseType_t uxPriority;
+	StackType_t *puxStackBuffer;
+	MemoryRegion_t xRegions[ 1 ];
+
+
+
+} TaskParameters_t;
+
+
+ 
+typedef struct xTASK_STATUS
+{
+	TaskHandle_t xHandle;			 
+	const char *pcTaskName;			   
+	UBaseType_t xTaskNumber;		 
+	eTaskState eCurrentState;		 
+	UBaseType_t uxCurrentPriority;	 
+	UBaseType_t uxBasePriority;		 
+	uint32_t ulRunTimeCounter;		 
+	StackType_t *pxStackBase;		 
+	uint16_t usStackHighWaterMark;	 
+} TaskStatus_t;
+
+ 
+typedef enum
+{
+	eAbortSleep = 0,		 
+	eStandardSleep,			 
+	eNoTasksWaitingTimeout	 
+} eSleepModeStatus;
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+	BaseType_t xTaskCreate(	TaskFunction_t pxTaskCode,
+							const char * const pcName,	 
+							const uint16_t usStackDepth,
+							void * const pvParameters,
+							UBaseType_t uxPriority,
+							TaskHandle_t * const pxCreatedTask ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+#line 454 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\FreeRTOS\\include\\task.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+void vTaskAllocateMPURegions( TaskHandle_t xTask, const MemoryRegion_t * const pxRegions ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+void vTaskDelete( TaskHandle_t xTaskToDelete ) ;
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+void vTaskDelay( const TickType_t xTicksToDelay ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+void vTaskDelayUntil( TickType_t * const pxPreviousWakeTime, const TickType_t xTimeIncrement ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+BaseType_t xTaskAbortDelay( TaskHandle_t xTask ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+UBaseType_t uxTaskPriorityGet( const TaskHandle_t xTask ) ;
+
+
+
+
+
+
+ 
+UBaseType_t uxTaskPriorityGetFromISR( const TaskHandle_t xTask ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+eTaskState eTaskGetState( TaskHandle_t xTask ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+void vTaskGetInfo( TaskHandle_t xTask, TaskStatus_t *pxTaskStatus, BaseType_t xGetFreeStackSpace, eTaskState eState ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+void vTaskPrioritySet( TaskHandle_t xTask, UBaseType_t uxNewPriority ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+void vTaskSuspend( TaskHandle_t xTaskToSuspend ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+void vTaskResume( TaskHandle_t xTaskToResume ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+BaseType_t xTaskResumeFromISR( TaskHandle_t xTaskToResume ) ;
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+void vTaskStartScheduler( void ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+void vTaskEndScheduler( void ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+void vTaskSuspendAll( void ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+BaseType_t xTaskResumeAll( void ) ;
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+TickType_t xTaskGetTickCount( void ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+TickType_t xTaskGetTickCountFromISR( void ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+UBaseType_t uxTaskGetNumberOfTasks( void ) ;
+
+
+
+
+
+
+
+
+
+
+
+ 
+char *pcTaskGetName( TaskHandle_t xTaskToQuery ) ;  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+TaskHandle_t xTaskGetHandle( const char *pcNameToQuery ) ;  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+UBaseType_t uxTaskGetStackHighWaterMark( TaskHandle_t xTask ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+uint16_t uxTaskGetStackHighWaterMark2( TaskHandle_t xTask ) ;
+
+
+
+
+
+
+ 
+#line 1509 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\FreeRTOS\\include\\task.h"
+
+#line 1521 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\FreeRTOS\\include\\task.h"
+
+
+
+
+
+
+
+
+
+
+
+ 
+BaseType_t xTaskCallApplicationTaskHook( TaskHandle_t xTask, void *pvParameter ) ;
+
+
+
+
+
+
+
+ 
+TaskHandle_t xTaskGetIdleTaskHandle( void ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+UBaseType_t uxTaskGetSystemState( TaskStatus_t * const pxTaskStatusArray, const UBaseType_t uxArraySize, uint32_t * const pulTotalRunTime ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+void vTaskList( char * pcWriteBuffer ) ;  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+void vTaskGetRunTimeStats( char *pcWriteBuffer ) ;  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+uint32_t ulTaskGetIdleRunTimeCounter( void ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+BaseType_t xTaskGenericNotify( TaskHandle_t xTaskToNotify, uint32_t ulValue, eNotifyAction eAction, uint32_t *pulPreviousNotificationValue ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+BaseType_t xTaskGenericNotifyFromISR( TaskHandle_t xTaskToNotify, uint32_t ulValue, eNotifyAction eAction, uint32_t *pulPreviousNotificationValue, BaseType_t *pxHigherPriorityTaskWoken ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+BaseType_t xTaskNotifyWait( uint32_t ulBitsToClearOnEntry, uint32_t ulBitsToClearOnExit, uint32_t *pulNotificationValue, TickType_t xTicksToWait ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+void vTaskNotifyGiveFromISR( TaskHandle_t xTaskToNotify, BaseType_t *pxHigherPriorityTaskWoken ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+uint32_t ulTaskNotifyTake( BaseType_t xClearCountOnExit, TickType_t xTicksToWait ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+BaseType_t xTaskNotifyStateClear( TaskHandle_t xTask );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+uint32_t ulTaskNotifyValueClear( TaskHandle_t xTask, uint32_t ulBitsToClear ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+void vTaskSetTimeOutState( TimeOut_t * const pxTimeOut ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+BaseType_t xTaskCheckForTimeOut( TimeOut_t * const pxTimeOut, TickType_t * const pxTicksToWait ) ;
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+BaseType_t xTaskIncrementTick( void ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+void vTaskPlaceOnEventList( List_t * const pxEventList, const TickType_t xTicksToWait ) ;
+void vTaskPlaceOnUnorderedEventList( List_t * pxEventList, const TickType_t xItemValue, const TickType_t xTicksToWait ) ;
+
+
+
+
+
+
+
+
+
+
+
+ 
+void vTaskPlaceOnEventListRestricted( List_t * const pxEventList, TickType_t xTicksToWait, const BaseType_t xWaitIndefinitely ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+BaseType_t xTaskRemoveFromEventList( const List_t * const pxEventList ) ;
+void vTaskRemoveFromUnorderedEventList( ListItem_t * pxEventListItem, const TickType_t xItemValue ) ;
+
+
+
+
+
+
+
+
+ 
+ void vTaskSwitchContext( void ) ;
+
+
+
+
+ 
+TickType_t uxTaskResetEventItemValue( void ) ;
+
+
+
+ 
+TaskHandle_t xTaskGetCurrentTaskHandle( void ) ;
+
+
+
+
+ 
+void vTaskMissedYield( void ) ;
+
+
+
+
+ 
+BaseType_t xTaskGetSchedulerState( void ) ;
+
+
+
+
+ 
+BaseType_t xTaskPriorityInherit( TaskHandle_t const pxMutexHolder ) ;
+
+
+
+
+ 
+BaseType_t xTaskPriorityDisinherit( TaskHandle_t const pxMutexHolder ) ;
+
+
+
+
+
+
+
+
+ 
+void vTaskPriorityDisinheritAfterTimeout( TaskHandle_t const pxMutexHolder, UBaseType_t uxHighestPriorityWaitingTask ) ;
+
+
+
+ 
+UBaseType_t uxTaskGetTaskNumber( TaskHandle_t xTask ) ;
+
+
+
+
+ 
+void vTaskSetTaskNumber( TaskHandle_t xTask, const UBaseType_t uxHandle ) ;
+
+
+
+
+
+
+
+
+ 
+void vTaskStepTick( const TickType_t xTicksToJump ) ;
+
+
+
+
+
+
+
+
+
+
+
+ 
+BaseType_t xTaskCatchUpTicks( TickType_t xTicksToCatchUp ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+eSleepModeStatus eTaskConfirmSleepModeStatus( void ) ;
+
+
+
+
+ 
+TaskHandle_t pvTaskIncrementMutexHeldCount( void ) ;
+
+
+
+
+ 
+void vTaskInternalSetTimeOutState( TimeOut_t * const pxTimeOut ) ;
+
+
+
+
+
+
+
+
+
+#line 7 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\app\\user_task.h"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\FreeRTOS\\include\\queue.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+struct QueueDefinition;  
+typedef struct QueueDefinition * QueueHandle_t;
+
+
+
+
+
+ 
+typedef struct QueueDefinition * QueueSetHandle_t;
+
+
+
+
+
+ 
+typedef struct QueueDefinition * QueueSetMemberHandle_t;
+
+ 
+
+
+
+
+ 
+#line 76 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\FreeRTOS\\include\\queue.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+BaseType_t xQueueGenericSend( QueueHandle_t xQueue, const void * const pvItemToQueue, TickType_t xTicksToWait, const BaseType_t xCopyPosition ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+BaseType_t xQueuePeek( QueueHandle_t xQueue, void * const pvBuffer, TickType_t xTicksToWait ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+BaseType_t xQueuePeekFromISR( QueueHandle_t xQueue, void * const pvBuffer ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+BaseType_t xQueueReceive( QueueHandle_t xQueue, void * const pvBuffer, TickType_t xTicksToWait ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+UBaseType_t uxQueueMessagesWaiting( const QueueHandle_t xQueue ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+UBaseType_t uxQueueSpacesAvailable( const QueueHandle_t xQueue ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+void vQueueDelete( QueueHandle_t xQueue ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+BaseType_t xQueueGenericSendFromISR( QueueHandle_t xQueue, const void * const pvItemToQueue, BaseType_t * const pxHigherPriorityTaskWoken, const BaseType_t xCopyPosition ) ;
+BaseType_t xQueueGiveFromISR( QueueHandle_t xQueue, BaseType_t * const pxHigherPriorityTaskWoken ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+BaseType_t xQueueReceiveFromISR( QueueHandle_t xQueue, void * const pvBuffer, BaseType_t * const pxHigherPriorityTaskWoken ) ;
+
+
+
+
+ 
+BaseType_t xQueueIsQueueEmptyFromISR( const QueueHandle_t xQueue ) ;
+BaseType_t xQueueIsQueueFullFromISR( const QueueHandle_t xQueue ) ;
+UBaseType_t uxQueueMessagesWaitingFromISR( const QueueHandle_t xQueue ) ;
+
+
+
+
+
+
+
+
+
+ 
+BaseType_t xQueueCRSendFromISR( QueueHandle_t xQueue, const void *pvItemToQueue, BaseType_t xCoRoutinePreviouslyWoken );
+BaseType_t xQueueCRReceiveFromISR( QueueHandle_t xQueue, void *pvBuffer, BaseType_t *pxTaskWoken );
+BaseType_t xQueueCRSend( QueueHandle_t xQueue, const void *pvItemToQueue, TickType_t xTicksToWait );
+BaseType_t xQueueCRReceive( QueueHandle_t xQueue, void *pvBuffer, TickType_t xTicksToWait );
+
+
+
+
+
+ 
+QueueHandle_t xQueueCreateMutex( const uint8_t ucQueueType ) ;
+QueueHandle_t xQueueCreateMutexStatic( const uint8_t ucQueueType, StaticQueue_t *pxStaticQueue ) ;
+QueueHandle_t xQueueCreateCountingSemaphore( const UBaseType_t uxMaxCount, const UBaseType_t uxInitialCount ) ;
+QueueHandle_t xQueueCreateCountingSemaphoreStatic( const UBaseType_t uxMaxCount, const UBaseType_t uxInitialCount, StaticQueue_t *pxStaticQueue ) ;
+BaseType_t xQueueSemaphoreTake( QueueHandle_t xQueue, TickType_t xTicksToWait ) ;
+TaskHandle_t xQueueGetMutexHolder( QueueHandle_t xSemaphore ) ;
+TaskHandle_t xQueueGetMutexHolderFromISR( QueueHandle_t xSemaphore ) ;
+
+
+
+
+ 
+BaseType_t xQueueTakeMutexRecursive( QueueHandle_t xMutex, TickType_t xTicksToWait ) ;
+BaseType_t xQueueGiveMutexRecursive( QueueHandle_t xMutex ) ;
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+	void vQueueAddToRegistry( QueueHandle_t xQueue, const char *pcQueueName ) ;  
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+	void vQueueUnregisterQueue( QueueHandle_t xQueue ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+	const char *pcQueueGetName( QueueHandle_t xQueue ) ;  
+
+
+
+
+
+
+ 
+
+	QueueHandle_t xQueueGenericCreate( const UBaseType_t uxQueueLength, const UBaseType_t uxItemSize, const uint8_t ucQueueType ) ;
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+QueueSetHandle_t xQueueCreateSet( const UBaseType_t uxEventQueueLength ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+BaseType_t xQueueAddToSet( QueueSetMemberHandle_t xQueueOrSemaphore, QueueSetHandle_t xQueueSet ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+BaseType_t xQueueRemoveFromSet( QueueSetMemberHandle_t xQueueOrSemaphore, QueueSetHandle_t xQueueSet ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+QueueSetMemberHandle_t xQueueSelectFromSet( QueueSetHandle_t xQueueSet, const TickType_t xTicksToWait ) ;
+
+
+
+ 
+QueueSetMemberHandle_t xQueueSelectFromSetFromISR( QueueSetHandle_t xQueueSet ) ;
+
+ 
+void vQueueWaitForMessageRestricted( QueueHandle_t xQueue, TickType_t xTicksToWait, const BaseType_t xWaitIndefinitely ) ;
+BaseType_t xQueueGenericReset( QueueHandle_t xQueue, BaseType_t xNewQueue ) ;
+void vQueueSetQueueNumber( QueueHandle_t xQueue, UBaseType_t uxQueueNumber ) ;
+UBaseType_t uxQueueGetQueueNumber( QueueHandle_t xQueue ) ;
+uint8_t ucQueueGetQueueType( QueueHandle_t xQueue ) ;
+
+
+
+
+
+
+
+
+#line 8 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\app\\user_task.h"
+
+extern TaskHandle_t StartTask_Handler;
+
+
+
+
+void start_task(void *pvParameters);
+
+
+#line 2 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\app\\user_task.c"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\app\\usart_cmd.h"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\FreeRTOS\\include\\semphr.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+typedef QueueHandle_t SemaphoreHandle_t;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+#line 103 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\FreeRTOS\\include\\semphr.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+#line 8 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\app\\usart_cmd.h"
+
+
+
+
+typedef struct
+{
+	uint8_t data[50];
+} CMD_TypeDef;
+
+
+typedef struct rx_cmd_data
+{
+	CMD_TypeDef CMD_TypeStruct;
+	SemaphoreHandle_t USART1_ISR_binarySemaphore;
+	struct rx_cmd_data *next;
+} RX_CMD_DATA_LinkedListDef;
+
+extern RX_CMD_DATA_LinkedListDef RX_CMD_DATA_LinkedStruct_Array[10];
+extern RX_CMD_DATA_LinkedListDef *RX_CMD_DATA_Structp;
+void usart1_linked_list_init(void);
+
+#line 3 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\app\\user_task.c"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\bsp_ili9341.h"
+
+
+
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\sys\\sys.h"
+
+
+
+
+
+																	    
+
+
+
+
+
+#line 21 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\sys\\sys.h"
+
+#line 31 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\sys\\sys.h"
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#line 5 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\bsp_ili9341.h"
+#line 1 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\stdlib.h"
+ 
+ 
+
+
+
+
+
+  #pragma system_include
+
+
+#line 1 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\ycheck.h"
+ 
+ 
+
+ 
+
+
+  #pragma system_include
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+#line 12 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\stdlib.h"
+
+
+
+ 
+#pragma rtmodel="__dlib_full_locale_support",   "1"
+
+
+#line 28 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\stdlib.h"
+  
+    __intrinsic __nounwind size_t __iar_Mbcurmax(void);
+  
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+typedef struct
+{  
+  int quot;
+  int rem;
+} div_t;
+
+typedef struct
+{  
+  long quot;
+  long rem;
+} ldiv_t;
+
+
+  typedef struct
+  {  
+    long long quot;
+    long long rem;
+  } lldiv_t;
+
+
+#line 86 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\stdlib.h"
+
+ 
+  
+  __intrinsic __nounwind int             atexit(void (*)(void));
+
+    __intrinsic __nounwind          int  at_quick_exit(void (*)(void)) ;
+    __intrinsic __noreturn __nounwind void _Exit(int) ;
+    __intrinsic __noreturn __nounwind void quick_exit(int) ;
+
+  __intrinsic __noreturn __nounwind void   exit(int);
+   __intrinsic __nounwind        char * getenv(const char *);
+  __intrinsic __nounwind          int    system(const char *);
+
+
+
+
+               __intrinsic __nounwind void *    aligned_alloc(size_t, size_t);
+
+          __intrinsic __noreturn __nounwind void  abort(void) ;
+  _Pragma("function_effects = no_state, always_returns")     __intrinsic __nounwind int       abs(int);
+               __intrinsic __nounwind void *    calloc(size_t, size_t);
+  _Pragma("function_effects = no_state, always_returns")     __intrinsic __nounwind div_t     div(int, int);
+               __intrinsic __nounwind void      free(void *);
+  _Pragma("function_effects = no_state, always_returns")     __intrinsic __nounwind long      labs(long);
+  _Pragma("function_effects = no_state, always_returns")     __intrinsic __nounwind ldiv_t    ldiv(long, long);
+
+    _Pragma("function_effects = no_state, always_returns")   __intrinsic __nounwind long long llabs(long long);
+    _Pragma("function_effects = no_state, always_returns")   __intrinsic __nounwind lldiv_t   lldiv(long long, long long);
+
+               __intrinsic __nounwind void *    malloc(size_t);
+  _Pragma("function_effects = no_write(1), always_returns")    __intrinsic __nounwind int       mblen(const char *, size_t);
+
+    _Pragma("function_effects = no_read(1), no_write(2), always_returns")  __intrinsic __nounwind size_t mbstowcs(wchar_t *restrict,
+                                                const char *restrict, size_t);
+    _Pragma("function_effects = no_read(1), no_write(2), always_returns") __intrinsic __nounwind   int    mbtowc(wchar_t *restrict,
+                                              const char *restrict, size_t);
+
+               __intrinsic __nounwind int    rand(void);
+               __intrinsic __nounwind void   srand(unsigned int);
+               __intrinsic __nounwind void * realloc(void *, size_t);
+
+               __intrinsic __nounwind void * __iar_realloc_in_place(void *, size_t);
+
+  _Pragma("function_effects = no_write(1), no_read(2), always_returns") __intrinsic __nounwind long          strtol(const char *restrict,
+                                                 char **restrict, int);
+  _Pragma("function_effects = no_write(1), no_read(2), always_returns") __intrinsic __nounwind unsigned long strtoul(const char *, char **, int);
+
+    _Pragma("function_effects = no_read(1), no_write(2), always_returns")  __intrinsic __nounwind size_t wcstombs(char *restrict,
+                                               const wchar_t *restrict,
+                                               size_t);
+    _Pragma("function_effects = no_read(1), always_returns")     __intrinsic __nounwind int    wctomb(char *, wchar_t);
+
+
+    _Pragma("function_effects = no_write(1), no_read(2), always_returns") __intrinsic __nounwind long long strtoll(const char *, char **, int);
+    _Pragma("function_effects = no_write(1), no_read(2), always_returns") __intrinsic __nounwind unsigned long long strtoull(const char *,
+                                                          char **, int);
+
+
+#line 162 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\stdlib.h"
+
+
+  typedef int _Cmpfun(const void *, const void *);
+  _Pragma("function_effects = no_write(1,2), always_returns")  __intrinsic void * bsearch(const void *,
+                                                       const void *, size_t,
+                                                       size_t, _Cmpfun *);
+                __intrinsic void   qsort(void *, size_t, size_t,
+                                                     _Cmpfun *);
+               __intrinsic void     __qsortbbl(void *, size_t,
+                                                          size_t, _Cmpfun *);
+  _Pragma("function_effects = no_write(1), always_returns")    __intrinsic __nounwind double             atof(const char *);
+  _Pragma("function_effects = no_write(1), always_returns")    __intrinsic __nounwind int                atoi(const char *);
+  _Pragma("function_effects = no_write(1), always_returns")    __intrinsic __nounwind long               atol(const char *);
+
+     _Pragma("function_effects = no_write(1), always_returns") __intrinsic __nounwind long long        atoll(const char *);
+     _Pragma("function_effects = no_write(1), no_read(2), always_returns") __intrinsic __nounwind float         strtof(const char *restrict,
+                                                    char **restrict);
+     _Pragma("function_effects = no_write(1), no_read(2), always_returns") __intrinsic __nounwind long double   strtold(const char *, char **);
+
+  _Pragma("function_effects = no_write(1), no_read(2), always_returns") __intrinsic __nounwind double           strtod(const char *restrict,
+                                                    char **restrict);
+
+    _Pragma("function_effects = no_state, always_returns")   __intrinsic __nounwind int              __iar_DLib_library_version(void);
+
+
+
+
+  
+  #pragma inline=no_body
+  int abs(int i)
+  {       
+    return i < 0 ? -i : i;
+  }
+
+  #pragma inline=no_body
+  long labs(long i)
+  {  
+    return i < 0 ? -i : i;
+  }
+
+
+    #pragma inline=no_body
+    long long llabs(long long i)
+    {  
+      return i < 0 ? -i : i;
+    }
+
+  
+
+
+#line 244 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\stdlib.h"
+
+#line 283 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\stdlib.h"
+
+#line 1 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\DLib_Product_stdlib.h"
+
+
+
+
+
+
+ 
+
+
+
+
+
+  #pragma system_include
+
+
+
+
+
+
+
+
+#pragma type_attribute=__value_in_regs
+div_t __aeabi_idivmod(int n, int d);
+
+
+  #pragma type_attribute=__value_in_regs
+  lldiv_t __aeabi_ldivmod(long long n, long long d);
+
+
+#pragma inline=forced_no_body
+__intrinsic __nounwind
+div_t div(int a, int b)
+{
+
+  int q = a / b;
+  int r = a - (q*b);
+  div_t d;
+  d.quot = q;
+  d.rem = r;
+  return d;
+
+
+
+}
+
+#pragma inline=forced_no_body
+__intrinsic __nounwind
+ldiv_t ldiv(long a, long b)
+{
+
+  int q = a / b;
+  int r = a - (q*b);
+  ldiv_t ld;
+  ld.quot = q;
+  ld.rem = r;
+#line 62 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\DLib_Product_stdlib.h"
+  return ld;
+}
+
+
+  #pragma inline=forced_no_body
+  __intrinsic __nounwind
+  lldiv_t lldiv(long long a, long long b)
+  {
+    return __aeabi_ldivmod(a, b);
+  }
+
+
+
+
+
+
+
+
+#line 287 "E:\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\stdlib.h"
+
+
+
+
+
+
+
+
+ 
+#line 6 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\bsp_ili9341.h"
+
+typedef struct  
+{										    
+	u16 width;			
+	u16 height;	
+	u16 id;	
+	u8  dir;		
+	u16	wramcmd;	
+	u16  setxcmd;
+	u16  setycmd;	
+}_lcd_dev; 	  
+
+
+extern _lcd_dev lcddev;
+
+extern u16  POINT_COLOR;
+extern u16  BACK_COLOR; 
+ 
+
+typedef struct
+{
+	vu16 LCD_REG;
+	vu16 LCD_RAM;
+} LCD_TypeDef;
+			    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#line 61 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\bsp_ili9341.h"
+
+
+
+
+
+
+
+ 
+
+
+
+
+	    															  
+void LCD_Init(void);													 
+void LCD_DisplayOn(void);													
+void LCD_DisplayOff(void);													
+void LCD_Clear(u16 Color);	 											
+void LCD_SetCursor(u16 Xpos, u16 Ypos);									
+void LCD_DrawPoint(u16 x,u16 y);											
+void LCD_Fast_DrawPoint(u16 x,u16 y,u16 color);							
+u16  LCD_ReadPoint(u16 x,u16 y); 											
+void LCD_Draw_Circle(u16 x0,u16 y0,u8 r);						 			
+void LCD_DrawLine(u16 x1, u16 y1, u16 x2, u16 y2);						
+void LCD_DrawRectangle(u16 x1, u16 y1, u16 x2, u16 y2);		   			
+void LCD_Fill(u16 sx,u16 sy,u16 ex,u16 ey,u16 color);		   				
+void LCD_Color_Fill(u16 sx,u16 sy,u16 ex,u16 ey,u16 *color);			
+void LCD_ShowChar(u16 x,u16 y,u8 num,u8 size,u8 mode);					
+void LCD_ShowNum(u16 x,u16 y,u32 num,u8 len,u8 size);  					
+void LCD_ShowxNum(u16 x,u16 y,u32 num,u8 len,u8 size,u8 mode);				
+void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);		
+
+void LCD_WriteReg(u16 LCD_Reg, u16 LCD_RegValue);
+u16 LCD_ReadReg(u16 LCD_Reg);
+void LCD_WriteRAM_Prepare(void);
+void LCD_WriteRAM(u16 RGB_Code);
+void LCD_SSD_BackLightSet(u8 pwm);							
+void LCD_Scan_Dir(u8 dir);									
+void LCD_Display_Dir(u8 dir);								
+void LCD_Set_Window(u16 sx,u16 sy,u16 width,u16 height);				   						   																			 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#line 4 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\app\\user_task.c"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\app\\user_clock.h"
+
+
+
+typedef struct
+{
+    unsigned char _hour;
+    unsigned char _min;
+    unsigned char _sec;
+    
+}Clock;
+
+void Clock_run(Clock *c);
+#line 5 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\app\\user_task.c"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\bsp_sdio_sdcard.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+  
+
+
+  
+
+
+
+ 
+  
+
+
+   
+
+
+
+  
+typedef enum
+{
+
+
+    
+  SD_CMD_CRC_FAIL                    = (1),  
+  SD_DATA_CRC_FAIL                   = (2),  
+  SD_CMD_RSP_TIMEOUT                 = (3),  
+  SD_DATA_TIMEOUT                    = (4),  
+  SD_TX_UNDERRUN                     = (5),  
+  SD_RX_OVERRUN                      = (6),  
+  SD_START_BIT_ERR                   = (7),  
+  SD_CMD_OUT_OF_RANGE                = (8),  
+  SD_ADDR_MISALIGNED                 = (9),  
+  SD_BLOCK_LEN_ERR                   = (10),  
+  SD_ERASE_SEQ_ERR                   = (11),  
+  SD_BAD_ERASE_PARAM                 = (12),  
+  SD_WRITE_PROT_VIOLATION            = (13),  
+  SD_LOCK_UNLOCK_FAILED              = (14),  
+  SD_COM_CRC_FAILED                  = (15),  
+  SD_ILLEGAL_CMD                     = (16),  
+  SD_CARD_ECC_FAILED                 = (17),  
+  SD_CC_ERROR                        = (18),  
+  SD_GENERAL_UNKNOWN_ERROR           = (19),  
+  SD_STREAM_READ_UNDERRUN            = (20),  
+  SD_STREAM_WRITE_OVERRUN            = (21),  
+  SD_CID_CSD_OVERWRITE               = (22),  
+  SD_WP_ERASE_SKIP                   = (23),  
+  SD_CARD_ECC_DISABLED               = (24),  
+  SD_ERASE_RESET                     = (25),  
+  SD_AKE_SEQ_ERROR                   = (26),  
+  SD_INVALID_VOLTRANGE               = (27),
+  SD_ADDR_OUT_OF_RANGE               = (28),
+  SD_SWITCH_ERROR                    = (29),
+  SD_SDIO_DISABLED                   = (30),
+  SD_SDIO_FUNCTION_BUSY              = (31),
+  SD_SDIO_FUNCTION_FAILED            = (32),
+  SD_SDIO_UNKNOWN_FUNCTION           = (33),
+
+
+
+  
+  SD_INTERNAL_ERROR, 
+  SD_NOT_CONFIGURED,
+  SD_REQUEST_PENDING, 
+  SD_REQUEST_NOT_APPLICABLE, 
+  SD_INVALID_PARAMETER,  
+  SD_UNSUPPORTED_FEATURE,  
+  SD_UNSUPPORTED_HW,  
+  SD_ERROR,  
+  SD_OK = 0 
+} SD_Error;
+
+
+
+    
+typedef enum
+{
+  SD_TRANSFER_OK  = 0,
+  SD_TRANSFER_BUSY = 1,
+  SD_TRANSFER_ERROR
+} SDTransferState;
+
+
+
+    
+typedef enum
+{
+  SD_CARD_READY                  = ((uint32_t)0x00000001),
+  SD_CARD_IDENTIFICATION         = ((uint32_t)0x00000002),
+  SD_CARD_STANDBY                = ((uint32_t)0x00000003),
+  SD_CARD_TRANSFER               = ((uint32_t)0x00000004),
+  SD_CARD_SENDING                = ((uint32_t)0x00000005),
+  SD_CARD_RECEIVING              = ((uint32_t)0x00000006),
+  SD_CARD_PROGRAMMING            = ((uint32_t)0x00000007),
+  SD_CARD_DISCONNECTED           = ((uint32_t)0x00000008),
+  SD_CARD_ERROR                  = ((uint32_t)0x000000FF)
+}SDCardState;
+
+
+
+
+  
+typedef struct
+{
+  volatile uint8_t  CSDStruct;             
+  volatile uint8_t  SysSpecVersion;        
+  volatile uint8_t  Reserved1;             
+  volatile uint8_t  TAAC;                  
+  volatile uint8_t  NSAC;                  
+  volatile uint8_t  MaxBusClkFrec;         
+  volatile uint16_t CardComdClasses;       
+  volatile uint8_t  RdBlockLen;            
+  volatile uint8_t  PartBlockRead;         
+  volatile uint8_t  WrBlockMisalign;       
+  volatile uint8_t  RdBlockMisalign;       
+  volatile uint8_t  DSRImpl;               
+  volatile uint8_t  Reserved2;             
+  volatile uint32_t DeviceSize;            
+  volatile uint8_t  MaxRdCurrentVDDMin;    
+  volatile uint8_t  MaxRdCurrentVDDMax;    
+  volatile uint8_t  MaxWrCurrentVDDMin;    
+  volatile uint8_t  MaxWrCurrentVDDMax;    
+  volatile uint8_t  DeviceSizeMul;         
+  volatile uint8_t  EraseGrSize;           
+  volatile uint8_t  EraseGrMul;            
+  volatile uint8_t  WrProtectGrSize;       
+  volatile uint8_t  WrProtectGrEnable;     
+  volatile uint8_t  ManDeflECC;            
+  volatile uint8_t  WrSpeedFact;           
+  volatile uint8_t  MaxWrBlockLen;         
+  volatile uint8_t  WriteBlockPaPartial;   
+  volatile uint8_t  Reserved3;             
+  volatile uint8_t  ContentProtectAppli;   
+  volatile uint8_t  FileFormatGrouop;      
+  volatile uint8_t  CopyFlag;              
+  volatile uint8_t  PermWrProtect;         
+  volatile uint8_t  TempWrProtect;         
+  volatile uint8_t  FileFormat;            
+  volatile uint8_t  ECC;                   
+  volatile uint8_t  CSD_CRC;               
+  volatile uint8_t  Reserved4;             
+} SD_CSD;
+
+
+
+ 
+typedef struct
+{
+  volatile uint8_t  ManufacturerID;        
+  volatile uint16_t OEM_AppliID;           
+  volatile uint32_t ProdName1;             
+  volatile uint8_t  ProdName2;             
+  volatile uint8_t  ProdRev;               
+  volatile uint32_t ProdSN;                
+  volatile uint8_t  Reserved1;             
+  volatile uint16_t ManufactDate;          
+  volatile uint8_t  CID_CRC;               
+  volatile uint8_t  Reserved2;             
+} SD_CID;
+
+
+
+ 
+typedef struct
+{
+  volatile uint8_t DAT_BUS_WIDTH;
+  volatile uint8_t SECURED_MODE;
+  volatile uint16_t SD_CARD_TYPE;
+  volatile uint32_t SIZE_OF_PROTECTED_AREA;
+  volatile uint8_t SPEED_CLASS;
+  volatile uint8_t PERFORMANCE_MOVE;
+  volatile uint8_t AU_SIZE;
+  volatile uint16_t ERASE_SIZE;
+  volatile uint8_t ERASE_TIMEOUT;
+  volatile uint8_t ERASE_OFFSET;
+} SD_CardStatus;
+
+
+
+
+ 
+typedef struct
+{
+  SD_CSD SD_csd;
+  SD_CID SD_cid;
+  uint64_t CardCapacity;   
+  uint32_t CardBlockSize;  
+  uint16_t RCA;
+  uint8_t CardType;
+} SD_CardInfo;
+
+
+
+ 
+  
+
+
+  
+
+
+
+ 
+#line 277 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\bsp_sdio_sdcard.h"
+
+
+
+
+#line 288 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\bsp_sdio_sdcard.h"
+
+
+
+
+ 
+#line 301 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\bsp_sdio_sdcard.h"
+
+
+
+
+ 
+#line 317 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\bsp_sdio_sdcard.h"
+  
+   
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+ 
+#line 341 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\bsp_sdio_sdcard.h"
+
+
+
+  
+  
+
+
+  
+
+
+  
+
+
+
+  
+void SD_DeInit(void);
+SD_Error SD_Init(void);
+SDTransferState SD_GetStatus(void);
+SDCardState SD_GetState(void);
+uint8_t SD_Detect(void);
+SD_Error SD_PowerON(void);
+SD_Error SD_PowerOFF(void);
+SD_Error SD_InitializeCards(void);
+SD_Error SD_GetCardInfo(SD_CardInfo *cardinfo);
+SD_Error SD_GetCardStatus(SD_CardStatus *cardstatus);
+SD_Error SD_EnableWideBusOperation(uint32_t WideMode);
+SD_Error SD_SelectDeselect(uint64_t addr);
+SD_Error SD_ReadBlock(uint8_t *readbuff, uint64_t ReadAddr, uint16_t BlockSize);
+SD_Error SD_ReadMultiBlocks(uint8_t *readbuff, uint64_t ReadAddr, uint16_t BlockSize, uint32_t NumberOfBlocks);
+SD_Error SD_WriteBlock(uint8_t *writebuff, uint64_t WriteAddr, uint16_t BlockSize);
+SD_Error SD_WriteMultiBlocks(uint8_t *writebuff, uint64_t WriteAddr, uint16_t BlockSize, uint32_t NumberOfBlocks);
+SDTransferState SD_GetTransferState(void);
+SD_Error SD_StopTransfer(void);
+SD_Error SD_Erase(uint64_t startaddr, uint64_t endaddr);
+SD_Error SD_SendStatus(uint32_t *pcardstatus);
+SD_Error SD_SendSDStatus(uint32_t *psdstatus);
+SD_Error SD_ProcessIRQSrc(void);
+void SD_ProcessDMAIRQ(void);
+SD_Error SD_WaitReadOperation(void);
+SD_Error SD_WaitWriteOperation(void);
+SD_Error SD_HighSpeed(void);
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+  
+
+
+
+  
+
+ 
+#line 6 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\app\\user_task.c"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\app\\user_Debug_Info.h"
+
+
+
+void usr_showstr(unsigned int y,const char *format,...);
+void usr_Debug(const char *format,...);
+#line 7 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\app\\user_task.c"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\app\\user_showpic.h"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\FATFS\\ff.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\drivers\\FATFS\\integer.h"
+ 
+ 
+ 
+
+
+
+
+#line 14 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\drivers\\FATFS\\integer.h"
+
+ 
+typedef unsigned char	BYTE;
+
+ 
+typedef short			SHORT;
+typedef unsigned short	WORD;
+typedef unsigned short	WCHAR;
+
+ 
+typedef int				INT;
+typedef unsigned int	UINT;
+
+ 
+typedef long			LONG;
+typedef unsigned long	DWORD;
+
+ 
+typedef char			CHAR;
+typedef unsigned char	UCHAR;
+typedef unsigned char	BYTE;
+
+
+
+#line 27 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\FATFS\\ff.h"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\drivers\\FATFS\\ffconf.h"
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+#line 28 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\FATFS\\ff.h"
+
+
+
+
+
+
+ 
+
+#line 48 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\FATFS\\ff.h"
+
+
+
+
+
+ 
+
+#line 67 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\FATFS\\ff.h"
+typedef char TCHAR;
+
+
+
+
+
+
+
+
+ 
+
+typedef struct {
+	BYTE	fs_type;		 
+	BYTE	drv;			 
+	BYTE	csize;			 
+	BYTE	n_fats;			 
+	BYTE	wflag;			 
+	BYTE	fsi_flag;		 
+	WORD	id;				 
+	WORD	n_rootdir;		 
+
+	WORD	ssize;			 
+
+
+
+
+
+	DWORD	last_clust;		 
+	DWORD	free_clust;		 
+
+
+
+
+	DWORD	n_fatent;		 
+	DWORD	fsize;			 
+	DWORD	volbase;		 
+	DWORD	fatbase;		 
+	DWORD	dirbase;		 
+	DWORD	database;		 
+	DWORD	winsect;		 
+	BYTE	win[4096];	 
+} FATFS;
+
+
+
+ 
+
+typedef struct {
+	FATFS*	fs;				 
+	WORD	id;				 
+	BYTE	flag;			 
+	BYTE	err;			 
+	DWORD	fptr;			 
+	DWORD	fsize;			 
+	DWORD	sclust;			 
+	DWORD	clust;			 
+	DWORD	dsect;			 
+
+	DWORD	dir_sect;		 
+	BYTE*	dir_ptr;		 
+#line 135 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\FATFS\\ff.h"
+	BYTE	buf[4096];	 
+
+} FIL;
+
+
+
+ 
+
+typedef struct {
+	FATFS*	fs;				 
+	WORD	id;				 
+	WORD	index;			 
+	DWORD	sclust;			 
+	DWORD	clust;			 
+	DWORD	sect;			 
+	BYTE*	dir;			 
+	BYTE*	fn;				 
+
+
+
+
+	WCHAR*	lfn;			 
+	WORD	lfn_idx;		 
+
+
+
+
+} DIR;
+
+
+
+ 
+
+typedef struct {
+	DWORD	fsize;			 
+	WORD	fdate;			 
+	WORD	ftime;			 
+	BYTE	fattrib;		 
+	TCHAR	fname[13];		 
+
+	TCHAR*	lfname;			 
+	UINT 	lfsize;			 
+
+} FILINFO;
+
+
+
+ 
+
+typedef enum {
+	FR_OK = 0,				 
+	FR_DISK_ERR,			 
+	FR_INT_ERR,				 
+	FR_NOT_READY,			 
+	FR_NO_FILE,				 
+	FR_NO_PATH,				 
+	FR_INVALID_NAME,		 
+	FR_DENIED,				 
+	FR_EXIST,				 
+	FR_INVALID_OBJECT,		 
+	FR_WRITE_PROTECTED,		 
+	FR_INVALID_DRIVE,		 
+	FR_NOT_ENABLED,			 
+	FR_NO_FILESYSTEM,		 
+	FR_MKFS_ABORTED,		 
+	FR_TIMEOUT,				 
+	FR_LOCKED,				 
+	FR_NOT_ENOUGH_CORE,		 
+	FR_TOO_MANY_OPEN_FILES,	 
+	FR_INVALID_PARAMETER	 
+} FRESULT;
+
+
+
+ 
+ 
+
+FRESULT f_open (FIL* fp, const TCHAR* path, BYTE mode);				 
+FRESULT f_close (FIL* fp);											 
+FRESULT f_read (FIL* fp, void* buff, UINT btr, UINT* br);			 
+FRESULT f_write (FIL* fp, const void* buff, UINT btw, UINT* bw);	 
+FRESULT f_forward (FIL* fp, UINT(*func)(const BYTE*,UINT), UINT btf, UINT* bf);	 
+FRESULT f_lseek (FIL* fp, DWORD ofs);								 
+FRESULT f_truncate (FIL* fp);										 
+FRESULT f_sync (FIL* fp);											 
+FRESULT f_opendir (DIR* dp, const TCHAR* path);						 
+FRESULT f_closedir (DIR* dp);										 
+FRESULT f_readdir (DIR* dp, FILINFO* fno);							 
+FRESULT f_findfirst (DIR* dp, FILINFO* fno, const TCHAR* path, const TCHAR* pattern);	 
+FRESULT f_findnext (DIR* dp, FILINFO* fno);							 
+FRESULT f_mkdir (const TCHAR* path);								 
+FRESULT f_unlink (const TCHAR* path);								 
+FRESULT f_rename (const TCHAR* path_old, const TCHAR* path_new);	 
+FRESULT f_stat (const TCHAR* path, FILINFO* fno);					 
+FRESULT f_chmod (const TCHAR* path, BYTE attr, BYTE mask);			 
+FRESULT f_utime (const TCHAR* path, const FILINFO* fno);			 
+FRESULT f_chdir (const TCHAR* path);								 
+FRESULT f_chdrive (const TCHAR* path);								 
+FRESULT f_getcwd (TCHAR* buff, UINT len);							 
+FRESULT f_getfree (const TCHAR* path, DWORD* nclst, FATFS** fatfs);	 
+FRESULT f_getlabel (const TCHAR* path, TCHAR* label, DWORD* vsn);	 
+FRESULT f_setlabel (const TCHAR* label);							 
+FRESULT f_mount (FATFS* fs, const TCHAR* path, BYTE opt);			 
+FRESULT f_mkfs (const TCHAR* path, BYTE sfd, UINT au);				 
+FRESULT f_fdisk (BYTE pdrv, const DWORD szt[], void* work);			 
+int f_putc (TCHAR c, FIL* fp);										 
+int f_puts (const TCHAR* str, FIL* cp);								 
+int f_printf (FIL* fp, const TCHAR* str, ...);						 
+TCHAR* f_gets (TCHAR* buff, int len, FIL* fp);						 
+
+#line 251 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\FATFS\\ff.h"
+
+
+
+
+
+
+
+
+ 
+ 
+
+ 
+
+DWORD get_fattime (void);
+
+
+ 
+
+WCHAR ff_convert (WCHAR chr, UINT dir);	 
+WCHAR ff_wtoupper (WCHAR chr);			 
+
+
+
+
+
+
+ 
+#line 284 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\FATFS\\ff.h"
+
+
+
+
+ 
+ 
+
+
+ 
+
+
+
+
+#line 305 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\FATFS\\ff.h"
+
+
+ 
+
+
+
+
+
+
+ 
+
+#line 324 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\FATFS\\ff.h"
+
+
+ 
+
+
+
+
+ 
+ 
+
+#line 345 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\FATFS\\ff.h"
+
+
+
+
+
+#line 6 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\app\\user_showpic.h"
+
+
+typedef struct 
+{
+	u16(*read_point)(u16,u16);				
+	void(*draw_point)(u16,u16,u16);			
+ 	void(*fill)(u16,u16,u16,u16,u16);		
+ 	void(*draw_hline)(u16,u16,u16,u16);		
+ 	void(*fillcolor)(u16,u16,u16,u16,u16*);	
+}_pic_phy; 
+
+extern _pic_phy pic_phy;
+
+typedef struct
+{		
+	u16 lcdwidth;	
+	u16 lcdheight;	
+	u32 ImgWidth; 	
+	u32 ImgHeight;
+
+	u32 Div_Fac;  	
+	
+	u32 S_Height; 	
+	u32 S_Width;
+	
+	u32	S_XOFF;	  	
+	u32 S_YOFF;
+
+	u32 staticx; 	
+	u32 staticy;																 	
+}_pic_info;
+extern _pic_info picinfo;
+
+void piclib_init(void);								
+void ai_draw_init(void);
+void user_showpic(const u8 *filename);
+#line 8 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\app\\user_task.c"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\sys\\systick.h"
+
+
+
+
+
+
+
+
+
+void systick_init();
+void delay_ms(u32 nms);
+void delay_us(u32 nus);
+
+
+#line 9 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\app\\user_task.c"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\bsp_ov2640.h"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\drivers\\bsp_sccb.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+void SCCB_Init(void);
+void SCCB_Start(void);
+void SCCB_Stop(void);
+void SCCB_No_Ack(void);
+u8 SCCB_WR_Byte(u8 dat);
+u8 SCCB_RD_Byte(void);
+u8 SCCB_WR_Reg(u8 reg,u8 data);
+u8 SCCB_RD_Reg(u8 reg);
+#line 5 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\bsp_ov2640.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+extern  u8 ov2640_mode;
+
+
+
+
+
+ 
+
+
+#line 61 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\bsp_ov2640.h"
+
+
+#line 109 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\bsp_ov2640.h"
+
+
+								
+	    				 
+u8 OV2640_Init(void);  
+void OV2640_JPEG_Mode(void);
+void OV2640_RGB565_Mode(void);
+void OV2640_Auto_Exposure(u8 level);
+void OV2640_Light_Mode(u8 mode);
+void OV2640_Color_Saturation(u8 sat);
+void OV2640_Brightness(u8 bright);
+void OV2640_Contrast(u8 contrast);
+void OV2640_Special_Effects(u8 eft);
+void OV2640_Color_Bar(u8 sw);
+void OV2640_Window_Set(u16 sx,u16 sy,u16 width,u16 height);
+u8 OV2640_OutSize_Set(u16 width,u16 height);
+u8 OV2640_ImageWin_Set(u16 offx,u16 offy,u16 width,u16 height);
+u8 OV2640_ImageSize_Set(u16 width,u16 height);
+void OV2640_Powerdown(void);
+void OV2640_Reset(void);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#line 10 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\app\\user_task.c"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\sys\\dcmi.h"
+
+
+
+
+extern void (*dcmi_rx_callback)(void);
+
+void dcmi_init(void);
+void DCMI_DMA_Init(u32 mem0addr,u32 mem1addr,u16 memsize,u32 memblen,u32 meminc);
+void DCMI_Start(void);
+void DCMI_Stop(void);
+
+void DCMI_Set_Window(u16 sx,u16 sy,u16 width,u16 height);
+void DCMI_CR_Set(u8 pclk,u8 hsync,u8 vsync);
+
+#line 12 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\app\\user_task.c"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\app\\user_imgprocess.h"
+
+
+
+
+
+
+
+extern u32 jpeg_buf0[];						
+extern u32 jpeg_buf1[];		        	    
+extern u32 jpeg_data_buf[];	
+
+void jpeg_data_process(void);
+#line 13 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\app\\user_task.c"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\bsp_key.h"
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+void KEY_GPIO_Config(void);
+u8 KEY_Scan(u8);  		
+
+#line 14 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\app\\user_task.c"
+#line 1 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\user\\..\\drivers\\bsp_led.h"
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+void LED_GPIO_Config(void);
+
+#line 15 "D:\\practice\\stm32\\Iar\\IARforSTM32\\10-ov2940\\app\\user_task.c"
+
+
+
+
+SemaphoreHandle_t KeySemaphore;
+
+TaskHandle_t Usart_cmdTask_Handler;
+
+
+void Usart_cmd_task(void *pvParameters);
+
+TaskHandle_t ov2640Task_Handler;
+
+
+void ov2640_task(void *pvParameters);
+
+
+FATFS fs;                     
+FIL fnew;                     
+FRESULT res_sd;               
+UINT fnum;                    
+BYTE ReadBuffer[1024] = {0};  
+BYTE WriteBuffer[] = "Tanch SDcard program wirte & read test\r\n";
+
+void Semaphore_Init(void)
+{
+  KeySemaphore = xQueueGenericCreate( ( UBaseType_t ) 1, ( ( uint8_t ) 0U ), ( ( uint8_t ) 3U ) );	
+}
+
+void start_task(void *pvParameters)
+{
+  vPortEnterCritical(); 
+  Semaphore_Init();
+  
+
+
+
+
+
+
+
+ 
+
+   xTaskCreate((TaskFunction_t)ov2640_task,
+              (const char *)"ov2640_task",
+              (uint16_t)4096,
+              (void *)0,
+              (UBaseType_t)3,
+              (TaskHandle_t *)&ov2640Task_Handler); 
+
+  vTaskDelete(StartTask_Handler); 
+  vPortExitCritical();            
+}
+
+void Usart_cmd_task(void *pvParameters)
+{
+  BaseType_t err = ( ( BaseType_t ) 0 );
+
+  while (1)
+  {
+    if (RX_CMD_DATA_Structp->USART1_ISR_binarySemaphore != 0)
+    {
+      err = xQueueSemaphoreTake( ( RX_CMD_DATA_Structp->USART1_ISR_binarySemaphore ), ( 0xffffffffUL ) );
+      if (err == ( ( BaseType_t ) 1 ))
+      {
+        LCD_ShowString(12, 160, 240, 24, 24, RX_CMD_DATA_Structp->CMD_TypeStruct.data);
+      }
+    }
+  vTaskDelay(100);
+  }
+}
+
+
+void ov2640_task(void *pvParameters)
+{
+    u8 res;
+    BaseType_t err=( ( BaseType_t ) 0 );
+
+    while(OV2640_Init())
+	{
+		usr_Debug("OV2640 ERROR!");
+		vTaskDelay(800);
+	}
+    
+    usr_Debug("OV2640 OK!");
+    OV2640_RGB565_Mode();
+    OV2640_Auto_Exposure(4);
+    dcmi_init();			
+	DCMI_DMA_Init((u32)&((LCD_TypeDef *) ((u32)(0x6C000000 | 0x0000007E)))->LCD_RAM,0,1,((uint32_t)0x00002000),((uint32_t)0x00000000));
+    OV2640_OutSize_Set(lcddev.width,lcddev.height); 
+    DCMI_Start();
+    
+    while(1)
+    {
+        if(KeySemaphore!=0)
+        {
+            err=xQueueSemaphoreTake( ( KeySemaphore ), ( ( TickType_t ) 0xffffffffUL ) );	
+            if(err==( ( BaseType_t ) 1 ))										
+            {
+                {((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x00020000) + 0x1400))->ODR ^=((uint16_t)0x0200);};
+            }
+        }
+    }
+}

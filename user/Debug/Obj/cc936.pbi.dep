@@ -1,0 +1,5 @@
+cc936.pbi: \
+  D:\practice\stm32\Iar\IARforSTM32\10-ov2940\drivers\FATFS\option\cc936.c \
+  D:\practice\stm32\Iar\IARforSTM32\10-ov2940\drivers\FATFS\option/../ff.h \
+  D:\practice\stm32\Iar\IARforSTM32\10-ov2940\user\..\drivers\FATFS/integer.h \
+  D:\practice\stm32\Iar\IARforSTM32\10-ov2940\user\..\drivers\FATFS/ffconf.h

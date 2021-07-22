@@ -1,0 +1,5 @@
+ff.pbi: D:\practice\stm32\Iar\IARforSTM32\10-ov2940\drivers\FATFS\ff.c \
+  D:\practice\stm32\Iar\IARforSTM32\10-ov2940\drivers\FATFS/ff.h \
+  D:\practice\stm32\Iar\IARforSTM32\10-ov2940\drivers\FATFS/integer.h \
+  D:\practice\stm32\Iar\IARforSTM32\10-ov2940\drivers\FATFS/ffconf.h \
+  D:\practice\stm32\Iar\IARforSTM32\10-ov2940\drivers\FATFS/diskio.h
